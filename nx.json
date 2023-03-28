@@ -2,7 +2,12 @@
     "$schema": "./node_modules/nx/schemas/nx-schema.json",
     "npmScope": "workspace",
     "tasksRunnerOptions": {
-        "default": {}
+        "default": {
+            "runner": "@nrwl/nx-cloud",
+            "options": {
+                "accessToken": "MDAzNmNjYzYtYWZmYi00OTVmLThjMmUtODI2NjVlNTM1YTlhfHJlYWQtd3JpdGU="
+            }
+        }
     },
     "targetDefaults": {
         "build": {

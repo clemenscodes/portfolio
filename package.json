@@ -3,6 +3,7 @@
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
+        "dev": "xdg-open http://localhost:3000 && nx serve",
         "ci": "scripts/ci.sh",
         "full": "scripts/full.sh",
         "debug": "scripts/debug.sh",
@@ -18,7 +19,6 @@
         "@next/font": "13.1.1",
         "@nrwl/next": "15.8.9",
         "@tabler/icons-react": "^2.12.0",
-        "canvas": "^2.11.0",
         "class-variance-authority": "^0.4.0",
         "clsx": "^1.2.1",
         "lottie-colorify": "^0.8.0",
@@ -67,6 +67,7 @@
         "@typescript-eslint/parser": "^5.36.1",
         "autoprefixer": "^10.4.14",
         "babel-jest": "^29.4.1",
+        "canvas": "^2.11.0",
         "commitizen": "^4.3.0",
         "commitlint": "^17.5.1",
         "cypress": "^12.2.0",

@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
                 <div className='my-auto flex w-1/2 space-x-4'>
                     <Logo />
                 </div>
-                <div className='my-auto flex w-1/2 justify-end space-x-4'>
+                <div className='my-auto flex w-1/2  items-center justify-end space-x-4'>
                     <ModeToggle />
                 </div>
             </nav>

@@ -15,7 +15,7 @@ class MyDocument extends Document {
                     <meta name='keywords' content={site.keywords} />
                     <meta name='description' content={site.description} />
                 </Head>
-                <body className='dark:text-dimmed-font dark:bg-dimmed-900 min-h-screen bg-white font-sans antialiased'>
+                <body className='dark:text-dimmed-font dark:bg-dimmed-900 m-0 box-border min-h-screen scroll-smooth bg-white p-0 font-sans antialiased'>
                     <Main />
                     <NextScript />
                 </body>

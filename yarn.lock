@@ -2638,6 +2638,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/hooks@npm:^6.0.5":
+  version: 6.0.5
+  resolution: "@mantine/hooks@npm:6.0.5"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 2f8a1f155bf5e457484282d1ee1ab6e8d3356f48b01291820f828ac7978c8f960d711a576b4636753e604e4058e241b210f348e32adb2960be22aee84137ab63
+  languageName: node
+  linkType: hard
+
 "@mapbox/node-pre-gyp@npm:^1.0.0":
   version: 1.0.10
   resolution: "@mapbox/node-pre-gyp@npm:1.0.10"
@@ -22573,6 +22582,7 @@ __metadata:
     "@babel/preset-react": ^7.14.5
     "@commitlint/config-nx-scopes": ^17.4.3
     "@ianvs/prettier-plugin-sort-imports": ^3.7.2
+    "@mantine/hooks": ^6.0.5
     "@next/font": 13.1.1
     "@next/plugin-storybook": ^13.2.4
     "@nrwl/cypress": 15.8.9

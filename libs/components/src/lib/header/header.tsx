@@ -1,11 +1,11 @@
 import Logo from '../logo/logo';
-import ModeToggle from '../mode-toggle/mode-toggle';
+import ToggleTheme from '../toggle-theme/toggle-theme';
 import { cn } from '@styles';
+import { HTML } from '@types';
 import { useEffect, useState } from 'react';
 
-type DefaultHeaderProps = JSX.IntrinsicElements['header'];
 /* eslint-disable-next-line */
-export interface HeaderProps extends DefaultHeaderProps {}
+export interface HeaderProps extends HTML<'header'> {}
 
 export const Header: React.FC<HeaderProps> = ({ ...props }) => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -25,6 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
 
     return (
         <header
+            {...props}
             className={cn([
                 'dark:bg-dimmed-900 fixed left-0 top-0 z-10 h-16 w-full transform bg-white shadow-md transition-transform duration-300',
                 visible ? '' : '-translate-y-full',
@@ -35,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
                     <Logo />
                 </div>
                 <div className='my-auto flex w-1/2  items-center justify-end space-x-4'>
-                    <ModeToggle placeholder='ksfsj' />
+                    <ToggleTheme />
                 </div>
             </nav>
         </header>

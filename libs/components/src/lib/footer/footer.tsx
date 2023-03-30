@@ -1,11 +1,12 @@
 import { cn } from '@styles';
+import { HTML } from '@types';
 
 /* eslint-disable-next-line */
-export interface FooterProps {}
+export interface FooterProps extends HTML<'footer'> {}
 
 export const Footer: React.FC<FooterProps> = ({ ...props }) => {
     return (
-        <footer className={cn([])}>
+        <footer {...props} className={cn([])}>
             <h1>Welcome to Footer!</h1>
         </footer>
     );

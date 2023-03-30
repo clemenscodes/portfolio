@@ -11,7 +11,10 @@ export const ModeToggle: React.FC<ModeToggleProps> = ({ ...props }) => {
     const toggleTheme = () => (isDark ? setTheme('light') : setTheme('dark'));
 
     return (
-        <button onClick={toggleTheme} className={cn('dark:hover:bg-dimmed-800 m-2 rounded p-1 hover:bg-gray-200')}>
+        <button
+            onClick={toggleTheme}
+            className={cn('dark:hover:bg-dimmed-800 rounded-full p-2 transition-all duration-300 hover:bg-gray-200')}
+        >
             <IconSun className={cn(isDark ? '' : 'hidden')} />
             <IconMoon className={cn(isDark ? 'hidden' : '')} />
         </button>

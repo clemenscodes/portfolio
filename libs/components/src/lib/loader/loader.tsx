@@ -1,5 +1,4 @@
 import animationData from '../../../assets/json/circle-loader.json';
-import { cn } from '@styles';
 import { colorify } from 'lottie-colorify';
 import Lottie from 'lottie-react';
 import { useTheme } from 'next-themes';
@@ -15,11 +14,7 @@ export const Loader: React.FC<LoaderProps> = ({ ...props }) => {
     useEffect(() => {
         isDark ? setColors(['#ffffff']) : setColors(['#000000']);
     }, [isDark]);
-    return (
-        <div className={cn(['animate-accordion-up fixed bottom-0 right-0 h-10 w-10'])}>
-            <Lottie animationData={colorify(colors, animationData)} />
-        </div>
-    );
+    return <Lottie animationData={colorify(colors, animationData)} />;
 };
 
 export default Loader;

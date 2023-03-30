@@ -30,20 +30,17 @@
             "executor": "@nrwl/next:server",
             "defaultConfiguration": "development",
             "options": {
-                "buildTarget": "web:build",
-                "hostname": "0.0.0.0",
-                "port": 3000,
-                "dev": true
+                "buildTarget": "web:build:production",
+                "dev": false
             },
             "configurations": {
                 "development": {
                     "buildTarget": "web:build:development",
-                    "dev": true
+                    "dev": true,
+                    "hostname": "0.0.0.0",
+                    "port": 3000
                 },
-                "production": {
-                    "buildTarget": "web:build:production",
-                    "dev": false
-                }
+                "production": {}
             }
         },
         "export": {

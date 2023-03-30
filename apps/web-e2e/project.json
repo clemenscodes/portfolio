@@ -6,12 +6,15 @@
     "targets": {
         "e2e": {
             "executor": "@nrwl/cypress:cypress",
+            "defaultConfiguration": "production",
             "options": {
                 "cypressConfig": "apps/web-e2e/cypress.config.ts",
-                "devServerTarget": "web:serve:development",
                 "testingType": "e2e"
             },
             "configurations": {
+                "development": {
+                    "devServerTarget": "web:serve:development"
+                },
                 "production": {
                     "devServerTarget": "web:serve:production"
                 }

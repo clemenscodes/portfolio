@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
-        "dev": "xdg-open http://localhost:3000 && nx serve",
+        "dev": "xdg-open 'http://localhost:3000' && nx serve",
         "ci": "scripts/ci.sh",
         "full": "scripts/full.sh",
         "debug": "scripts/debug.sh",

@@ -3,8 +3,9 @@ import ModeToggle from '../mode-toggle/mode-toggle';
 import { cn } from '@styles';
 import { useEffect, useState } from 'react';
 
+type DefaultHeaderProps = JSX.IntrinsicElements['header'];
 /* eslint-disable-next-line */
-export interface HeaderProps {}
+export interface HeaderProps extends DefaultHeaderProps {}
 
 export const Header: React.FC<HeaderProps> = ({ ...props }) => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -34,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
                     <Logo />
                 </div>
                 <div className='my-auto flex w-1/2  items-center justify-end space-x-4'>
-                    <ModeToggle />
+                    <ModeToggle placeholder='ksfsj' />
                 </div>
             </nav>
         </header>

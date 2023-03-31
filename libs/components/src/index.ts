@@ -1,3 +1,4 @@
+export * from './lib/greeting/greeting';
 export * from './lib/toggle-theme/toggle-theme';
 export * from './lib/emoji/emoji';
 export * from './lib/logo/logo';

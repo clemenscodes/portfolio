@@ -16,6 +16,7 @@ export default {
                 dimmed: {
                     font: '#adbac7',
                     muted: '#768390',
+                    light: '#f4f4f4',
                     100: '#adbac7',
                     200: '#909dab',
                     300: '#768390',

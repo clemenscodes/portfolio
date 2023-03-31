@@ -1,11 +1,10 @@
 import { cn } from '@styles';
 import { IconMoon, IconSun } from '@tabler/icons-react';
-import { HTML } from '@types';
+import { type HTML } from '@types';
 import { forwardRef } from '@utils';
 import { useTheme } from 'next-themes';
 
-/* eslint-disable-next-line */
-export interface ToggleThemeProps extends HTML<'button'> {}
+export type ToggleThemeProps = HTML<'button'>;
 
 export const ToggleTheme = forwardRef<ToggleThemeProps>(({ className, ...props }, ref) => {
     const { setTheme, theme } = useTheme();

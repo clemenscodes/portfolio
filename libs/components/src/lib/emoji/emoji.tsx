@@ -1,5 +1,5 @@
 import { cn } from '@styles';
-import { HTML } from '@types';
+import { type HTML } from '@types';
 
 export interface EmojiProps extends HTML<'span'> {
     emoji: string;

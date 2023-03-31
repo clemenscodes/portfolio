@@ -1,5 +1,5 @@
 import { cn } from '@styles';
-import { HTML } from '@types';
+import { type HTML } from '@types';
 
 /* eslint-disable-next-line */
 export interface FooterProps extends HTML<'footer'> {}

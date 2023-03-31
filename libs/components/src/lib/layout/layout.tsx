@@ -1,10 +1,10 @@
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import { cn } from '@styles';
-import { PropsWithChildren } from 'react';
+import { type HTML } from '@types';
 
 /* eslint-disable-next-line */
-export interface LayoutProps extends PropsWithChildren {}
+export interface LayoutProps extends HTML<'div'> {}
 
 export const Layout: React.FC<LayoutProps> = ({ children, ...props }) => {
     return (

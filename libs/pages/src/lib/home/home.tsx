@@ -10,7 +10,7 @@ export const Home: NextPage<HomeProps> = ({ ...props }) => {
         <div className={cn(['flex flex-col items-center justify-center'])}>
             <h1>
                 Welcome to Home!{' '}
-                <Emoji className={cn('animate-wave inline-block transform')} emoji={'👋'} label={'waving-hand'} />
+                <Emoji className={cn('animate-wave inline-block')} emoji={'👋'} label={'waving-hand'} />
             </h1>
         </div>
     );

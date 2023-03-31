@@ -1,7 +1,7 @@
 import Logo from '../logo/logo';
 import ToggleTheme from '../toggle-theme/toggle-theme';
 import { cn } from '@styles';
-import { HTML } from '@types';
+import { type HTML } from '@types';
 import { useEffect, useState } from 'react';
 
 /* eslint-disable-next-line */

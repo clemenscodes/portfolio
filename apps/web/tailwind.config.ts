@@ -1,9 +1,9 @@
-const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
-const { join } = require('path');
-const baseConfig = require('../../tailwind-workspace-preset.js');
+import baseConfig from '../../tailwind.config';
+import { createGlobPatternsForDependencies } from '@nrwl/react/tailwind';
+import { join } from 'path';
+import type { Config } from 'tailwindcss';
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
     presets: [baseConfig],
     content: [
         join(__dirname, 'pages/**/*!(*.stories|*.spec).{ts,tsx,html}'),
@@ -29,4 +29,4 @@ module.exports = {
             },
         },
     },
-};
+} satisfies Config;

@@ -1,13 +1,16 @@
 import Logo from '../logo/logo';
 import ToggleTheme from '../toggle-theme/toggle-theme';
+import { sections } from '@config';
 import { cn } from '@styles';
-import { type HTML } from '@types';
+import { Section, type HTML } from '@types';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-export type HeaderProps = HTML<'header'>;
+export type HeaderProps = HTML<'header'> & {
+    sectionsProp?: Section[];
+};
 
-export const Header: React.FC<HeaderProps> = ({ ...props }) => {
+export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...props }) => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
 
@@ -37,11 +40,17 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
                 </div>
                 <div className='my-auto flex w-1/2  items-center justify-end space-x-4'>
                     <ul>
-                        <li>
-                            <Link scroll={true} href={`/#skills`}>
-                                Skills
-                            </Link>
-                        </li>
+                        {sections.map((section, index) => {
+                            return (
+                                section.display && (
+                                    <li key={index}>
+                                        <Link scroll={true} href={section.href}>
+                                            {section.name}
+                                        </Link>
+                                    </li>
+                                )
+                            );
+                        })}
                     </ul>
                     <ToggleTheme />
                 </div>

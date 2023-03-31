@@ -1,3 +1,7 @@
+export * from './lib/contact/contact';
+export * from './lib/projects/projects';
+export * from './lib/education/education';
+export * from './lib/skills/skills';
 export * from './lib/greeting/greeting';
 export * from './lib/toggle-theme/toggle-theme';
 export * from './lib/emoji/emoji';

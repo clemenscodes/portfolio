@@ -3,7 +3,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 
 export default {
     content: [],
-    plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+    plugins: [require('tailwindcss-animate')],
     darkMode: ['class'],
     theme: {
         extend: {
@@ -12,14 +12,6 @@ export default {
                 condensed: ['Roboto Condensed'],
             },
             keyframes: {
-                'accordion-down': {
-                    from: { height: '0' },
-                    to: { height: 'var(--radix-accordion-content-height)' },
-                },
-                'accordion-up': {
-                    from: { height: 'var(--radix-accordion-content-height)' },
-                    to: { height: '0' },
-                },
                 wave: {
                     '0%': { transform: 'rotate(0deg)' },
                     '10%': { transform: 'rotate(-10deg)' },
@@ -32,8 +24,6 @@ export default {
             },
             animation: {
                 wave: 'wave 1.8s ease-in-out infinite',
-                'accordion-down': 'accordion-down 0.2s ease-out',
-                'accordion-up': 'accordion-up 0.2s ease-out',
             },
         },
     },

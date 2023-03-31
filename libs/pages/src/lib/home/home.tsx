@@ -1,17 +1,18 @@
-import { Emoji } from '@components';
+import { Greeting, Skills, Education, Projects, Contact } from '@components';
 import { cn } from '@styles';
+import { type HTML } from '@types';
 import { NextPage } from 'next';
 
-/* eslint-disable-next-line */
-export interface HomeProps {}
+export type HomeProps = HTML<'div'>;
 
 export const Home: NextPage<HomeProps> = ({ ...props }) => {
     return (
-        <div className={cn(['flex flex-col items-center justify-center'])}>
-            <h1>
-                Welcome to Home!{' '}
-                <Emoji className={cn('animate-wave inline-block')} emoji={'👋'} label={'waving-hand'} />
-            </h1>
+        <div {...props} className={cn(['flex flex-col items-center justify-center'])}>
+            <Greeting />
+            <Skills />
+            <Education />
+            <Projects />
+            <Contact />
         </div>
     );
 };

@@ -1,3 +1,4 @@
+import { Emoji } from '@components';
 import { cn } from '@styles';
 import { NextPage } from 'next';
 
@@ -7,7 +8,9 @@ export interface HomeProps {}
 export const Home: NextPage<HomeProps> = ({ ...props }) => {
     return (
         <div className={cn(['flex flex-col items-center justify-center'])}>
-            <h1>Welcome to Home!</h1>
+            <h1>
+                Welcome to Home! <Emoji emoji={'👋'} label={''} />
+            </h1>
         </div>
     );
 };

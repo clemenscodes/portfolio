@@ -1,4 +1,5 @@
 export * from './lib/toggle-theme/toggle-theme';
+export * from './lib/emoji/emoji';
 export * from './lib/logo/logo';
 export * from './lib/loader/loader';
 export * from './lib/footer/footer';

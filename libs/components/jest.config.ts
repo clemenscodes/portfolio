@@ -6,4 +6,5 @@ export default {
         '^.+\\.[tj]sx?$': ['@swc/jest', { jsc: { transform: { react: { runtime: 'automatic' } } } }],
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+    setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
 };

@@ -1,9 +1,9 @@
-import Loader from './loader';
+import Animation from './animation';
 import { render } from '@testing-library/react';
 
-describe('Loader', () => {
+describe('Animation', () => {
     it('should render successfully', () => {
-        const { baseElement } = render(<Loader />);
+        const { baseElement } = render(<Animation />);
         expect(baseElement).toBeTruthy();
     });
 });

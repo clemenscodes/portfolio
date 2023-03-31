@@ -38,8 +38,12 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                 <div className='my-auto flex w-1/2 space-x-4'>
                     <Logo />
                 </div>
-                <div className='my-auto flex w-1/2  items-center justify-end space-x-4'>
-                    <ul>
+                <div className='my-auto flex w-1/2 items-center justify-end space-x-4'>
+                    <input className={cn('hidden')} type='checkbox' id='menu' />
+                    <label htmlFor='menu'>
+                        <span className={cn()}></span>
+                    </label>
+                    <ul className={cn('flex space-x-4')}>
                         {sections.map((section, index) => {
                             return (
                                 section.display && (

@@ -1,4 +1,4 @@
-import { Greeting, Skills, Education, Projects, Contact } from '@components';
+import { Greeting, Skills, Education, Projects, Contact, OpenSource } from '@components';
 import { cn } from '@styles';
 import { type HTML } from '@types';
 import { NextPage } from 'next';
@@ -11,6 +11,7 @@ export const Home: NextPage<HomeProps> = ({ ...props }) => {
             <Greeting />
             <Skills />
             <Education />
+            <OpenSource />
             <Projects />
             <Contact />
         </div>

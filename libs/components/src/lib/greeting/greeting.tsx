@@ -9,7 +9,7 @@ export type GreetingProps = HTML<'div'> & {
 
 export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ...props }) => {
     return (
-        <div {...props} className={cn([])}>
+        <div {...props} className={cn(['animate-in fade-in slide-in-from-bottom-10 duration-1000'])}>
             <h1>
                 {greetingProps.title}{' '}
                 <Emoji className='animate-wave inline-block' emoji={'👋'} label={'waving-hand-emoji'} />

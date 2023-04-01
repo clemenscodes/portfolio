@@ -38,13 +38,13 @@ export const skillsSection: Skills = {
     subTitle: 'Exploring bleeding tech',
     skills: [],
     softwareSkills: [],
-    href: '/#skills',
+    href: '#skills',
     name: 'Skills',
     display: true,
 };
 
 export const openSourceSection: OpenSource = {
-    href: '/#opensource',
+    href: '#opensource',
     name: 'Open Source',
     display: true,
     showGithubProfile: true,
@@ -67,7 +67,7 @@ const school: School = {
 export const educationSection: Education = {
     schools: [school],
     display: true,
-    href: '/#education',
+    href: '#education',
     name: 'Education',
 };
 
@@ -87,7 +87,7 @@ export const projectsSection: Projects = {
             ],
         },
     ],
-    href: '/#projects',
+    href: '#projects',
     name: 'Projects',
     display: true,
 };
@@ -97,7 +97,7 @@ export const contactSection: Contact = {
     subTitle: 'Discuss a project or just want to say hi? My Inbox is open for all.',
     number: '+49-1746590828',
     email: 'clemenscodes@gmail.com',
-    href: '/#contact',
+    href: '#contact',
     name: 'Contact',
     display: true,
 };

@@ -10,6 +10,7 @@ export default {
             fontFamily: {
                 sans: ['var(--font-sans)', ...fontFamily.sans],
                 condensed: ['Roboto Condensed'],
+                agustina: ['Agustina Regular'],
             },
             keyframes: {
                 wave: {

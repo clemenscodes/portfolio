@@ -10,7 +10,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, ...props }) => {
     return (
         <div className={cn('flex h-screen flex-col justify-between')}>
             <Header />
-            <main className={cn('mb-auto mt-16')}>{children}</main>
+            <main className={cn('mb-auto mt-20')}>{children}</main>
             <Footer />
         </div>
     );

@@ -1,4 +1,4 @@
-import RobotoCondensed from './robotoCondensed';
+import RobotoCondensed from './roboto-condensed';
 import { render } from '@testing-library/react';
 
 describe('Fonts', () => {

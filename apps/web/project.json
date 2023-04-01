@@ -10,15 +10,15 @@
             "defaultConfiguration": "production",
             "options": {
                 "root": "apps/web",
-                "outputPath": "dist/apps/web"
+                "outputPath": "dist/apps/web",
+                "assets": [
+                    {
+                        "input": "libs/components/assets",
+                        "glob": "**/*",
+                        "output": ""
+                    }
+                ]
             },
-            "assets": [
-                {
-                    "input": "libs/components/assets",
-                    "glob": "**/*",
-                    "output": ""
-                }
-            ],
             "configurations": {
                 "development": {
                     "outputPath": "apps/web"

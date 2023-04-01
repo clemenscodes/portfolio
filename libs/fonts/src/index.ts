@@ -1,1 +1,1 @@
-export * from './lib/robotoCondensed';
+export * from './lib/roboto-condensed/roboto-condensed';

@@ -27,6 +27,10 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
         return () => window.removeEventListener('scroll', handleScroll);
     }, [prevScrollPos, visible]);
 
+    const handleChecked = () => {
+        setIsChecked(!isChecked);
+    };
+
     return (
         <header
             {...props}
@@ -43,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                     <input
                         className={cn('hidden')}
                         checked={isChecked}
-                        onChange={() => setIsChecked(!isChecked)}
+                        onChange={handleChecked}
                         type='checkbox'
                         id='menu'
                     />
@@ -73,6 +77,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                 section.display && (
                                     <li
                                         key={index}
+                                        onClick={handleChecked}
                                         className={cn(
                                             'md:text-md dark:hover:bg-dimmed-800 hover:bg-dimmed-light flex flex-col items-end rounded p-2 text-sm md:inline-block',
                                             isChecked ? '' : 'hidden'

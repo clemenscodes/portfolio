@@ -9,9 +9,9 @@ export type LogoProps = Omit<LinkProps, 'href'> & {
 export const Logo = forwardRef<LogoProps>(({ name = greeting.name, ...props }, ref) => {
     return (
         <Link {...props} ref={ref} href={'/'}>
-            <span className=''> &lt;</span>
+            <span className='text-gray-200'> &lt;</span>
             <span className=''>{name}</span>
-            <span className=''>/&gt;</span>
+            <span className='text-gray-200'>/&gt;</span>
         </Link>
     );
 }, 'Logo');

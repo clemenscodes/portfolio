@@ -10,7 +10,7 @@ export type ButtonProps = HTML<'button'> & {
 
 export const Button: React.FC<ButtonProps> = ({ newTab, className, children, href, ...props }) => {
     return (
-        <button {...props} className={cn([className])}>
+        <button {...props} className={cn(['flex-1', className])}>
             {newTab ? (
                 <Link target='_blank' href={href}>
                     {children}

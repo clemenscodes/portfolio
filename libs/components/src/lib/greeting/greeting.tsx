@@ -15,16 +15,29 @@ export type GreetingProps = HTML<'div'> & {
 
 export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ...props }) => {
     return (
-        <div {...props} className={cn(['animate-in fade-in slide-in-from-bottom-10 duration-1000'])}>
-            <div className=''>
-                <div className=''>
-                    <h1>
+        <div
+            {...props}
+            className={cn(['mx-auto mt-8 w-[90%] px-5 py-3 animate-in fade-in slide-in-from-bottom-10 duration-1000'])}
+        >
+            <div className={cn('block md:flex')}>
+                <div className={cn('mb-8 flex-1')}>
+                    <h1
+                        className={cn(
+                            'flex-1 text-center text-3xl font-bold leading-tight md:text-left md:text-4xl xl:text-5xl 2xl:text-6xl'
+                        )}
+                    >
                         {greetingProps.title}{' '}
-                        <Emoji className='animate-wave inline-block' emoji={'👋'} label={'waving-hand-emoji'} />
+                        <Emoji className='inline-block animate-wave' emoji={'👋'} label={'waving-hand-emoji'} />
                     </h1>
-                    <p className=''>{greeting.subTitle}</p>
+                    <p
+                        className={cn(
+                            'text-dimmed-muted text- my-8 flex-1 text-center md:text-left md:text-3xl md:leading-10'
+                        )}
+                    >
+                        {greeting.subTitle}
+                    </p>
                     <SocialMedia />
-                    <div className=''>
+                    <div className={cn('mt-5 flex flex-1')}>
                         <Button newTab={true} href='#contact'>
                             Contact me
                         </Button>
@@ -33,13 +46,16 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
                         </Button>
                     </div>
                 </div>
-            </div>
-            <div className=''>
-                {illustration.animated ? (
-                    <Animation animationData={manWaving} />
-                ) : (
-                    <Image alt='man sitting on table' src={manOnTable} />
-                )}
+                <div className={cn('mb-8 flex-1 ')}>
+                    <div className={cn('h-full w-full')}>
+                        {' '}
+                        {illustration.animated ? (
+                            <Animation animationData={manWaving} />
+                        ) : (
+                            <Image className={cn('h-auto max-w-full')} alt='man sitting on table' src={manOnTable} />
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
     );

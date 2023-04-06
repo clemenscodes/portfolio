@@ -1,7 +1,7 @@
 {
     "root": true,
     "ignorePatterns": ["**/*"],
-    "plugins": ["@nrwl/nx", "tailwindcss"],
+    "plugins": ["@nrwl/nx"],
     "settings": {
         "tailwindcss": {
             "callees": ["cn"]
@@ -11,8 +11,6 @@
         {
             "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
             "rules": {
-                "tailwindcss/no-custom-classname": "off",
-                "tailwindcss/classnames-order": "error",
                 "@nrwl/nx/enforce-module-boundaries": [
                     "error",
                     {

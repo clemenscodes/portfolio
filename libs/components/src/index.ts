@@ -1,3 +1,5 @@
+export * from './lib/button/button';
+export * from './lib/social-media/social-media';
 export * from './lib/animation/animation';
 export * from './lib/open-source/open-source';
 export * from './lib/contact/contact';

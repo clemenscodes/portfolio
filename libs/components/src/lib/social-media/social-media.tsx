@@ -99,8 +99,8 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ linksProp = socialMedi
                     imageProps={{
                         src: linksProp.linkedIn.src,
                         alt: 'LinkedIn Logo',
-                        width: 40,
-                        height: 40,
+                        width: 45,
+                        height: 45,
                     }}
                 />
             )}

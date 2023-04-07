@@ -18,7 +18,7 @@ export const SocialMediaIconButton: React.FC<SocialMediaIconButtonProps> = ({
         <button
             {...props}
             className={cn(
-                'flex h-12 w-12 items-center justify-center rounded-full transition-all duration-200 ease-in hover:scale-150',
+                'flex h-12 w-12 items-center justify-center rounded-full transition-all duration-200 ease-in sm:hover:scale-125 md:hover:scale-150',
                 className
             )}
         >

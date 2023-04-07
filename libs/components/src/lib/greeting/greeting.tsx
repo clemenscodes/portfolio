@@ -17,10 +17,10 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
     return (
         <div
             {...props}
-            className={cn(['mx-auto mt-8 w-[90%] px-5 py-3 animate-in fade-in slide-in-from-bottom-10 duration-1000'])}
+            className={cn(['mx-auto w-[90%] px-5 py-3 animate-in fade-in slide-in-from-bottom-10 duration-1000'])}
         >
             <div className={cn('block md:flex')}>
-                <div className={cn('mb-8 flex-1')}>
+                <div className={cn('flex-1')}>
                     <h1
                         className={cn(
                             'my-8 flex-1 text-center text-3xl font-bold leading-tight md:text-left md:text-4xl xl:text-5xl 2xl:text-6xl'
@@ -37,7 +37,7 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
                         {greeting.subTitle}
                     </p>
                     <SocialMedia className='my-8' />
-                    <div className={cn('my-8 flex flex-1')}>
+                    <div className={cn('my-10 flex max-w-full space-x-12 sm:justify-around md:justify-start')}>
                         <Button newTab={true} href='#contact'>
                             Contact me
                         </Button>

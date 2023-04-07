@@ -1,3 +1,4 @@
+export * from './lib/social-media-icon-button/social-media-icon-button';
 export * from './lib/button/button';
 export * from './lib/social-media/social-media';
 export * from './lib/animation/animation';

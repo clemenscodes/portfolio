@@ -1,10 +1,15 @@
 import { Display } from './display';
 
+export interface SocialMediaLink {
+    href: URL | string;
+    src: string;
+}
+
 export interface SocialMediaLinks extends Display {
-    github?: URL;
-    linkedIn?: URL;
-    twitter?: URL;
-    gitlab?: URL;
-    stackOverflow?: URL;
-    gmail?: string;
+    github?: SocialMediaLink;
+    linkedIn?: SocialMediaLink;
+    twitter?: SocialMediaLink;
+    gitlab?: SocialMediaLink;
+    stackOverflow?: SocialMediaLink;
+    gmail?: SocialMediaLink;
 }

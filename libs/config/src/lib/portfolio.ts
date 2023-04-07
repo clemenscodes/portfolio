@@ -24,12 +24,30 @@ export const greeting: IGreeting = {
 };
 
 export const socialMediaLinks: SocialMediaLinks = {
-    github: new URL('https://github.com/clemenscodes'),
-    linkedIn: new URL('https://linkedin.com/in/clemens-horn/'),
-    twitter: new URL('https://twitter.com/clemens-horn/'),
-    gitlab: new URL('https://gitlab.com/clemenshorn'),
-    stackOverflow: new URL('https://stackoverflow.com/users/13416466/clemens'),
-    gmail: 'clemenscodes@gmail.com',
+    github: {
+        href: new URL('https://github.com/clemenscodes'),
+        src: '../../../svg/github-mark-white.svg',
+    },
+    linkedIn: {
+        href: new URL('https://linkedin.com/in/clemens-horn/'),
+        src: '../../../svg/linkedin.svg',
+    },
+    twitter: {
+        href: new URL('https://twitter.com/clemens-horn/'),
+        src: '../../../svg/twitter.svg',
+    },
+    gitlab: {
+        href: new URL('https://gitlab.com/clemenshorn'),
+        src: '../../../svg/gitlab.svg',
+    },
+    stackOverflow: {
+        href: new URL('https://stackoverflow.com/users/13416466/clemens'),
+        src: '../../../svg/stackoverflow.svg',
+    },
+    gmail: {
+        href: 'clemenscodes@gmail.com',
+        src: '../../../svg/gmail.svg',
+    },
     display: true,
 };
 

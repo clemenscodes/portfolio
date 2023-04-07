@@ -3,10 +3,10 @@ import { Section } from './section';
 
 export type Skill = string;
 export interface SoftwareSkill {
-    skill: string;
+    name: string;
 }
 
-export interface Skills extends Section, Description {
+export interface ISkills extends Section, Description {
     skills: Skill[];
     softwareSkills: SoftwareSkill[];
 }

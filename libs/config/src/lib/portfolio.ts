@@ -3,7 +3,7 @@ import {
     Illustration,
     Education,
     Section,
-    Skills,
+    ISkills,
     OpenSource,
     Projects,
     SocialMediaLinks,
@@ -18,7 +18,7 @@ export const illustration: Illustration = {
 export const greeting: IGreeting = {
     name: 'Clemens Horn',
     title: "Hi all, I'm Clemens",
-    subTitle: 'A Full Stack Developer who loves building robust software with Rust and TypeScript.',
+    subTitle: 'A developer who loves building robust software with Rust and TypeScript.',
     resumeLink: new URL('https://drive.google.com/file/d/1UaHHePEB-NXinMw6R_Z5G06QaBXigYzS/view?usp=sharin'),
     display: true,
 };
@@ -51,11 +51,116 @@ export const socialMediaLinks: SocialMediaLinks = {
     display: true,
 };
 
-export const skillsSection: Skills = {
+export const skillsSection: ISkills = {
     title: 'What I do',
     subTitle: 'Exploring bleeding tech',
-    skills: [],
-    softwareSkills: [],
+    skills: [
+        'Progressive Web Applications ( PWA ) in normal and SPA Stacks',
+        'Integration of third party services such as Firebase / Google Cloud / Digital Ocean',
+        'Development of CLI utilities',
+        'Operation of a Cardano Stakepool (Soon)',
+    ],
+    softwareSkills: [
+        {
+            name: 'html',
+        },
+        {
+            name: 'css',
+        },
+        {
+            name: 'tailwind',
+        },
+        {
+            name: 'typescript',
+        },
+        {
+            name: 'react',
+        },
+        {
+            name: 'next.js',
+        },
+        {
+            name: 'angular',
+        },
+        {
+            name: 'jest',
+        },
+        {
+            name: 'cypress',
+        },
+        {
+            name: 'docker',
+        },
+        {
+            name: 'kubernetes',
+        },
+        {
+            name: 'terraform',
+        },
+        {
+            name: 'git',
+        },
+        {
+            name: 'github actions',
+        },
+        {
+            name: 'graphql',
+        },
+        {
+            name: 'postgres',
+        },
+        {
+            name: 'prisma',
+        },
+        {
+            name: 'hasura',
+        },
+        {
+            name: 'nestjs',
+        },
+        {
+            name: 'node.js',
+        },
+        {
+            name: 'express.js',
+        },
+        {
+            name: 'redis',
+        },
+        {
+            name: 'rust',
+        },
+        {
+            name: 'storybook',
+        },
+        {
+            name: 'ipfs',
+        },
+        {
+            name: 'linux',
+        },
+        {
+            name: 'gcloud',
+        },
+        {
+            name: 'firebase',
+        },
+        {
+            name: 'cardano',
+        },
+        {
+            name: 'mongodb',
+        },
+        {
+            name: 'nx',
+        },
+        {
+            name: 'c',
+        },
+        {
+            name: 'bash',
+        },
+    ],
     href: '#skills',
     name: 'Skills',
     display: true,

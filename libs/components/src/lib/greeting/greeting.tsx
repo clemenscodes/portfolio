@@ -17,7 +17,9 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
     return (
         <div
             {...props}
-            className={cn(['mx-auto w-[90%] px-5 py-3 animate-in fade-in slide-in-from-bottom-10 duration-1000'])}
+            className={cn([
+                'mx-auto w-[90%] px-5 py-3 animate-in fade-in slide-in-from-bottom-10 duration-1000 md:my-16',
+            ])}
         >
             <div className={cn('block md:flex')}>
                 <div className={cn('flex-1')}>

@@ -7,4 +7,6 @@ export default {
         '^.+\\.svg$': 'jest-transform-stub',
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+    setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
 };
+

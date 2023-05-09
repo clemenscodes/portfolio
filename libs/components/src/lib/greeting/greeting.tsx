@@ -14,6 +14,9 @@ export type GreetingProps = HTML<'div'> & {
 };
 
 export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ...props }) => {
+    for (let index = 0; index < 100; index++) {
+        console.log(index);
+    }
     return (
         <div
             {...props}

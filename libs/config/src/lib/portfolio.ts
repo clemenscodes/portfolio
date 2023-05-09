@@ -19,7 +19,7 @@ export const greeting: IGreeting = {
     name: 'Clemens Horn',
     title: "Hi all, I'm Clemens",
     subTitle: 'A developer who loves building robust software with Rust and TypeScript.',
-    resumeLink: new URL('https://drive.google.com/file/d/1UaHHePEB-NXinMw6R_Z5G06QaBXigYzS/view?usp=sharin'),
+    resumeLink: new URL('https://drive.google.com/file/d/12J1mhDIUc5aN2EIIokasqajRS3h_br2h/view?usp=share_link'),
     display: true,
 };
 
@@ -58,7 +58,6 @@ export const skillsSection: ISkills = {
         'Progressive Web Applications ( PWA ) in normal and SPA Stacks',
         'Integration of third party services such as Firebase / Google Cloud / Digital Ocean',
         'Development of CLI utilities',
-        'Operation of a Cardano Stakepool (Soon)',
     ],
     softwareSkills: [
         {

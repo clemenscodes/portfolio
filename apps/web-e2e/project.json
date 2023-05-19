@@ -5,20 +5,23 @@
     "projectType": "application",
     "targets": {
         "e2e": {
-            "executor": "@nrwl/cypress:cypress",
+            "executor": "@nx/cypress:cypress",
+            "defaultConfiguration": "production",
             "options": {
                 "cypressConfig": "apps/web-e2e/cypress.config.ts",
-                "devServerTarget": "web:serve:development",
                 "testingType": "e2e"
             },
             "configurations": {
+                "development": {
+                    "devServerTarget": "web:serve:development"
+                },
                 "production": {
                     "devServerTarget": "web:serve:production"
                 }
             }
         },
         "lint": {
-            "executor": "@nrwl/linter:eslint",
+            "executor": "@nx/linter:eslint",
             "outputs": ["{options.outputFile}"],
             "options": {
                 "lintFilePatterns": ["apps/web-e2e/**/*.{js,ts}"]

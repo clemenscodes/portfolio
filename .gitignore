@@ -21,6 +21,7 @@ apps/web/public/*
 !apps/web/public/favicon.ico
 !apps/web/public/manifest.json
 !apps/web/public/robots.txt
+!apps/web/public/.gitkeep
 **/tmp
 **/.env**
 !**/.env.skeleton

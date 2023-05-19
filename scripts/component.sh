@@ -20,11 +20,11 @@ file="$path.tsx"
 css="$path.module.css"
 tsx="$lib/$file"
 
-nx generate @nrwl/next:component "$component" --directory="$directory" --project="$project" --export -s=css
+nx generate @nx/next:component "$component" --directory="$directory" --project="$project" --export -s=css
 rm "$lib/$css"
 sed -i '1d' "$lib/$file"
 sed -i 's/className={[^\}]*}//g' "$lib/$file"
-nx generate @nrwl/react:component-story --componentPath="$file" --project="$project"
+nx generate @nx/react:component-story --componentPath="$file" --project="$project"
 nx format
 function_name=$(grep -m 1 -oP '(?<=export function )\w+' "$tsx")
 props_interface=$(grep -m 1 -oP '(?<=interface )\w+(?=\s*\{\s*\})' "$tsx")

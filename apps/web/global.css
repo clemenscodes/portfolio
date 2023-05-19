@@ -2,12 +2,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-html,
-body {
-    padding: 0;
-    margin: 0;
+@font-face {
+    font-family: 'Agustina Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Agustina Regular'), url('/fonts/Agustina.woff') format('woff');
+    font-display: swap;
 }
 
-* {
-    box-sizing: border-box;
+.lottie * {
+    @apply my-auto h-full w-full overflow-hidden;
 }

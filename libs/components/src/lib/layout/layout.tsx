@@ -1,16 +1,16 @@
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import { cn } from '@styles';
-import { PropsWithChildren } from 'react';
+import { type HTML } from '@types';
 
 /* eslint-disable-next-line */
-export interface LayoutProps extends PropsWithChildren {}
+export interface LayoutProps extends HTML<'div'> {}
 
 export const Layout: React.FC<LayoutProps> = ({ children, ...props }) => {
     return (
-        <div className={cn('flex h-screen flex-col justify-between')}>
+        <div className={cn('flex h-screen flex-col justify-between overflow-x-hidden')}>
             <Header />
-            <main className={cn('mb-auto')}>{children}</main>
+            <main className={cn('mx-6 mb-auto md:mx-12 xl:mx-24')}>{children}</main>
             <Footer />
         </div>
     );

@@ -3,8 +3,9 @@ import ToggleTheme from '../toggle-theme/toggle-theme';
 import { sections } from '@config';
 import { cn } from '@styles';
 import { Section, type HTML } from '@types';
+import { scrollToComponent } from '@utils';
 import Link from 'next/link';
-import { MouseEventHandler, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export type HeaderProps = HTML<'header'> & {
     sectionsProp?: Section[];
@@ -29,20 +30,6 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
 
     const handleChecked = () => {
         setIsChecked(!isChecked);
-    };
-
-    const scrollToComponent: MouseEventHandler<HTMLAnchorElement> = (e) => {
-        e.preventDefault();
-        const href = e.currentTarget.getAttribute('href');
-        if (!href) {
-            throw Error('href attribute does not exist');
-        }
-        const id = href.replace('/#', '');
-        const component = document.getElementById(id);
-        if (!component) {
-            throw Error(`Element with id ${id} does not exist`);
-        }
-        component.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (

@@ -35,7 +35,7 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
                     </p>
                     <SocialMedia className='my-8' />
                     <div className={cn('my-10 flex justify-around xl:w-3/4')}>
-                        <Button className='p-3' newTab={true} href='#contact'>
+                        <Button className='p-3' newTab={false} href='#contact'>
                             Contact me
                         </Button>
                         <Button className='p-3' newTab={true} href={greeting.resumeLink}>

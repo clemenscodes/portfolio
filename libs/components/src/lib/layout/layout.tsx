@@ -8,9 +8,9 @@ export interface LayoutProps extends HTML<'div'> {}
 
 export const Layout: React.FC<LayoutProps> = ({ children, ...props }) => {
     return (
-        <div className={cn('flex h-screen flex-col justify-between')}>
+        <div className={cn('flex h-screen flex-col justify-between overflow-x-hidden')}>
             <Header />
-            <main className={cn('mb-auto mt-20')}>{children}</main>
+            <main className={cn('mx-6 mb-auto md:mx-12 xl:mx-24')}>{children}</main>
             <Footer />
         </div>
     );

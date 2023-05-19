@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
         <header
             {...props}
             className={cn([
-                'dark:bg-dimmed-900 fixed left-0 top-0 z-10 h-20 w-full transform bg-white shadow-md transition-transform duration-300',
+                'dark:bg-dimmed-900 left-0 top-0 z-10 h-16 w-full transform bg-white shadow-md transition-transform duration-300',
                 visible ? '' : '-translate-y-full',
             ])}
         >

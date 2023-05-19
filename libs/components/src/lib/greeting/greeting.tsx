@@ -15,12 +15,7 @@ export type GreetingProps = HTML<'div'> & {
 
 export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ...props }) => {
     return (
-        <div
-            {...props}
-            className={cn([
-                'mx-auto w-[90%] px-5 py-3 animate-in fade-in slide-in-from-bottom-10 duration-1000 md:my-16',
-            ])}
-        >
+        <div {...props} className={cn(['animate-in fade-in slide-in-from-bottom-10 duration-1000 md:my-16'])}>
             <div className={cn('block md:flex')}>
                 <div className={cn('flex-1')}>
                     <h1
@@ -33,17 +28,17 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
                     </h1>
                     <p
                         className={cn(
-                            'text-dimmed-muted text-dimmed-muted my-8 flex-1 text-center md:text-left md:text-3xl md:leading-10'
+                            'text-dimmed-muted text-dimmed-muted my-8 flex-1 text-center text-2xl md:text-left md:text-3xl md:leading-10'
                         )}
                     >
                         {greeting.subTitle}
                     </p>
                     <SocialMedia className='my-8' />
-                    <div className={cn('my-10 flex max-w-full space-x-12 sm:justify-around md:justify-start')}>
-                        <Button newTab={true} href='#contact'>
+                    <div className={cn('my-10 flex justify-around xl:w-3/4')}>
+                        <Button className='p-3' newTab={true} href='#contact'>
                             Contact me
                         </Button>
-                        <Button newTab={true} href={greeting.resumeLink}>
+                        <Button className='p-3' newTab={true} href={greeting.resumeLink}>
                             See my resume
                         </Button>
                     </div>

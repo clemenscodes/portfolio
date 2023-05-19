@@ -19,7 +19,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ linksProp = socialMedi
         }
     }, [isDark, linksProp.github]);
     return (
-        <div {...props} className={cn(['flex items-center justify-between space-x-2 md:w-2/3', className])}>
+        <div {...props} className={cn(['flex items-center justify-between xl:w-3/4', className])}>
             {linksProp.github && (
                 <SocialMediaIconButton
                     className={cn('')}

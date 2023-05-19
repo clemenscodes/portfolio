@@ -1,5 +1,5 @@
 import { RouterContext } from 'next/dist/shared/lib/router-context';
-import '../global.css';
+import '../web/global.css';
 
 export const parameters = {
     nextRouter: {

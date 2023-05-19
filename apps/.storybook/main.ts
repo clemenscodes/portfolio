@@ -3,14 +3,16 @@ import type { StorybookConfig } from '@storybook/nextjs';
 const config: StorybookConfig = {
     core: { disableTelemetry: true },
     stories: [
-        '../../../libs/components/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-        '../../../libs/pages/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+        '../../libs/components/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+        '../../libs/pages/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     ],
     addons: ['@storybook/addon-essentials', 'storybook-tailwind-dark-mode'],
-    staticDirs: ['../public'],
+    staticDirs: ['../web/public'],
     framework: {
         name: '@storybook/nextjs',
-        options: {},
+        options: {
+            nextConfigPath: '../web/next.config.js',
+        },
     },
     docs: { autodocs: true },
     features: { storyStoreV7: true, buildStoriesJson: true },

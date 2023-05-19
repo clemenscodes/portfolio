@@ -1,10 +1,11 @@
 import { rootMain } from '../../.storybook/main';
-import type { StorybookConfig, Options } from '@storybook/core-common';
-import path from 'path';
+import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
     ...rootMain,
-    core: { ...rootMain.core, builder: 'webpack5' },
+    core: {
+        ...rootMain.core,
+    },
     stories: [
         ...rootMain.stories,
         '../../libs/components/**/*.stories.@(js|jsx|ts|tsx|mdx)',
@@ -13,24 +14,29 @@ const config: StorybookConfig = {
     staticDirs: ['../web/public'],
     addons: [
         ...(rootMain.addons || []),
-        '@nrwl/react/plugins/storybook',
+        '@nx/react/plugins/storybook',
         'storybook-addon-swc',
         'storybook-tailwind-dark-mode',
         {
             name: 'storybook-addon-next',
             options: {
-                nextConfigPath: path.resolve(__dirname, '../web/next.config.js'),
+                nextConfigPath: '../web/next.config.js',
             },
         },
     ],
-    webpackFinal: async (config, { configType }: Options) => {
+    webpackFinal: async (config, { configType }) => {
         if (rootMain.webpackFinal) {
             config = await rootMain.webpackFinal(config, {
                 configType,
-            } as Options);
+                packageJson: undefined,
+                configDir: '',
+                presets: undefined,
+            });
         }
         return config;
     },
+    docs: {
+        autodocs: true,
+    },
 };
-
 module.exports = config;

@@ -1,8 +1,9 @@
-import type { StorybookConfig } from '@storybook/core-common';
+import type { StorybookConfig } from '@storybook/nextjs';
 
 export const rootMain: StorybookConfig = {
+    framework: '@storybook/nextjs',
     core: {
-        builder: 'webpack5',
+        builder: '@storybook/builder-webpack5',
         disableTelemetry: true,
     },
     stories: [],
@@ -13,4 +14,12 @@ export const rootMain: StorybookConfig = {
     //   // Return the altered config
     //   return config;
     // },
+};
+
+export const framework = {
+    name: '@storybook/react-webpack5',
+    options: {},
+};
+export const docs = {
+    autodocs: true,
 };

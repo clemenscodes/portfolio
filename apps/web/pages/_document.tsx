@@ -8,8 +8,9 @@ class MyDocument extends Document {
     }
     render() {
         return (
-            <Html lang='en'>
+            <Html lang='en' translate='no'>
                 <Head>
+                    <meta name='google' content='notranslate' />
                     <meta charSet='UTF-8' />
                     <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
                     <meta name='keywords' content={site.keywords} />

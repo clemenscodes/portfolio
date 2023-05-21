@@ -12,8 +12,8 @@ const App: React.FC<AppProps> = ({ Component, ...pageProps }) => {
     return (
         <>
             <Head>
-                <title>{site.title}</title>
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
+                <title>{site.title}</title>
             </Head>
             <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
                 <FontProvider>

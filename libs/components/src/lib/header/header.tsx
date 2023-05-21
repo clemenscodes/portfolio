@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                         key={index}
                                         onClick={handleChecked}
                                         className={cn(
-                                            'dark:hover:bg-dimmed-800 dark:bg-dimmed-900 hover:bg-dimmed-light md:text-md flex flex-col items-end rounded bg-white p-4 text-sm md:inline-block xl:text-xl',
+                                            'dark:hover:bg-dimmed-800 dark:bg-dimmed-900 hover:bg-dimmed-light md:text-md flex flex-col items-end rounded bg-white p-3 text-sm md:inline-block xl:text-xl',
                                             isChecked ? '' : 'hidden'
                                         )}
                                     >
@@ -93,7 +93,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                         })}
                         <li
                             className={cn(
-                                'dark:bg-dimmed-900 flex flex-col items-end bg-white p-4 md:inline-block',
+                                'dark:bg-dimmed-900 flex flex-col items-end bg-white p-3 md:inline-block',
                                 isChecked ? '' : 'hidden'
                             )}
                         >

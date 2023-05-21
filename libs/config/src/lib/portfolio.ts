@@ -62,102 +62,135 @@ export const skillsSection: ISkills = {
     softwareSkills: [
         {
             name: 'html',
+            src: '../../../svg/html.svg',
         },
         {
             name: 'css',
+            src: '../../../svg/css.svg',
         },
         {
             name: 'tailwind',
+            src: '../../../svg/tailwindcss.svg',
         },
         {
             name: 'typescript',
+            src: '../../../svg/typescript.svg',
         },
         {
             name: 'react',
+            src: '../../../svg/reactjs.svg',
         },
         {
-            name: 'next.js',
+            name: 'next',
+            src: '../../../svg/nextjs.svg',
         },
         {
             name: 'angular',
+            src: '../../../svg/angular.svg',
         },
         {
             name: 'jest',
+            src: '../../../svg/jest.svg',
         },
         {
             name: 'cypress',
+            src: '../../../svg/cypress.svg',
         },
         {
             name: 'docker',
+            src: '../../../svg/docker.svg',
         },
         {
             name: 'kubernetes',
+            src: '../../../svg/kubernetes.svg',
         },
         {
             name: 'terraform',
+            src: '../../../svg/terraform.svg',
         },
         {
             name: 'git',
+            src: '../../../svg/git.svg',
         },
         {
             name: 'github actions',
+            src: '../../../svg/github-actions.svg',
         },
         {
             name: 'graphql',
+            src: '../../../svg/graphql.svg',
         },
         {
             name: 'postgres',
+            src: '../../../svg/postgresql.svg',
         },
         {
             name: 'prisma',
+            src: '../../../svg/prisma.svg',
         },
         {
             name: 'hasura',
+            src: '../../../svg/hasura.svg',
         },
         {
-            name: 'nestjs',
+            name: 'nest',
+            src: '../../../svg/nestjs.svg',
         },
         {
-            name: 'node.js',
+            name: 'node',
+            src: '../../../svg/nodejs.svg',
         },
         {
-            name: 'express.js',
+            name: 'express',
+            src: '../../../svg/expressjs.svg',
         },
         {
             name: 'redis',
+            src: '../../../svg/redis.svg',
         },
         {
             name: 'rust',
+            src: '../../../svg/rust.svg',
         },
         {
             name: 'storybook',
+            src: '../../../svg/storybook.svg',
         },
         {
             name: 'ipfs',
+            src: '../../../svg/ipfs.svg',
         },
         {
             name: 'linux',
+            src: '../../../svg/arch.svg',
         },
         {
             name: 'gcloud',
+            src: '../../../svg/gcloud.svg',
         },
         {
             name: 'firebase',
+            src: '../../../svg/firebase.svg',
         },
         {
             name: 'cardano',
+            src: '../../../svg/cardano.svg',
         },
         {
             name: 'mongodb',
+            src: '../../../svg/mongodb.svg',
         },
         {
             name: 'nx',
+            src: '../../../svg/nx.svg',
         },
         {
             name: 'c',
+            src: '../../../svg/c.svg',
         },
         {
             name: 'bash',
+            src: '../../../svg/bash.svg',
         },
     ],
     href: '#skills',

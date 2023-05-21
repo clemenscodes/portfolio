@@ -1,5 +1,6 @@
 import { cn } from '@styles';
 import { type HTML } from '@types';
+import { scrollToComponent } from '@utils';
 import Link from 'next/link';
 import { UrlObject } from 'url';
 
@@ -22,7 +23,9 @@ export const Button: React.FC<ButtonProps> = ({ newTab, className, children, hre
                     {children}
                 </Link>
             ) : (
-                <Link href={href}>{children}</Link>
+                <Link scroll={true} href={href} onClick={scrollToComponent}>
+                    {children}
+                </Link>
             )}
         </button>
     );

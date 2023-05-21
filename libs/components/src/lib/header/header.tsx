@@ -3,8 +3,9 @@ import ToggleTheme from '../toggle-theme/toggle-theme';
 import { sections } from '@config';
 import { cn } from '@styles';
 import { Section, type HTML } from '@types';
+import { scrollToComponent } from '@utils';
 import Link from 'next/link';
-import { MouseEventHandler, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export type HeaderProps = HTML<'header'> & {
     sectionsProp?: Section[];
@@ -31,33 +32,19 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
         setIsChecked(!isChecked);
     };
 
-    const scrollToComponent: MouseEventHandler<HTMLAnchorElement> = (e) => {
-        e.preventDefault();
-        const href = e.currentTarget.getAttribute('href');
-        if (!href) {
-            throw Error('href attribute does not exist');
-        }
-        const id = href.replace('/#', '');
-        const component = document.getElementById(id);
-        if (!component) {
-            throw Error(`Element with id ${id} does not exist`);
-        }
-        component.scrollIntoView({ behavior: 'smooth' });
-    };
-
     return (
         <header
             {...props}
             className={cn([
-                'dark:bg-dimmed-900 left-0 top-0 z-10 h-16 w-full transform bg-white shadow-md transition-transform duration-300',
+                'dark:bg-dimmed-900 fixed left-0 right-0 top-0 z-10 h-16 w-screen transform bg-white shadow-md transition-transform duration-300',
                 visible ? '' : '-translate-y-full',
             ])}
         >
-            <nav className={cn('relative mx-4 flex h-full')}>
+            <nav className={cn('mx-4 flex h-full')}>
                 <div className='absolute my-auto flex h-full w-2/5 transform items-center'>
                     <Logo />
                 </div>
-                <div className='my-auto flex w-full flex-col items-end justify-end space-x-4 md:flex-row md:items-center'>
+                <div className='my-auto flex w-screen flex-col items-end justify-end space-x-4 md:flex-row md:items-center'>
                     <input
                         className={cn('hidden')}
                         checked={isChecked}
@@ -83,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                     </label>
                     <ul
                         className={cn(
-                            'max-h-none list-none items-center justify-center overflow-hidden md:flex md:space-x-2'
+                            'dark:bg-dimmed-900 absolute right-0 top-16 max-h-none list-none items-center justify-center rounded md:static md:flex md:space-x-2'
                         )}
                     >
                         {sections.map((section, index) => {
@@ -93,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                         key={index}
                                         onClick={handleChecked}
                                         className={cn(
-                                            'dark:hover:bg-dimmed-800 dark:bg-dimmed-900 hover:bg-dimmed-light md:text-md flex flex-col items-end rounded bg-white p-4 text-sm md:inline-block xl:text-xl',
+                                            'dark:hover:bg-dimmed-800 dark:bg-dimmed-900 hover:bg-dimmed-light md:text-md flex flex-col items-end rounded bg-white p-3 text-sm md:inline-block xl:text-xl',
                                             isChecked ? '' : 'hidden'
                                         )}
                                     >
@@ -106,7 +93,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                         })}
                         <li
                             className={cn(
-                                'dark:bg-dimmed-900 flex flex-col items-end bg-white p-4 md:inline-block',
+                                'dark:bg-dimmed-900 flex flex-col items-end bg-white pt-1 md:inline-block',
                                 isChecked ? '' : 'hidden'
                             )}
                         >

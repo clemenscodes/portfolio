@@ -24,30 +24,23 @@ export const greeting: IGreeting = {
 };
 
 export const socialMediaLinks: SocialMediaLinks = {
-    github: {
-        href: new URL('https://github.com/clemenscodes'),
-        src: '../../../svg/github-mark-white.svg',
-    },
-    linkedIn: {
-        href: new URL('https://linkedin.com/in/clemens-horn/'),
-        src: '../../../svg/linkedin.svg',
-    },
-    twitter: {
-        href: new URL('https://twitter.com/clemens-horn/'),
-        src: '../../../svg/twitter.svg',
-    },
-    gitlab: {
-        href: new URL('https://gitlab.com/clemenshorn'),
-        src: '../../../svg/gitlab.svg',
-    },
-    stackOverflow: {
-        href: new URL('https://stackoverflow.com/users/13416466/clemens'),
-        src: '../../../svg/stackoverflow.svg',
-    },
-    gmail: {
-        href: 'clemenscodes@gmail.com',
-        src: '../../../svg/gmail.svg',
-    },
+    links: [
+        {
+            name: 'GitHub',
+            href: new URL('https://github.com/clemenscodes'),
+            src: '../../../svg/github-mark-white.svg',
+        },
+        {
+            name: 'LinkedIn',
+            href: new URL('https://linkedin.com/in/clemens-horn/'),
+            src: '../../../svg/linkedin.svg',
+        },
+        {
+            name: 'Gmail',
+            href: 'mailto:clemenscodes@gmail.com',
+            src: '../../../svg/gmail.svg',
+        },
+    ],
     display: true,
 };
 

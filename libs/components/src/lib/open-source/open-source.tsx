@@ -1,11 +1,10 @@
 import { cn } from '@styles';
 
-/* eslint-disable-next-line */
-export interface OpenSourceProps {}
+export type OpenSourceProps = React.ComponentPropsWithoutRef<'section'>;
 
 export const OpenSource: React.FC<OpenSourceProps> = ({ ...props }) => {
     return (
-        <section className={cn([])} id='opensource'>
+        <section className={cn([])} id='opensource' {...props}>
             <h1>Welcome to OpenSource!</h1>
         </section>
     );

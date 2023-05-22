@@ -10,9 +10,7 @@ describe('SocialMediaIconButton', () => {
                 }}
                 imageProps={{
                     src: '/mock',
-                    width: 200,
-                    height: 200,
-                    alt: '',
+                    alt: 'Mock Logo',
                 }}
             />
         );

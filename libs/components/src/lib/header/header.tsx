@@ -2,12 +2,12 @@ import Logo from '../logo/logo';
 import ToggleTheme from '../toggle-theme/toggle-theme';
 import { sections } from '@config';
 import { cn } from '@styles';
-import { Section, type HTML } from '@types';
+import { Section } from '@types';
 import { scrollToComponent } from '@utils';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
-export type HeaderProps = HTML<'header'> & {
+export type HeaderProps = React.ComponentPropsWithoutRef<'header'> & {
     sectionsProp?: Section[];
 };
 
@@ -91,7 +91,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                     </label>
                     <ul
                         className={cn(
-                            'absolute right-0 top-1/2 max-h-none translate-y-1/2 list-none items-center justify-center rounded bg-white shadow-full transition-transform dark:bg-dimmed-900 md:static md:flex md:translate-y-0 md:space-x-2 md:shadow-none',
+                            'absolute right-0 top-3/4 max-h-none translate-y-3/4 list-none items-center justify-center rounded bg-white shadow-full transition-transform dark:bg-dimmed-900 md:static md:flex md:translate-y-0 md:space-x-2 md:shadow-none',
                             isChecked
                                 ? 'opacity-100 animate-in fade-in slide-in-from-right md:animate-none'
                                 : 'opacity-0 animate-out fade-out slide-out-to-right ease-out md:animate-none md:opacity-100'
@@ -104,7 +104,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                         key={index}
                                         onClick={handleChecked}
                                         className={cn(
-                                            'md:text-md flex flex-col items-end rounded p-3 text-sm transition-transform hover:bg-gray-200 dark:bg-dimmed-900 dark:hover:bg-dimmed-800 md:inline-block xl:text-xl'
+                                            'md:text-md flex flex-col items-center rounded p-3 text-sm transition-transform hover:bg-gray-200 dark:bg-dimmed-900 dark:hover:bg-dimmed-800 md:inline-block xl:text-xl'
                                         )}
                                     >
                                         <Link
@@ -124,7 +124,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                         })}
                         <li
                             className={cn(
-                                'flex flex-col items-end rounded bg-white p-3 dark:bg-dimmed-900 md:inline-block md:items-center',
+                                'flex flex-col items-center rounded bg-white hover:bg-gray-200 dark:bg-dimmed-900 md:inline-block md:items-center',
                                 isChecked ? '' : 'hidden'
                             )}
                         >

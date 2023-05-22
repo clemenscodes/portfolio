@@ -7,6 +7,10 @@ export default {
     darkMode: ['class'],
     theme: {
         extend: {
+            boxShadow: {
+                full: '0px 0px 8px 4px rgba(0,0,0,0.2)',
+                'full-xl': '0px 0px 16px 8px rgba(0,0,0,0.2)',
+            },
             fontFamily: {
                 sans: ['var(--font-sans)', ...fontFamily.sans],
                 condensed: ['Roboto Condensed'],

@@ -55,14 +55,28 @@ export const skillsSection: ISkills = {
     title: 'What I do',
     subTitle: 'Building software that scales using modern technologies',
     skills: [
-        'Progressive Web Applications ( PWA ) in normal and SPA Stacks',
-        'Integration of third party services such as Firebase / Google Cloud / Digital Ocean',
-        'Development of CLI utilities',
+        'Development of scalable and responsive frontend interfaces using HTML, CSS, and JavaScript',
+        'Implementing UI/UX designs and creating visually appealing user interfaces',
+        'Utilizing frontend frameworks like Tailwind CSS, Bootstrap, and Sass to streamline development and enhance styling',
+        'Building dynamic and interactive web applications with frameworks like React, Next.js, and Angular',
+        'Creating efficient and maintainable code using TypeScript to enhance frontend development',
+        'Building RESTful APIs and backend services using Node.js, Nest.js, and Express.js',
+        'Designing and managing databases using MySQL, PostgreSQL, MongoDB, and Firebase',
+        'Implementing real-time functionality and GraphQL APIs using technologies like WebSockets, Hasura, and Prisma',
+        'Setting up and managing DevOps workflows using Git, GitHub, GitHub Actions, Docker, and Kubernetes',
+        'Configuring and deploying applications on cloud platforms like Google Cloud using Terraform',
+        'Developing CLI utilities with Rust and automation scripts using Bash shell scripting',
+        'Implementing testing strategies and utilizing testing frameworks like Jest, Cypress and Storybook',
+        'Exploring and leveraging emerging technologies like IPFS for NFTs and Cardano for cryptocurrencies',
     ],
     skillCategories: [
         {
             categoryName: 'Programming Languages',
             softwareSkills: [
+                {
+                    name: 'javascript',
+                    src: '../../../svg/javascript.svg',
+                },
                 {
                     name: 'typescript',
                     src: '../../../svg/typescript.svg',
@@ -74,6 +88,14 @@ export const skillsSection: ISkills = {
                 {
                     name: 'c',
                     src: '../../../svg/c.svg',
+                },
+                {
+                    name: 'python',
+                    src: '../../../svg/python.svg',
+                },
+                {
+                    name: 'lua',
+                    src: '../../../svg/lua.svg',
                 },
             ],
         },
@@ -89,8 +111,20 @@ export const skillsSection: ISkills = {
                     src: '../../../svg/css.svg',
                 },
                 {
+                    name: 'sass',
+                    src: '../../../svg/sass.svg',
+                },
+                {
                     name: 'tailwind',
                     src: '../../../svg/tailwindcss.svg',
+                },
+                {
+                    name: 'bootstrap',
+                    src: '../../../svg/bootstrap.svg',
+                },
+                {
+                    name: 'redux',
+                    src: '../../../svg/redux.svg',
                 },
                 {
                     name: 'react',
@@ -104,6 +138,18 @@ export const skillsSection: ISkills = {
                     name: 'angular',
                     src: '../../../svg/angular.svg',
                 },
+                {
+                    name: 'jquery',
+                    src: '../../../svg/jquery.svg',
+                },
+                {
+                    name: 'tauri',
+                    src: '../../../svg/tauri.svg',
+                },
+                {
+                    name: 'expo',
+                    src: '../../../svg/expo.svg',
+                },
             ],
         },
         {
@@ -114,21 +160,48 @@ export const skillsSection: ISkills = {
                     src: '../../../svg/nodejs.svg',
                 },
                 {
-                    name: 'express',
-                    src: '../../../svg/expressjs.svg',
+                    name: 'nginx',
+                    src: '../../../svg/nginx.svg',
+                },
+                {
+                    name: 'redis',
+                    src: '../../../svg/redis.svg',
                 },
                 {
                     name: 'nest',
                     src: '../../../svg/nestjs.svg',
                 },
-
+                {
+                    name: 'express',
+                    src: '../../../svg/expressjs.svg',
+                },
+                {
+                    name: 'oauth',
+                    src: '../../../svg/oauth.svg',
+                },
+                {
+                    name: 'websocket',
+                    src: '../../../svg/websocket.svg',
+                },
+                {
+                    name: 'prisma',
+                    src: '../../../svg/prisma.svg',
+                },
+                {
+                    name: 'mysql',
+                    src: '../../../svg/mysql.svg',
+                },
                 {
                     name: 'postgres',
                     src: '../../../svg/postgresql.svg',
                 },
                 {
-                    name: 'prisma',
-                    src: '../../../svg/prisma.svg',
+                    name: 'mongodb',
+                    src: '../../../svg/mongodb.svg',
+                },
+                {
+                    name: 'firebase',
+                    src: '../../../svg/firebase.svg',
                 },
                 {
                     name: 'graphql',
@@ -139,16 +212,8 @@ export const skillsSection: ISkills = {
                     src: '../../../svg/hasura.svg',
                 },
                 {
-                    name: 'redis',
-                    src: '../../../svg/redis.svg',
-                },
-                {
-                    name: 'mongodb',
-                    src: '../../../svg/mongodb.svg',
-                },
-                {
-                    name: 'firebase',
-                    src: '../../../svg/firebase.svg',
+                    name: 'ipfs',
+                    src: '../../../svg/ipfs.svg',
                 },
             ],
         },
@@ -179,6 +244,11 @@ export const skillsSection: ISkills = {
                     name: 'github actions',
                     src: '../../../svg/github-actions.svg',
                 },
+            ],
+        },
+        {
+            categoryName: 'Development Tools',
+            softwareSkills: [
                 {
                     name: 'linux',
                     src: '../../../svg/arch.svg',
@@ -187,15 +257,21 @@ export const skillsSection: ISkills = {
                     name: 'bash',
                     src: '../../../svg/bash.svg',
                 },
-            ],
-        },
-
-        {
-            categoryName: 'Development Tools',
-            softwareSkills: [
+                {
+                    name: 'neovim',
+                    src: '../../../svg/neovim.svg',
+                },
+                {
+                    name: 'yarn',
+                    src: '../../../svg/yarn.svg',
+                },
                 {
                     name: 'nx',
                     src: '../../../svg/nx.svg',
+                },
+                {
+                    name: 'webpack',
+                    src: '../../../svg/webpack.svg',
                 },
                 {
                     name: 'jest',
@@ -209,18 +285,34 @@ export const skillsSection: ISkills = {
                     name: 'storybook',
                     src: '../../../svg/storybook.svg',
                 },
+                {
+                    name: 'jira',
+                    src: '../../../svg/jira.svg',
+                },
+                {
+                    name: 'trello',
+                    src: '../../../svg/trello.svg',
+                },
+                {
+                    name: 'slack',
+                    src: '../../../svg/slack.svg',
+                },
             ],
         },
         {
             categoryName: 'Cryptocurrencies',
             softwareSkills: [
                 {
-                    name: 'cardano',
-                    src: '../../../svg/cardano.svg',
+                    name: 'bitcoin',
+                    src: '../../../svg/bitcoin.svg',
                 },
                 {
-                    name: 'ipfs',
-                    src: '../../../svg/ipfs.svg',
+                    name: 'monero',
+                    src: '../../../svg/monero.svg',
+                },
+                {
+                    name: 'cardano',
+                    src: '../../../svg/cardano.svg',
                 },
             ],
         },

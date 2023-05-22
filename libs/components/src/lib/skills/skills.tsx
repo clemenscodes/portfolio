@@ -48,18 +48,27 @@ export const Skills: React.FC<SkillsProps> = ({ skillsProp = skillsSection, ...p
                         : 'opacity-0 animate-out fade-out slide-out-to-right'
                 )}
             >
-                <h1 className={cn('text-center text-3xl md:text-6xl')}>{skillsProp.title}</h1>
-                <p className={cn('text-dimmed-muted text-center ')}>{skillsProp.subTitle}</p>
+                <h1 className={cn('text-center text-5xl md:text-8xl')}>{skillsProp.title}</h1>
+                <p className={cn('text-dimmed-muted m-2 p-2 text-center text-3xl')}>{skillsProp.subTitle}</p>
                 {skillsProp.skillCategories.map((category, index) => (
-                    <div className={cn()} key={index}>
-                        <h2 className={cn()}>{category.categoryName}</h2>
-                        <ul className={cn('flex flex-wrap justify-between')}>
+                    <div
+                        className={cn('my-6 rounded-lg shadow-full transition-all duration-300 hover:shadow-full-xl')}
+                        key={index}
+                    >
+                        <h2
+                            className={cn(
+                                'dark:text-dimmed-font text-dimmed-muted pt-8 text-center text-xl font-semibold md:text-2xl'
+                            )}
+                        >
+                            {category.categoryName}
+                        </h2>
+                        <ul className={cn('flex flex-wrap justify-evenly')}>
                             {category.softwareSkills.map((skill, index) => (
                                 <li
                                     key={index}
                                     className={cn('m-8 flex transition-all duration-300 hover:scale-[110%]')}
                                 >
-                                    <Image src={skill.src} alt={`Logo of ${skill.name}`} width={75} height={75} />
+                                    <Image src={skill.src} alt={`Logo of ${skill.name}`} width={80} height={80} />
                                 </li>
                             ))}
                         </ul>

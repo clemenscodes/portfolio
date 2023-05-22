@@ -94,7 +94,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                             'absolute right-0 top-3/4 max-h-none translate-y-3/4 list-none items-center justify-center rounded bg-white shadow-full transition-transform dark:bg-dimmed-900 md:static md:flex md:translate-y-0 md:space-x-2 md:shadow-none',
                             isChecked
                                 ? 'opacity-100 animate-in fade-in slide-in-from-right md:animate-none'
-                                : 'opacity-0 animate-out fade-out slide-out-to-right ease-out md:animate-none md:opacity-100'
+                                : 'hidden opacity-0 animate-out fade-out slide-out-to-right ease-out md:animate-none md:opacity-100'
                         )}
                     >
                         {sections.map((section, index) => {

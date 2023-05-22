@@ -8,7 +8,12 @@ export interface SoftwareSkill {
     src: string;
 }
 
+export interface SkillCategory {
+    categoryName: string;
+    softwareSkills: SoftwareSkill[];
+}
+
 export interface ISkills extends Section, Description {
     skills: Skill[];
-    softwareSkills: SoftwareSkill[];
+    skillCategories: SkillCategory[];
 }

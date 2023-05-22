@@ -53,144 +53,176 @@ export const socialMediaLinks: SocialMediaLinks = {
 
 export const skillsSection: ISkills = {
     title: 'What I do',
-    subTitle: 'Exploring bleeding tech',
+    subTitle: 'Building software that scales using modern technologies',
     skills: [
         'Progressive Web Applications ( PWA ) in normal and SPA Stacks',
         'Integration of third party services such as Firebase / Google Cloud / Digital Ocean',
         'Development of CLI utilities',
     ],
-    softwareSkills: [
+    skillCategories: [
         {
-            name: 'html',
-            src: '../../../svg/html.svg',
+            categoryName: 'Programming Languages',
+            softwareSkills: [
+                {
+                    name: 'typescript',
+                    src: '../../../svg/typescript.svg',
+                },
+                {
+                    name: 'rust',
+                    src: '../../../svg/rust.svg',
+                },
+                {
+                    name: 'c',
+                    src: '../../../svg/c.svg',
+                },
+            ],
         },
         {
-            name: 'css',
-            src: '../../../svg/css.svg',
+            categoryName: 'Frontend',
+            softwareSkills: [
+                {
+                    name: 'html',
+                    src: '../../../svg/html.svg',
+                },
+                {
+                    name: 'css',
+                    src: '../../../svg/css.svg',
+                },
+                {
+                    name: 'tailwind',
+                    src: '../../../svg/tailwindcss.svg',
+                },
+                {
+                    name: 'react',
+                    src: '../../../svg/reactjs.svg',
+                },
+                {
+                    name: 'next',
+                    src: '../../../svg/nextjs.svg',
+                },
+                {
+                    name: 'angular',
+                    src: '../../../svg/angular.svg',
+                },
+            ],
         },
         {
-            name: 'tailwind',
-            src: '../../../svg/tailwindcss.svg',
+            categoryName: 'Backend',
+            softwareSkills: [
+                {
+                    name: 'node',
+                    src: '../../../svg/nodejs.svg',
+                },
+                {
+                    name: 'express',
+                    src: '../../../svg/expressjs.svg',
+                },
+                {
+                    name: 'nest',
+                    src: '../../../svg/nestjs.svg',
+                },
+
+                {
+                    name: 'postgres',
+                    src: '../../../svg/postgresql.svg',
+                },
+                {
+                    name: 'prisma',
+                    src: '../../../svg/prisma.svg',
+                },
+                {
+                    name: 'graphql',
+                    src: '../../../svg/graphql.svg',
+                },
+                {
+                    name: 'hasura',
+                    src: '../../../svg/hasura.svg',
+                },
+                {
+                    name: 'redis',
+                    src: '../../../svg/redis.svg',
+                },
+                {
+                    name: 'mongodb',
+                    src: '../../../svg/mongodb.svg',
+                },
+                {
+                    name: 'firebase',
+                    src: '../../../svg/firebase.svg',
+                },
+            ],
         },
         {
-            name: 'typescript',
-            src: '../../../svg/typescript.svg',
+            categoryName: 'DevOps',
+            softwareSkills: [
+                {
+                    name: 'git',
+                    src: '../../../svg/git.svg',
+                },
+                {
+                    name: 'docker',
+                    src: '../../../svg/docker.svg',
+                },
+                {
+                    name: 'kubernetes',
+                    src: '../../../svg/kubernetes.svg',
+                },
+                {
+                    name: 'terraform',
+                    src: '../../../svg/terraform.svg',
+                },
+                {
+                    name: 'gcloud',
+                    src: '../../../svg/gcloud.svg',
+                },
+                {
+                    name: 'github actions',
+                    src: '../../../svg/github-actions.svg',
+                },
+                {
+                    name: 'linux',
+                    src: '../../../svg/arch.svg',
+                },
+                {
+                    name: 'bash',
+                    src: '../../../svg/bash.svg',
+                },
+            ],
+        },
+
+        {
+            categoryName: 'Development Tools',
+            softwareSkills: [
+                {
+                    name: 'nx',
+                    src: '../../../svg/nx.svg',
+                },
+                {
+                    name: 'jest',
+                    src: '../../../svg/jest.svg',
+                },
+                {
+                    name: 'cypress',
+                    src: '../../../svg/cypress.svg',
+                },
+                {
+                    name: 'storybook',
+                    src: '../../../svg/storybook.svg',
+                },
+            ],
         },
         {
-            name: 'react',
-            src: '../../../svg/reactjs.svg',
-        },
-        {
-            name: 'next',
-            src: '../../../svg/nextjs.svg',
-        },
-        {
-            name: 'angular',
-            src: '../../../svg/angular.svg',
-        },
-        {
-            name: 'jest',
-            src: '../../../svg/jest.svg',
-        },
-        {
-            name: 'cypress',
-            src: '../../../svg/cypress.svg',
-        },
-        {
-            name: 'docker',
-            src: '../../../svg/docker.svg',
-        },
-        {
-            name: 'kubernetes',
-            src: '../../../svg/kubernetes.svg',
-        },
-        {
-            name: 'terraform',
-            src: '../../../svg/terraform.svg',
-        },
-        {
-            name: 'git',
-            src: '../../../svg/git.svg',
-        },
-        {
-            name: 'github actions',
-            src: '../../../svg/github-actions.svg',
-        },
-        {
-            name: 'graphql',
-            src: '../../../svg/graphql.svg',
-        },
-        {
-            name: 'postgres',
-            src: '../../../svg/postgresql.svg',
-        },
-        {
-            name: 'prisma',
-            src: '../../../svg/prisma.svg',
-        },
-        {
-            name: 'hasura',
-            src: '../../../svg/hasura.svg',
-        },
-        {
-            name: 'nest',
-            src: '../../../svg/nestjs.svg',
-        },
-        {
-            name: 'node',
-            src: '../../../svg/nodejs.svg',
-        },
-        {
-            name: 'express',
-            src: '../../../svg/expressjs.svg',
-        },
-        {
-            name: 'redis',
-            src: '../../../svg/redis.svg',
-        },
-        {
-            name: 'rust',
-            src: '../../../svg/rust.svg',
-        },
-        {
-            name: 'storybook',
-            src: '../../../svg/storybook.svg',
-        },
-        {
-            name: 'ipfs',
-            src: '../../../svg/ipfs.svg',
-        },
-        {
-            name: 'linux',
-            src: '../../../svg/arch.svg',
-        },
-        {
-            name: 'gcloud',
-            src: '../../../svg/gcloud.svg',
-        },
-        {
-            name: 'firebase',
-            src: '../../../svg/firebase.svg',
-        },
-        {
-            name: 'cardano',
-            src: '../../../svg/cardano.svg',
-        },
-        {
-            name: 'mongodb',
-            src: '../../../svg/mongodb.svg',
-        },
-        {
-            name: 'nx',
-            src: '../../../svg/nx.svg',
-        },
-        {
-            name: 'c',
-            src: '../../../svg/c.svg',
-        },
-        {
-            name: 'bash',
-            src: '../../../svg/bash.svg',
+            categoryName: 'Cryptocurrencies',
+            softwareSkills: [
+                {
+                    name: 'cardano',
+                    src: '../../../svg/cardano.svg',
+                },
+                {
+                    name: 'ipfs',
+                    src: '../../../svg/ipfs.svg',
+                },
+            ],
         },
     ],
     href: '#skills',

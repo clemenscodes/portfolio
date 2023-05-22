@@ -180,10 +180,6 @@ export const skillsSection: ISkills = {
                     src: '../../../svg/oauth.svg',
                 },
                 {
-                    name: 'websocket',
-                    src: '../../../svg/websocket.svg',
-                },
-                {
                     name: 'prisma',
                     src: '../../../svg/prisma.svg',
                 },

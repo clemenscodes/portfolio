@@ -5,9 +5,9 @@ export interface OpenSourceProps {}
 
 export const OpenSource: React.FC<OpenSourceProps> = ({ ...props }) => {
     return (
-        <div className={cn([])} id='opensource'>
+        <section className={cn([])} id='opensource'>
             <h1>Welcome to OpenSource!</h1>
-        </div>
+        </section>
     );
 };
 

@@ -49,7 +49,7 @@ export const Skills: React.FC<SkillsProps> = ({ skillsProp = skillsSection, ...p
                 )}
             >
                 <h1 className={cn('text-center text-5xl md:text-8xl')}>{skillsProp.title}</h1>
-                <p className={cn('text-dimmed-muted m-2 p-2 text-center text-3xl')}>{skillsProp.subTitle}</p>
+                <p className={cn('m-2 p-2 text-center text-3xl text-dimmed-muted')}>{skillsProp.subTitle}</p>
                 {skillsProp.skillCategories.map((category, index) => (
                     <div
                         className={cn('my-6 rounded-lg shadow-full transition-all duration-300 hover:shadow-full-xl')}
@@ -57,7 +57,7 @@ export const Skills: React.FC<SkillsProps> = ({ skillsProp = skillsSection, ...p
                     >
                         <h2
                             className={cn(
-                                'dark:text-dimmed-font text-dimmed-muted pt-8 text-center text-xl font-semibold md:text-2xl'
+                                'pt-8 text-center text-xl font-semibold text-dimmed-muted dark:text-dimmed-font md:text-2xl'
                             )}
                         >
                             {category.categoryName}
@@ -66,9 +66,16 @@ export const Skills: React.FC<SkillsProps> = ({ skillsProp = skillsSection, ...p
                             {category.softwareSkills.map((skill, index) => (
                                 <li
                                     key={index}
-                                    className={cn('m-8 flex transition-all duration-300 hover:scale-[110%]')}
+                                    className={cn(
+                                        'relative m-8 flex h-16 w-16 transition-all duration-300 hover:scale-[110%] md:h-20 md:w-20'
+                                    )}
                                 >
-                                    <Image src={skill.src} alt={`Logo of ${skill.name}`} width={80} height={80} />
+                                    <Image
+                                        src={skill.src}
+                                        alt={`Logo of ${skill.name}`}
+                                        fill
+                                        className={cn('object-contain')}
+                                    />
                                 </li>
                             ))}
                         </ul>

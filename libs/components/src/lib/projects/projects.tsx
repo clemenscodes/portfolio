@@ -5,9 +5,9 @@ export interface ProjectsProps {}
 
 export const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
     return (
-        <div className={cn([])} id='projects'>
+        <section className={cn([])} id='projects'>
             <h1>Welcome to Projects!</h1>
-        </div>
+        </section>
     );
 };
 

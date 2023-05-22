@@ -15,7 +15,7 @@ export type GreetingProps = HTML<'div'> & {
 
 export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ...props }) => {
     return (
-        <div {...props} className={cn(['animate-in fade-in slide-in-from-bottom-10 duration-1000 md:my-16'])}>
+        <section {...props} className={cn(['animate-in fade-in slide-in-from-bottom-10 duration-1000 md:my-16'])}>
             <div className={cn('block md:flex')}>
                 <div className={cn('flex-1')}>
                     <h1
@@ -28,7 +28,7 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
                     </h1>
                     <p
                         className={cn(
-                            'text-dimmed-muted text-dimmed-muted my-8 flex-1 text-center text-2xl md:text-left md:text-3xl md:leading-10'
+                            'my-8 flex-1 text-center text-2xl text-dimmed-muted text-dimmed-muted md:text-left md:text-3xl md:leading-10'
                         )}
                     >
                         {greeting.subTitle}
@@ -44,16 +44,16 @@ export const Greeting: React.FC<GreetingProps> = ({ greetingProps = greeting, ..
                     </div>
                 </div>
                 <div className={cn('mb-8 flex-1')}>
-                    <div className={cn('h-full w-full')}>
+                    <div className={cn('max-w-screen h-full')}>
                         {illustration.animated ? (
                             <Animation animationData={manWaving} />
                         ) : (
-                            <Image className={cn('h-auto max-w-full')} alt='man sitting on table' src={manOnTable} />
+                            <Image className={cn('max-w-screen h-auto')} alt='man sitting on table' src={manOnTable} />
                         )}
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

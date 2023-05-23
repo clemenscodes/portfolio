@@ -1,18 +1,18 @@
 import { Description } from './description';
 import { Section } from './section';
 
-export interface ProjectLink {
+export interface IProjectLink {
     name: string;
     url: URL;
 }
 
-export interface Project {
+export interface IProject {
     imageSrc: string;
     name: string;
     description: string;
-    links: ProjectLink[];
+    links: IProjectLink[];
 }
 
-export interface Projects extends Section, Description {
-    projects: Project[];
+export interface IProjects extends Section, Description {
+    projects: IProject[];
 }

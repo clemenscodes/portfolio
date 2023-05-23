@@ -9,9 +9,9 @@ export const Home: NextPage<HomeProps> = ({ ...props }) => {
         <div {...props} className={cn(['flex flex-col items-center justify-center'])}>
             <Greeting />
             <Skills />
+            <Projects />
             <Education />
             <OpenSource />
-            <Projects />
         </div>
     );
 };

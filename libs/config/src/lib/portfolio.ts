@@ -5,7 +5,7 @@ import {
     Section,
     ISkills,
     OpenSource,
-    Projects,
+    IProjects,
     SocialMediaLinks,
     Contact,
     School,
@@ -387,12 +387,12 @@ export const educationSection: Education = {
     name: 'Education',
 };
 
-export const projectsSection: Projects = {
+export const projectsSection: IProjects = {
     title: 'Projects',
     subTitle: 'Some projects I have built along the way',
     projects: [
         {
-            imageSrc: '../../../components/assets/img/crypto.png',
+            imageSrc: '/img/crypto.png',
             name: 'Simple Crypto',
             description: 'Beginner friendly introduction to cryptocurrencies and their ecological impact',
             links: [

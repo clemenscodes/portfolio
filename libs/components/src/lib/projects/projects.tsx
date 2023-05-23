@@ -1,13 +1,12 @@
 import { cn } from '@styles';
 
-/* eslint-disable-next-line */
-export interface ProjectsProps {}
+export type ProjectsProps = React.ComponentPropsWithoutRef<'section'>;
 
 export const Projects: React.FC<ProjectsProps> = ({ ...props }) => {
     return (
-        <div className={cn([])} id='projects'>
+        <section className={cn([])} id='projects' {...props}>
             <h1>Welcome to Projects!</h1>
-        </div>
+        </section>
     );
 };
 

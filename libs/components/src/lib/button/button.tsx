@@ -1,10 +1,9 @@
 import { cn } from '@styles';
-import { type HTML } from '@types';
 import { scrollToComponent } from '@utils';
 import Link from 'next/link';
 import { UrlObject } from 'url';
 
-export type ButtonProps = HTML<'button'> & {
+export type ButtonProps = React.ComponentPropsWithoutRef<'button'> & {
     newTab: boolean;
     href: UrlObject | string;
 };

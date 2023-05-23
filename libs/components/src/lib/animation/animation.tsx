@@ -4,7 +4,7 @@ export type AnimationProps = LottieComponentProps;
 
 export const Animation: React.FC<AnimationProps> = ({ animationData, ...props }) => {
     return (
-        <div className='lottie block h-full w-full'>
+        <div className='lottie max-w-screen block h-full'>
             <Lottie {...props} animationData={animationData} />
         </div>
     );

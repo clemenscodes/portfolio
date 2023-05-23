@@ -1,10 +1,9 @@
 import { RobotoCondensed } from '@fonts';
 
-/* eslint-disable-next-line */
-export interface FontProviderProps extends React.PropsWithChildren {}
+export type FontProviderProps = React.PropsWithChildren;
 
-export function FontProvider({ children }: FontProviderProps) {
+export const FontProvider: React.FC<FontProviderProps> = ({ children }) => {
     return <RobotoCondensed>{children}</RobotoCondensed>;
-}
+};
 
 export default FontProvider;

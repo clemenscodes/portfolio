@@ -7,11 +7,10 @@ const robotoCondensed = Roboto_Condensed({
     display: 'swap',
 });
 
-/* eslint-disable-next-line */
-export interface FontsProps extends React.PropsWithChildren {}
+export type FontsProps = React.PropsWithChildren;
 
-export function RobotoCondensed({ children }: FontsProps) {
-    return <main className={`${robotoCondensed.variable} font-sans`}>{children}</main>;
-}
+export const RobotoCondensed: React.FC<FontsProps> = ({ children }) => {
+    return <div className={`${robotoCondensed.variable} font-sans`}>{children}</div>;
+};
 
 export default RobotoCondensed;

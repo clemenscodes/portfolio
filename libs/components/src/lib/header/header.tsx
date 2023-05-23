@@ -2,12 +2,12 @@ import Logo from '../logo/logo';
 import ToggleTheme from '../toggle-theme/toggle-theme';
 import { sections } from '@config';
 import { cn } from '@styles';
-import { Section, type HTML } from '@types';
+import { Section } from '@types';
 import { scrollToComponent } from '@utils';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export type HeaderProps = HTML<'header'> & {
+export type HeaderProps = React.ComponentPropsWithoutRef<'header'> & {
     sectionsProp?: Section[];
 };
 
@@ -15,28 +15,49 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
     const [isChecked, setIsChecked] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.scrollY;
-            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-            setPrevScrollPos(currentScrollPos);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [prevScrollPos, visible]);
+    const [autoScroll, setAutoscroll] = useState(false);
+    const headerRef = useRef<HTMLHeadingElement>(null);
 
     const handleChecked = () => {
         setIsChecked(!isChecked);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+                setIsChecked(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => document.removeEventListener('click', handleClickOutside);
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            setPrevScrollPos(currentScrollPos);
+            if (autoScroll) {
+                return setVisible(false);
+            }
+            if (isChecked) {
+                return setVisible(true);
+            }
+            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [autoScroll, isChecked, prevScrollPos, visible]);
+
     return (
         <header
             {...props}
+            ref={headerRef}
             className={cn([
-                'dark:bg-dimmed-900 fixed left-0 right-0 top-0 z-10 h-16 w-screen transform bg-white shadow-md transition-transform duration-300',
+                'fixed left-0 right-0 top-0 z-10 h-24 transform bg-white shadow-md transition-transform duration-300 dark:bg-dimmed-900',
                 visible ? '' : '-translate-y-full',
             ])}
         >
@@ -58,19 +79,22 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                 'before:absolute before:top-1 before:block before:h-[2px] before:w-4',
                                 'before:bg-black dark:before:bg-white',
                                 'before:transform before:transition-all before:duration-200 before:ease-out',
-                                isChecked ? 'before:top-0 before:-rotate-45' : '',
+                                isChecked && 'before:top-0 before:-rotate-45',
                                 'relative right-0 block h-[2px] w-4 bg-black dark:bg-white md:hidden',
-                                isChecked ? 'dark:bg-dimmed-900 bg-white transition-all duration-200 ease-out' : '',
+                                isChecked && 'bg-white transition-all duration-200 ease-out dark:bg-dimmed-900',
                                 'after:absolute after:-top-1 after:block after:h-[2px] after:w-4',
                                 'after:bg-black dark:after:bg-white',
                                 'after:transform after:transition-all after:duration-200 after:ease-out',
-                                isChecked ? 'after:top-0 after:rotate-45' : ''
+                                isChecked && 'after:top-0 after:rotate-45'
                             )}
-                        ></span>
+                        />
                     </label>
                     <ul
                         className={cn(
-                            'dark:bg-dimmed-900 absolute right-0 top-16 max-h-none list-none items-center justify-center rounded md:static md:flex md:space-x-2'
+                            'absolute right-0 top-3/4 max-h-none translate-y-3/4 list-none items-center justify-center rounded bg-white shadow-full transition-transform dark:bg-dimmed-900 md:static md:flex md:translate-y-0 md:space-x-2 md:shadow-none',
+                            isChecked
+                                ? 'opacity-100 animate-in fade-in slide-in-from-right md:animate-none'
+                                : 'hidden opacity-0 animate-out fade-out slide-out-to-right ease-out md:animate-none md:opacity-100'
                         )}
                     >
                         {sections.map((section, index) => {
@@ -80,11 +104,18 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                         key={index}
                                         onClick={handleChecked}
                                         className={cn(
-                                            'dark:hover:bg-dimmed-800 dark:bg-dimmed-900 hover:bg-dimmed-light md:text-md flex flex-col items-end rounded bg-white p-3 text-sm md:inline-block xl:text-xl',
-                                            isChecked ? '' : 'hidden'
+                                            'md:text-md flex flex-col items-center rounded p-3 text-sm transition-transform hover:bg-gray-200 dark:bg-dimmed-900 dark:hover:bg-dimmed-800 md:inline-block xl:text-2xl'
                                         )}
                                     >
-                                        <Link scroll={true} href={section.href} onClick={scrollToComponent}>
+                                        <Link
+                                            scroll={true}
+                                            href={section.href}
+                                            onClick={(e) => {
+                                                setAutoscroll(true);
+                                                scrollToComponent(e);
+                                                setTimeout(() => setAutoscroll(false), 2000);
+                                            }}
+                                        >
                                             {section.name}
                                         </Link>
                                     </li>
@@ -93,8 +124,8 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                         })}
                         <li
                             className={cn(
-                                'dark:bg-dimmed-900 flex flex-col items-end bg-white pt-1 md:inline-block',
-                                isChecked ? '' : 'hidden'
+                                'flex flex-col items-center rounded md:inline-block md:items-center xl:text-2xl',
+                                isChecked || 'hidden'
                             )}
                         >
                             <ToggleTheme />

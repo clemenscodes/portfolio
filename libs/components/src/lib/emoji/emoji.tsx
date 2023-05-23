@@ -1,10 +1,9 @@
 import { cn } from '@styles';
-import { type HTML } from '@types';
 
-export interface EmojiProps extends HTML<'span'> {
+export type EmojiProps = React.ComponentPropsWithoutRef<'span'> & {
     emoji: string;
     label: string;
-}
+};
 
 export const Emoji: React.FC<EmojiProps> = ({ emoji, label, className, ...props }) => {
     const hidden = label ? 'false' : 'true';

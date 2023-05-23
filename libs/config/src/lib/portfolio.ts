@@ -48,19 +48,71 @@ export const skillsSection: ISkills = {
     title: 'What I do',
     subTitle: 'Building software that scales using modern technologies',
     skills: [
-        'Development of scalable and responsive frontend interfaces using HTML, CSS, and JavaScript',
-        'Implementing UI/UX designs and creating visually appealing user interfaces',
-        'Utilizing frontend frameworks like Tailwind CSS, Bootstrap, and Sass to streamline development and enhance styling',
-        'Building dynamic and interactive web applications with frameworks like React, Next.js, and Angular',
-        'Creating efficient and maintainable code using TypeScript to enhance frontend development',
-        'Building RESTful APIs and backend services using Node.js, Nest.js, and Express.js',
-        'Designing and managing databases using MySQL, PostgreSQL, MongoDB, and Firebase',
-        'Implementing real-time functionality and GraphQL APIs using technologies like WebSockets, Hasura, and Prisma',
-        'Setting up and managing DevOps workflows using Git, GitHub, GitHub Actions, Docker, and Kubernetes',
-        'Configuring and deploying applications on cloud platforms like Google Cloud using Terraform',
-        'Developing CLI utilities with Rust and automation scripts using Bash shell scripting',
-        'Implementing testing strategies and utilizing testing frameworks like Jest, Cypress and Storybook',
-        'Exploring and leveraging emerging technologies like IPFS for NFTs and Cardano for cryptocurrencies',
+        {
+            name: 'Frontend interface development',
+            description: 'Developing scalable, responsive and visually appealing frontend interfaces',
+        },
+        {
+            name: 'UI/UX implementation',
+            description: 'Implementing UI/UX designs utilizing Tailwind CSS and Storybook',
+        },
+        {
+            name: 'Web application development',
+            description: 'Building dynamic, interactive and progressive web applications with Next.js and Angular',
+        },
+        {
+            name: 'TypeScript expertise',
+            description: 'Creating efficient and maintainable code using TypeScript to enhance frontend development',
+        },
+        {
+            name: 'Backend services',
+            description: 'Building RESTful and GraphQL APIs using Node.js, Nest.js and Hasura',
+        },
+        {
+            name: 'Database design and management',
+            description: 'Creating and managing databases using Prisma, PostgreSQL, MySQL and MongoDB',
+        },
+
+        {
+            name: 'Realtime functionality ',
+            description: 'Implementing real-time functionality using WebSockets',
+        },
+        {
+            name: 'Secure application development',
+            description: 'Ensuring security through the implementation of OAuth protocols',
+        },
+        {
+            name: 'Testing frameworks',
+            description: 'Utilizing Jest and Cypress for comprehensive testing',
+        },
+        {
+            name: 'DevOps workflows',
+            description: 'Setting up and managing DevOps workflows using GitHub Actions, Docker, and Kubernetes',
+        },
+        {
+            name: 'Cloud platform deployment',
+            description: 'Configuring and deploying applications on cloud platforms like Google Cloud using Terraform',
+        },
+        {
+            name: 'Efficient code organization',
+            description: 'Leveraging Nx for streamlined code organization in monorepo architectures',
+        },
+        {
+            name: 'Command line interfaces',
+            description: 'Developing command line interfaces with Rust',
+        },
+        {
+            name: 'Optimal development environment',
+            description: 'Utilizing Arch Linux and window managers in a keyboard driven workflow',
+        },
+        {
+            name: 'Productive code editing',
+            description: 'Employing Neovim as my code editor of choice to maximize efficiency and productivity',
+        },
+        {
+            name: 'Automation',
+            description: 'Creating automation scripts using POSIX shell and Python',
+        },
     ],
     skillCategories: [
         {
@@ -241,10 +293,6 @@ export const skillsSection: ISkills = {
                 {
                     name: 'linux',
                     src: '../../../svg/arch.svg',
-                },
-                {
-                    name: 'bash',
-                    src: '../../../svg/bash.svg',
                 },
                 {
                     name: 'neovim',

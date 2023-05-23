@@ -1,7 +1,10 @@
 import { Description } from './description';
 import { Section } from './section';
 
-export type Skill = string;
+export interface Skill {
+    name: string;
+    description: string;
+}
 
 export interface SoftwareSkill {
     name: string;

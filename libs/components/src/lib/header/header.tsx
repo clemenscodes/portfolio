@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
             {...props}
             ref={headerRef}
             className={cn([
-                'fixed left-0 right-0 top-0 z-10 h-16 transform bg-white shadow-md transition-transform duration-300 dark:bg-dimmed-900',
+                'fixed left-0 right-0 top-0 z-10 h-24 transform bg-white shadow-md transition-transform duration-300 dark:bg-dimmed-900',
                 visible ? '' : '-translate-y-full',
             ])}
         >
@@ -79,15 +79,15 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                 'before:absolute before:top-1 before:block before:h-[2px] before:w-4',
                                 'before:bg-black dark:before:bg-white',
                                 'before:transform before:transition-all before:duration-200 before:ease-out',
-                                isChecked ? 'before:top-0 before:-rotate-45' : '',
+                                isChecked && 'before:top-0 before:-rotate-45',
                                 'relative right-0 block h-[2px] w-4 bg-black dark:bg-white md:hidden',
-                                isChecked ? 'bg-white transition-all duration-200 ease-out dark:bg-dimmed-900' : '',
+                                isChecked && 'bg-white transition-all duration-200 ease-out dark:bg-dimmed-900',
                                 'after:absolute after:-top-1 after:block after:h-[2px] after:w-4',
                                 'after:bg-black dark:after:bg-white',
                                 'after:transform after:transition-all after:duration-200 after:ease-out',
-                                isChecked ? 'after:top-0 after:rotate-45' : ''
+                                isChecked && 'after:top-0 after:rotate-45'
                             )}
-                        ></span>
+                        />
                     </label>
                     <ul
                         className={cn(
@@ -104,7 +104,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                                         key={index}
                                         onClick={handleChecked}
                                         className={cn(
-                                            'md:text-md flex flex-col items-center rounded p-3 text-sm transition-transform hover:bg-gray-200 dark:bg-dimmed-900 dark:hover:bg-dimmed-800 md:inline-block xl:text-xl'
+                                            'md:text-md flex flex-col items-center rounded p-3 text-sm transition-transform hover:bg-gray-200 dark:bg-dimmed-900 dark:hover:bg-dimmed-800 md:inline-block xl:text-2xl'
                                         )}
                                     >
                                         <Link
@@ -124,8 +124,8 @@ export const Header: React.FC<HeaderProps> = ({ sectionsProp = sections, ...prop
                         })}
                         <li
                             className={cn(
-                                'flex flex-col items-center rounded bg-white hover:bg-gray-200 dark:bg-dimmed-900 md:inline-block md:items-center',
-                                isChecked ? '' : 'hidden'
+                                'flex flex-col items-center rounded md:inline-block md:items-center xl:text-2xl',
+                                isChecked || 'hidden'
                             )}
                         >
                             <ToggleTheme />

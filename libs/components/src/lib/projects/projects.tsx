@@ -20,30 +20,34 @@ export const Projects: React.FC<ProjectsProps> = ({ projectsProps = projectsSect
                     <li
                         key={index}
                         className={cn(
-                            'relative flex flex-col items-center rounded-lg px-8 shadow-full transition-all duration-300 hover:shadow-full-xl'
+                            'relative my-8 flex flex-col items-center rounded-lg px-8 shadow-full transition-all duration-300 hover:shadow-full-xl'
                         )}
                     >
                         <Image
                             src={project.imageSrc}
                             alt={`${project.name} image`}
-                            width={400}
-                            height={400}
+                            width={200}
+                            height={200}
+                            quality={100}
+                            priority={true}
                             className={cn('my-8 max-w-full rounded object-cover')}
                         />
                         <h2 className={cn('text-center text-2xl md:text-3xl')}>{project.name}</h2>
                         <p className={cn('mx-8 mt-4 text-center text-lg text-dimmed-muted md:text-2xl')}>
                             {project.description}
                         </p>
-                        {project.links.map((link, index) => (
-                            <Button
-                                newTab={true}
-                                className={cn('text-md my-12 rounded md:text-2xl')}
-                                href={link.url.href}
-                                key={index}
-                            >
-                                {link.name}
-                            </Button>
-                        ))}
+                        <div className='flex flex-wrap justify-evenly'>
+                            {project.links.map((link, index) => (
+                                <Button
+                                    newTab={true}
+                                    className={cn('text-md mx-4 my-6 rounded md:text-2xl')}
+                                    href={link.url.href}
+                                    key={index}
+                                >
+                                    {link.name}
+                                </Button>
+                            ))}
+                        </div>
                     </li>
                 ))}
             </ul>

@@ -392,13 +392,99 @@ export const projectsSection: IProjects = {
     subTitle: 'Some projects I have built along the way',
     projects: [
         {
+            imageSrc: '../../../svg/cli.svg',
+            name: 'Ninja VM',
+            description: 'Virtual Machine for the Ninja Programming Language',
+            links: [
+                {
+                    name: 'View code in C',
+                    url: new URL('https://github.com/clemenscodes/njvm/'),
+                },
+                {
+                    name: 'View code in Rust',
+                    url: new URL('https://github.com/clemenscodes/njvm_rust/'),
+                },
+            ],
+        },
+        {
+            imageSrc: '../../../svg/cardano.svg',
+            name: 'Cardano CLI',
+            description: 'Command line interface to work with Cardano utilities',
+            links: [
+                {
+                    name: 'View code in Rust',
+                    url: new URL('https://github.com/clemenscodes/njvm_rust/'),
+                },
+            ],
+        },
+        {
+            imageSrc: '../../../svg/monero.svg',
+            name: 'Peer-to-peer Monero mining setup',
+            description: 'Easily bootstrap a monero node and start mining',
+            links: [
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/monero/'),
+                },
+            ],
+        },
+        {
             imageSrc: '/img/crypto.png',
             name: 'Simple Crypto',
             description: 'Beginner friendly introduction to cryptocurrencies and their ecological impact',
             links: [
                 {
-                    name: 'Visit Website',
+                    name: 'View site',
                     url: new URL('https://simple-crypto.web.app/'),
+                },
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/simple-crypto/'),
+                },
+            ],
+        },
+        {
+            imageSrc: '/img/mate-team.png',
+            name: 'Mate Team',
+            description: 'Organize events with your friends',
+            links: [
+                // {
+                //     name: 'View site',
+                //     url: new URL('https://mate-team.de/'),
+                // },
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/mate-team/'),
+                },
+            ],
+        },
+        {
+            imageSrc: '/img/cargonaut.png',
+            name: 'myCargonaut',
+            description: 'Rent rides',
+            links: [
+                {
+                    name: 'View site',
+                    url: new URL('https://cargonaut.web.app/'),
+                },
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/cargonaut/'),
+                },
+            ],
+        },
+        {
+            imageSrc: '/img/swiftsell.png',
+            name: 'SWIFTSELL',
+            description: 'Sell swiftly (Note: Serverless app, visiting site usually triggers a cold start)',
+            links: [
+                {
+                    name: 'View site',
+                    url: new URL('https://shop.swiftsell.de/'),
+                },
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/swiftsell/'),
                 },
             ],
         },

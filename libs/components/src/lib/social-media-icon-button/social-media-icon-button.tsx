@@ -21,7 +21,7 @@ export const SocialMediaIconButton: React.FC<SocialMediaIconButtonProps> = ({
                 className
             )}
         >
-            <Link target='_blank' rel='noopener noreferrer' {...linkProps} className='relative h-10 w-10'>
+            <Link target='_blank' rel='noopener noreferrer' {...linkProps} className='relative h-12 w-12'>
                 <Image fill {...imageProps} />
             </Link>
         </button>

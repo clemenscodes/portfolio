@@ -1,19 +1,4 @@
-import {
-    IGreeting,
-    Illustration,
-    Education,
-    Section,
-    ISkills,
-    OpenSource,
-    IProjects,
-    SocialMediaLinks,
-    Contact,
-    School,
-} from '@types';
-
-export const illustration: Illustration = {
-    animated: true,
-};
+import { IGreeting, Education, Section, ISkills, IProjects, SocialMediaLinks, Contact, School } from '@types';
 
 export const greeting: IGreeting = {
     name: 'Clemens Horn',
@@ -359,13 +344,6 @@ export const skillsSection: ISkills = {
     display: true,
 };
 
-export const openSourceSection: OpenSource = {
-    href: '#opensource',
-    name: 'Open Source',
-    display: true,
-    showGithubProfile: true,
-};
-
 const school: School = {
     name: 'Technische Hochschule Mittelhessen',
     logoSrc: '../../../components/assets/img/THM_Logo.png',
@@ -413,7 +391,7 @@ export const projectsSection: IProjects = {
             links: [
                 {
                     name: 'View code in Rust',
-                    url: new URL('https://github.com/clemenscodes/njvm_rust/'),
+                    url: new URL('https://github.com/crc-cardano-stakepool/cardano/'),
                 },
             ],
         },
@@ -504,10 +482,4 @@ export const contactSection: Contact = {
     display: true,
 };
 
-export const sections: Section[] = [
-    skillsSection,
-    educationSection,
-    openSourceSection,
-    projectsSection,
-    contactSection,
-];
+export const sections: Section[] = [skillsSection, educationSection, projectsSection, contactSection];

@@ -1,22 +1,22 @@
 import { Description } from './description';
 import { Section } from './section';
 
-export interface Skill {
+export interface ISkill {
     name: string;
     description: string;
 }
 
-export interface SoftwareSkill {
+export interface ISoftwareSkill {
     name: string;
     src: string;
 }
 
-export interface SkillCategory {
+export interface ISkillCategory {
     categoryName: string;
-    softwareSkills: SoftwareSkill[];
+    softwareSkills: ISoftwareSkill[];
 }
 
 export interface ISkills extends Section, Description {
-    skills: Skill[];
-    skillCategories: SkillCategory[];
+    skills: ISkill[];
+    skillCategories: ISkillCategory[];
 }

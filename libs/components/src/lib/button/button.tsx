@@ -8,25 +8,38 @@ export type ButtonProps = React.ComponentPropsWithoutRef<'button'> & {
     href: UrlObject | string;
 };
 
-export const Button: React.FC<ButtonProps> = ({ newTab, className, children, href, ...props }) => {
-    return (
+export const Button: React.FC<ButtonProps> = ({
+    newTab,
+    className,
+    children,
+    href,
+    ...props
+}) => {
+    const button = (
         <button
             {...props}
             className={cn([
-                'block cursor-pointer items-center whitespace-nowrap rounded-lg border border-[#55198b] bg-[#55198b] px-6 py-3 text-center text-xl font-bold uppercase text-white no-underline transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-white hover:text-[#55198b]',
+                'px-6 py-3',
+                'relative block items-center text-center',
+                'cursor-pointer whitespace-nowrap rounded-lg border',
+                'text-xl font-bold uppercase no-underline ',
+                'transition-all duration-300 ease-in-out',
+                'border-[#55198b] bg-[#55198b] text-white',
+                'hover:bg-white hover:text-[#55198b]',
                 className,
             ])}
         >
-            {newTab ? (
-                <Link target='_blank' href={href}>
-                    {children}
-                </Link>
-            ) : (
-                <Link scroll={true} href={href} onClick={scrollToComponent}>
-                    {children}
-                </Link>
-            )}
+            {children}
         </button>
+    );
+    return newTab ? (
+        <Link target='_blank' href={href}>
+            {button}
+        </Link>
+    ) : (
+        <Link scroll={true} href={href} onClick={scrollToComponent}>
+            {button}
+        </Link>
     );
 };
 

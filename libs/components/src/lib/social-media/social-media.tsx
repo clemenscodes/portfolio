@@ -1,4 +1,4 @@
-import SocialMediaIconButton from '../social-media-icon-button/social-media-icon-button';
+import SocialMediaButton from './social-media-button/social-media-button';
 import { socialMediaLinks } from '@config';
 import { cn } from '@styles';
 import { SocialMediaLinks } from '@types';
@@ -9,7 +9,11 @@ export type SocialMediaProps = React.ComponentPropsWithoutRef<'ul'> & {
     linksProp?: SocialMediaLinks;
 };
 
-export const SocialMedia: React.FC<SocialMediaProps> = ({ linksProp = socialMediaLinks, className, ...props }) => {
+export const SocialMedia: React.FC<SocialMediaProps> = ({
+    linksProp = socialMediaLinks,
+    className,
+    ...props
+}) => {
     const { theme } = useTheme();
     const isDark = theme === 'dark';
     const [gitHubSrc, setGitHubSrc] = useState('../../../svg/github.svg');
@@ -17,7 +21,9 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ linksProp = socialMedi
     useEffect(() => {
         const gh = linksProp.links.filter((link) => link.name === 'GitHub')[0];
         if (gh) {
-            isDark ? setGitHubSrc(gh.src) : setGitHubSrc('../../../svg/github.svg');
+            isDark
+                ? setGitHubSrc(gh.src)
+                : setGitHubSrc('../../../svg/github.svg');
         }
     }, [isDark, linksProp.links]);
 
@@ -25,13 +31,15 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({ linksProp = socialMedi
         <ul
             {...props}
             className={cn([
-                'mx-auto flex w-4/5 items-center justify-evenly md:mx-0 md:w-1/2 md:justify-start md:space-x-6',
+                'flex items-center justify-evenly',
+                'mx-auto w-4/5 ',
+                'md:mx-0 md:w-1/2 md:justify-start md:space-x-6',
                 className,
             ])}
         >
             {linksProp.links.map((link, index) => (
                 <li key={index}>
-                    <SocialMediaIconButton
+                    <SocialMediaButton
                         linkProps={{
                             href: link.href,
                         }}

@@ -1,5 +1,6 @@
 import ProjectList from './project-list/project-list';
 import { projectsSection } from '@config';
+import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { IProjects } from '@types';
 
@@ -11,9 +12,22 @@ export const Projects: React.FC<ProjectsProps> = ({
     projectsProps = projectsSection,
     ...props
 }) => {
+    const [ref, visible] = useIntersection({ threshold: 0.1 });
     return (
         <section
-            className={cn(['my-24 flex w-full flex-col'])}
+            ref={ref}
+            className={cn(
+                'flex  flex-col',
+                'my-24 w-full',
+                'transform will-change-transform',
+                'transition-all duration-1000',
+                visible && 'opacity-100',
+                visible && 'animate-in fade-in ease-out',
+                visible && 'slide-in-from-bottom',
+                visible || 'opacity-0',
+                visible || 'animate-out fade-out',
+                visible || 'slide-out-to-bottom'
+            )}
             id='projects'
             {...props}
         >

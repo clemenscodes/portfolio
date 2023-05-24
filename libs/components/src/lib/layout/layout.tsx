@@ -7,7 +7,9 @@ export type LayoutProps = React.ComponentPropsWithoutRef<'div'>;
 export const Layout: React.FC<LayoutProps> = ({ children, ...props }) => {
     return (
         <div
-            className={cn('flex h-screen flex-col justify-between')}
+            className={cn(
+                'flex h-screen flex-col justify-between overflow-x-hidden'
+            )}
             {...props}
         >
             <Header />

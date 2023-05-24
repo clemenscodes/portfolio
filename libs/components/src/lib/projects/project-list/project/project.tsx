@@ -1,4 +1,5 @@
 import ProjectLinkList from '../../project-link-list/project-link-list';
+import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { IProject } from '@types';
 import Image from 'next/image';
@@ -8,8 +9,10 @@ export type ProjectProps = React.ComponentPropsWithoutRef<'li'> & {
 };
 
 export const Project: React.FC<ProjectProps> = ({ project, ...props }) => {
+    const [ref, visible] = useIntersection<HTMLLIElement>();
     return (
         <li
+            ref={ref}
             {...props}
             className={cn(
                 'flex flex-col items-center',
@@ -17,6 +20,14 @@ export const Project: React.FC<ProjectProps> = ({ project, ...props }) => {
                 'rounded-lg',
                 'shadow-full',
                 'transition-all duration-300',
+                'transform will-change-transform',
+                visible && 'duration-1000',
+                visible && 'opacity-100',
+                visible && 'animate-in fade-in ease-out',
+                visible && 'slide-in-from-bottom',
+                visible || 'opacity-0',
+                visible || 'animate-out fade-out',
+                visible || 'slide-out-to-bottom',
                 'hover:shadow-full-xl',
                 'xl:w-[49%]'
             )}

@@ -8,12 +8,26 @@ export const greeting: IGreeting = {
     display: true,
 };
 
+export const contact: IContact = {
+    title: 'Contact Me',
+    subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
+    email: 'me@clemenshorn.com',
+    href: '#contact',
+    name: 'Contact',
+    display: true,
+};
+
 export const links: ISocialMediaLinks = {
     links: [
         {
             name: 'GitHub',
-            href: new URL('https://github.com/clemenscodes'),
+            href: new URL('https://github.com/clemenscodes/'),
             src: '../../../svg/github-mark-white.svg',
+        },
+        {
+            name: 'Twitter',
+            href: new URL('https://twitter.com/clemenscodes/'),
+            src: '../../../svg/twitter.svg',
         },
         {
             name: 'LinkedIn',
@@ -21,8 +35,8 @@ export const links: ISocialMediaLinks = {
             src: '../../../svg/linkedin.svg',
         },
         {
-            name: 'Gmail',
-            href: 'mailto:clemenscodes@gmail.com',
+            name: 'E-Mail',
+            href: `mailto:${contact.email}`,
             src: '../../../svg/gmail.svg',
         },
     ],
@@ -448,15 +462,6 @@ export const projects: IProjects = {
     ],
     href: '#projects',
     name: 'Projects',
-    display: true,
-};
-
-export const contact: IContact = {
-    title: 'Contact Me',
-    subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
-    email: 'clemenscodes@gmail.com',
-    href: '#contact',
-    name: 'Contact',
     display: true,
 };
 

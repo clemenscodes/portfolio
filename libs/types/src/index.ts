@@ -7,5 +7,5 @@ export * from './lib/section';
 export * from './lib/projects';
 export * from './lib/description';
 export * from './lib/socialMediaLinks';
-export * from './lib/education';
 export * from './lib/contact';
+export * from './lib/portfolio';

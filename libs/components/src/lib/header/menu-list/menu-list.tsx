@@ -1,11 +1,11 @@
 import ToggleTheme from '../toggle-theme/toggle-theme';
 import { cn } from '@styles';
-import { Section } from '@types';
+import { ISection } from '@types';
 import Link from 'next/link';
 
 export type MenuListProps = React.ComponentPropsWithoutRef<'ul'> & {
     isChecked: boolean;
-    sections: Section[];
+    sections: ISection[];
     handleChecked: () => void;
     handleScroll: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };

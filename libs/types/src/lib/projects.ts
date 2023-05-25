@@ -1,5 +1,5 @@
-import { Description } from './description';
-import { Section } from './section';
+import { IDescription } from './description';
+import { ISection } from './section';
 
 export interface IProjectLink {
     name: string;
@@ -13,6 +13,6 @@ export interface IProject {
     links: IProjectLink[];
 }
 
-export interface IProjects extends Section, Description {
+export interface IProjects extends ISection, IDescription {
     projects: IProject[];
 }

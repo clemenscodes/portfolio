@@ -1,17 +1,13 @@
 import ProjectList from './project-list/project-list';
-import { projectsSection } from '@config';
 import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { IProjects } from '@types';
 
 export type ProjectsProps = React.ComponentPropsWithoutRef<'section'> & {
-    projectsProps?: IProjects;
+    projects: IProjects;
 };
 
-export const Projects: React.FC<ProjectsProps> = ({
-    projectsProps = projectsSection,
-    ...props
-}) => {
+export const Projects: React.FC<ProjectsProps> = ({ projects, ...props }) => {
     const [ref, visible] = useIntersection({ threshold: 0.1 });
     return (
         <section
@@ -37,7 +33,7 @@ export const Projects: React.FC<ProjectsProps> = ({
                     'md:text-left md:text-8xl'
                 )}
             >
-                {projectsProps.title}
+                {projects.title}
             </h1>
             <p
                 className={cn(
@@ -47,9 +43,9 @@ export const Projects: React.FC<ProjectsProps> = ({
                     'md:text-left md:text-3xl'
                 )}
             >
-                {projectsProps.subTitle}
+                {projects.subTitle}
             </p>
-            <ProjectList projects={projectsProps.projects} />
+            <ProjectList projects={projects.projects} />
         </section>
     );
 };

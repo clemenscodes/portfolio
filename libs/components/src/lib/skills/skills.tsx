@@ -1,19 +1,15 @@
 import codingPerson from '../../../assets/json/codingPerson.json';
 import Animation from '../animation/animation';
 import { SkillCategoryList, SkillList } from './';
-import { skillsSection } from '@config';
 import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { ISkills } from '@types';
 
 export type SkillsProps = React.ComponentPropsWithoutRef<'section'> & {
-    skillsProp?: ISkills;
+    skills: ISkills;
 };
 
-export const Skills: React.FC<SkillsProps> = ({
-    skillsProp = skillsSection,
-    ...props
-}) => {
+export const Skills: React.FC<SkillsProps> = ({ skills, ...props }) => {
     const [ref, visible] = useIntersection({ threshold: 0.1 });
     return (
         <section
@@ -55,7 +51,7 @@ export const Skills: React.FC<SkillsProps> = ({
                     )}
                 >
                     <h1 className={cn('text-center text-5xl xl:text-8xl')}>
-                        {skillsProp.title}
+                        {skills.title}
                     </h1>
                     <p
                         className={cn(
@@ -64,14 +60,14 @@ export const Skills: React.FC<SkillsProps> = ({
                             'text-dimmed-muted'
                         )}
                     >
-                        {skillsProp.subTitle}
+                        {skills.subTitle}
                     </p>
                     <SkillCategoryList
-                        skillCategories={skillsProp.skillCategories}
+                        skillCategories={skills.skillCategories}
                     />
                 </div>
             </div>
-            <SkillList skills={skillsProp.skills} />
+            <SkillList skills={skills.skills} />
         </section>
     );
 };

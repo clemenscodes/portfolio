@@ -1,4 +1,4 @@
-import { IGreeting, Education, Section, ISkills, IProjects, SocialMediaLinks, Contact, School } from '@types';
+import { IGreeting, ISection, ISkills, IProjects, ISocialMediaLinks, IContact, IPortfolio } from '@types';
 
 export const greeting: IGreeting = {
     name: 'Clemens Horn',
@@ -8,7 +8,7 @@ export const greeting: IGreeting = {
     display: true,
 };
 
-export const socialMediaLinks: SocialMediaLinks = {
+export const links: ISocialMediaLinks = {
     links: [
         {
             name: 'GitHub',
@@ -29,7 +29,7 @@ export const socialMediaLinks: SocialMediaLinks = {
     display: true,
 };
 
-export const skillsSection: ISkills = {
+export const skills: ISkills = {
     title: 'What I do',
     subTitle: 'Building software that scales using modern technologies',
     skills: [
@@ -344,28 +344,7 @@ export const skillsSection: ISkills = {
     display: true,
 };
 
-const school: School = {
-    name: 'Technische Hochschule Mittelhessen',
-    logoSrc: '../../../components/assets/img/THM_Logo.png',
-    subTitle: 'Bachelor of Science in Social Media Systems',
-    duration: '2019 - present',
-    description: 'Worked as a tutor in several courses',
-    descriptionBullets: [
-        'Webbasierte Programmierung 1',
-        'Webbasierte Programmierung 2',
-        'Webbasierte Systeme 2',
-        'Integrations-Projekt 1',
-    ],
-};
-
-export const educationSection: Education = {
-    schools: [school],
-    display: true,
-    href: '#education',
-    name: 'Education',
-};
-
-export const projectsSection: IProjects = {
+export const projects: IProjects = {
     title: 'Projects',
     subTitle: 'Some projects I have built along the way',
     projects: [
@@ -421,36 +400,36 @@ export const projectsSection: IProjects = {
                 },
             ],
         },
-        {
-            imageSrc: '/img/mate-team.png',
-            name: 'Mate Team',
-            description: 'Organize events with your friends',
-            links: [
-                // {
-                //     name: 'View site',
-                //     url: new URL('https://mate-team.de/'),
-                // },
-                {
-                    name: 'View code',
-                    url: new URL('https://github.com/clemenscodes/mate-team/'),
-                },
-            ],
-        },
-        {
-            imageSrc: '/img/cargonaut.png',
-            name: 'myCargonaut',
-            description: 'Rent rides',
-            links: [
-                {
-                    name: 'View site',
-                    url: new URL('https://cargonaut.web.app/'),
-                },
-                {
-                    name: 'View code',
-                    url: new URL('https://github.com/clemenscodes/cargonaut/'),
-                },
-            ],
-        },
+        // {
+        //     imageSrc: '/img/mate-team.png',
+        //     name: 'Mate Team',
+        //     description: 'Organize events with your friends',
+        //     links: [
+        //         // {
+        //         //     name: 'View site',
+        //         //     url: new URL('https://mate-team.de/'),
+        //         // },
+        //         {
+        //             name: 'View code',
+        //             url: new URL('https://github.com/clemenscodes/mate-team/'),
+        //         },
+        //     ],
+        // },
+        // {
+        //     imageSrc: '/img/cargonaut.png',
+        //     name: 'myCargonaut',
+        //     description: 'Rent rides',
+        //     links: [
+        //         {
+        //             name: 'View site',
+        //             url: new URL('https://cargonaut.web.app/'),
+        //         },
+        //         {
+        //             name: 'View code',
+        //             url: new URL('https://github.com/clemenscodes/cargonaut/'),
+        //         },
+        //     ],
+        // },
         {
             imageSrc: '/img/swiftsell.png',
             name: 'SWIFTSELL',
@@ -472,14 +451,22 @@ export const projectsSection: IProjects = {
     display: true,
 };
 
-export const contactSection: Contact = {
+export const contact: IContact = {
     title: 'Contact Me',
     subTitle: 'Discuss a project or just want to say hi? My Inbox is open for all.',
-    number: '+49-1746590828',
     email: 'clemenscodes@gmail.com',
     href: '#contact',
     name: 'Contact',
     display: true,
 };
 
-export const sections: Section[] = [skillsSection, educationSection, projectsSection, contactSection];
+export const sections: ISection[] = [skills, projects, contact];
+
+export const portfolio: IPortfolio = {
+    sections,
+    links,
+    greeting,
+    skills,
+    projects,
+    contact,
+};

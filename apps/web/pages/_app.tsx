@@ -6,7 +6,6 @@ import Head from 'next/head';
 
 const ThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider));
 const FontProvider = dynamic(() => import('@providers').then((mod) => mod.FontProvider));
-const Layout = dynamic(() => import('@components').then((mod) => mod.Layout));
 
 const App: React.FC<AppProps> = ({ Component, ...pageProps }) => {
     return (
@@ -17,9 +16,7 @@ const App: React.FC<AppProps> = ({ Component, ...pageProps }) => {
             </Head>
             <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
                 <FontProvider>
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
+                    <Component {...pageProps} />
                 </FontProvider>
             </ThemeProvider>
         </>

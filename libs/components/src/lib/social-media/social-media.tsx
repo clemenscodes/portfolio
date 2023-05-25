@@ -1,16 +1,15 @@
 import SocialMediaButton from './social-media-button/social-media-button';
-import { socialMediaLinks } from '@config';
 import { cn } from '@styles';
-import { SocialMediaLinks } from '@types';
+import { ISocialMediaLinks } from '@types';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 export type SocialMediaProps = React.ComponentPropsWithoutRef<'ul'> & {
-    linksProp?: SocialMediaLinks;
+    links: ISocialMediaLinks;
 };
 
 export const SocialMedia: React.FC<SocialMediaProps> = ({
-    linksProp = socialMediaLinks,
+    links,
     className,
     ...props
 }) => {
@@ -19,13 +18,13 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({
     const [gitHubSrc, setGitHubSrc] = useState('../../../svg/github.svg');
 
     useEffect(() => {
-        const gh = linksProp.links.filter((link) => link.name === 'GitHub')[0];
+        const gh = links.links.filter((link) => link.name === 'GitHub')[0];
         if (gh) {
             isDark
                 ? setGitHubSrc(gh.src)
                 : setGitHubSrc('../../../svg/github.svg');
         }
-    }, [isDark, linksProp.links]);
+    }, [isDark, links]);
 
     return (
         <ul
@@ -37,7 +36,7 @@ export const SocialMedia: React.FC<SocialMediaProps> = ({
                 className,
             ])}
         >
-            {linksProp.links.map((link, index) => (
+            {links.links.map((link, index) => (
                 <li key={index}>
                     <SocialMediaButton
                         linkProps={{

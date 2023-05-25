@@ -1,20 +1,17 @@
 import Logo from './logo/logo';
 import MenuList from './menu-list/menu-list';
 import Menu from './menu/menu';
-import { sections } from '@config';
 import { cn } from '@styles';
-import { Section } from '@types';
+import { IGreeting, ISection } from '@types';
 import { scrollToComponent } from '@utils';
 import { useEffect, useRef, useState } from 'react';
 
 export type HeaderProps = React.ComponentPropsWithoutRef<'header'> & {
-    sectionsProp?: Section[];
+    sections: ISection[];
+    name: IGreeting['name'];
 };
 
-export const Header: React.FC<HeaderProps> = ({
-    sectionsProp = sections,
-    ...props
-}) => {
+export const Header: React.FC<HeaderProps> = ({ sections, name, ...props }) => {
     const [isChecked, setIsChecked] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -87,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
                         'transform'
                     )}
                 >
-                    <Logo />
+                    <Logo name={name} />
                 </div>
                 <div
                     className={cn(

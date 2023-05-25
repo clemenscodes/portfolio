@@ -3,16 +3,17 @@ import Animation from '../animation/animation';
 import Button from '../button/button';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
-import { greeting } from '@config';
 import { cn } from '@styles';
-import { type IGreeting } from '@types';
+import { ISocialMediaLinks, type IGreeting } from '@types';
 
 export type GreetingProps = React.ComponentPropsWithoutRef<'section'> & {
-    greetingProps?: IGreeting;
+    greeting: IGreeting;
+    links: ISocialMediaLinks;
 };
 
 export const Greeting: React.FC<GreetingProps> = ({
-    greetingProps = greeting,
+    links,
+    greeting,
     ...props
 }) => {
     return (
@@ -36,7 +37,7 @@ export const Greeting: React.FC<GreetingProps> = ({
                             '2xl:text-6xl'
                         )}
                     >
-                        {greetingProps.title}{' '}
+                        {greeting.title}{' '}
                         <Emoji
                             className='inline-block animate-wave'
                             emoji={'👋'}
@@ -55,7 +56,7 @@ export const Greeting: React.FC<GreetingProps> = ({
                     >
                         {greeting.subTitle}
                     </p>
-                    <SocialMedia className={cn('my-8')} />
+                    <SocialMedia className={cn('my-8')} links={links} />
                     <div
                         className={cn(
                             'flex justify-evenly',

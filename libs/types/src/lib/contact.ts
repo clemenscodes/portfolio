@@ -1,7 +1,6 @@
-import { Description } from './description';
-import { Section } from './section';
+import { IDescription } from './description';
+import { ISection } from './section';
 
-export interface Contact extends Section, Description {
-    number: string;
+export interface IContact extends ISection, IDescription {
     email: string;
 }

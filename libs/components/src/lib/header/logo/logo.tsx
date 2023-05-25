@@ -1,15 +1,11 @@
-import { greeting } from '@config';
 import { cn } from '@styles';
 import { scrollToTop } from '@utils';
 
 export type LogoProps = React.ComponentPropsWithoutRef<'button'> & {
-    name?: string;
+    name: string;
 };
 
-export const Logo: React.FC<LogoProps> = ({
-    name = greeting.name,
-    ...props
-}) => {
+export const Logo: React.FC<LogoProps> = ({ name, ...props }) => {
     return (
         <button
             className={cn(

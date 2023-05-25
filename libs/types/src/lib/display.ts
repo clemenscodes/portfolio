@@ -1,3 +1,3 @@
-export interface Display {
+export interface IDisplay {
     display: boolean;
 }

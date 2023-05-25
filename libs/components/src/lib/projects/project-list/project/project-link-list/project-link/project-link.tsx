@@ -1,4 +1,4 @@
-import Button from '../../../button/button';
+import Button from '../../../../../button/button';
 import { cn } from '@styles';
 import { IProjectLink } from '@types';
 

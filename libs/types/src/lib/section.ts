@@ -1,6 +1,6 @@
-import { Display } from './display';
+import { IDisplay } from './display';
 
-export interface Section extends Display {
+export interface ISection extends IDisplay {
     href: string;
     name: string;
 }

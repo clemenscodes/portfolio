@@ -1,4 +1,4 @@
-export interface Description {
+export interface IDescription {
     title: string;
     subTitle: string;
 }

@@ -1,5 +1,5 @@
-import { Description } from './description';
-import { Section } from './section';
+import { IDescription } from './description';
+import { ISection } from './section';
 
 export interface ISkill {
     name: string;
@@ -16,7 +16,7 @@ export interface ISkillCategory {
     softwareSkills: ISoftwareSkill[];
 }
 
-export interface ISkills extends Section, Description {
+export interface ISkills extends ISection, IDescription {
     skills: ISkill[];
     skillCategories: ISkillCategory[];
 }

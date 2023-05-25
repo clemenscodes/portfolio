@@ -1,6 +1,6 @@
-import { SiteConfig } from '@types';
+import { ISiteConfig } from '@types';
 
-export const site: SiteConfig = {
+export const site: ISiteConfig = {
     title: "Clemens' Portfolio",
     description: '',
     keywords: '',

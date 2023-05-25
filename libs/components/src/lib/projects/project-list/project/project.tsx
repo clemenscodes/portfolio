@@ -1,4 +1,4 @@
-import ProjectLinkList from '../../project-link-list/project-link-list';
+import ProjectLinkList from './project-link-list/project-link-list';
 import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { IProject } from '@types';

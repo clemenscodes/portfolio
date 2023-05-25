@@ -453,7 +453,7 @@ export const projects: IProjects = {
 
 export const contact: IContact = {
     title: 'Contact Me',
-    subTitle: 'Discuss a project or just want to say hi? My Inbox is open for all.',
+    subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
     email: 'clemenscodes@gmail.com',
     href: '#contact',
     name: 'Contact',

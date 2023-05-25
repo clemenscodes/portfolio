@@ -15,7 +15,7 @@ describe('Emoji', () => {
         expect(spanElement).toHaveAttribute('aria-hidden', 'false');
     });
 
-    it('checks that aria-hidden is true and excluded from accessibility tree', () => {
+    it('checks that aria-hidden is true', () => {
         const props = {
             emoji: '🚀',
             label: '',

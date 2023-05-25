@@ -8,6 +8,7 @@ const { withNx } = require('@nx/next/plugins/with-nx');
  **/
 const nextConfig = {
     reactStrictMode: true,
+    optimizeFonts: true,
     swcMinify: true,
     nx: {
         svgr: true,

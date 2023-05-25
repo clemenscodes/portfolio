@@ -1,19 +1,4 @@
-import {
-    IGreeting,
-    Illustration,
-    Education,
-    Section,
-    ISkills,
-    OpenSource,
-    IProjects,
-    SocialMediaLinks,
-    Contact,
-    School,
-} from '@types';
-
-export const illustration: Illustration = {
-    animated: true,
-};
+import { IGreeting, ISection, ISkills, IProjects, ISocialMediaLinks, IContact, IPortfolio } from '@types';
 
 export const greeting: IGreeting = {
     name: 'Clemens Horn',
@@ -23,7 +8,7 @@ export const greeting: IGreeting = {
     display: true,
 };
 
-export const socialMediaLinks: SocialMediaLinks = {
+export const links: ISocialMediaLinks = {
     links: [
         {
             name: 'GitHub',
@@ -44,7 +29,7 @@ export const socialMediaLinks: SocialMediaLinks = {
     display: true,
 };
 
-export const skillsSection: ISkills = {
+export const skills: ISkills = {
     title: 'What I do',
     subTitle: 'Building software that scales using modern technologies',
     skills: [
@@ -359,46 +344,104 @@ export const skillsSection: ISkills = {
     display: true,
 };
 
-export const openSourceSection: OpenSource = {
-    href: '#opensource',
-    name: 'Open Source',
-    display: true,
-    showGithubProfile: true,
-};
-
-const school: School = {
-    name: 'Technische Hochschule Mittelhessen',
-    logoSrc: '../../../components/assets/img/THM_Logo.png',
-    subTitle: 'Bachelor of Science in Social Media Systems',
-    duration: '2019 - present',
-    description: 'Worked as a tutor in several courses',
-    descriptionBullets: [
-        'Webbasierte Programmierung 1',
-        'Webbasierte Programmierung 2',
-        'Webbasierte Systeme 2',
-        'Integrations-Projekt 1',
-    ],
-};
-
-export const educationSection: Education = {
-    schools: [school],
-    display: true,
-    href: '#education',
-    name: 'Education',
-};
-
-export const projectsSection: IProjects = {
+export const projects: IProjects = {
     title: 'Projects',
     subTitle: 'Some projects I have built along the way',
     projects: [
+        {
+            imageSrc: '../../../svg/cli.svg',
+            name: 'Ninja VM',
+            description: 'Virtual Machine for the Ninja Programming Language',
+            links: [
+                {
+                    name: 'View code in C',
+                    url: new URL('https://github.com/clemenscodes/njvm/'),
+                },
+                {
+                    name: 'View code in Rust',
+                    url: new URL('https://github.com/clemenscodes/njvm_rust/'),
+                },
+            ],
+        },
+        {
+            imageSrc: '../../../svg/cardano.svg',
+            name: 'Cardano CLI',
+            description: 'Command line interface to work with Cardano utilities',
+            links: [
+                {
+                    name: 'View code in Rust',
+                    url: new URL('https://github.com/crc-cardano-stakepool/cardano/'),
+                },
+            ],
+        },
+        {
+            imageSrc: '../../../svg/monero.svg',
+            name: 'Peer-to-peer Monero mining setup',
+            description: 'Easily bootstrap a monero node and start mining',
+            links: [
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/monero/'),
+                },
+            ],
+        },
         {
             imageSrc: '/img/crypto.png',
             name: 'Simple Crypto',
             description: 'Beginner friendly introduction to cryptocurrencies and their ecological impact',
             links: [
                 {
-                    name: 'Visit Website',
+                    name: 'View site',
                     url: new URL('https://simple-crypto.web.app/'),
+                },
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/simple-crypto/'),
+                },
+            ],
+        },
+        // {
+        //     imageSrc: '/img/mate-team.png',
+        //     name: 'Mate Team',
+        //     description: 'Organize events with your friends',
+        //     links: [
+        //         // {
+        //         //     name: 'View site',
+        //         //     url: new URL('https://mate-team.de/'),
+        //         // },
+        //         {
+        //             name: 'View code',
+        //             url: new URL('https://github.com/clemenscodes/mate-team/'),
+        //         },
+        //     ],
+        // },
+        // {
+        //     imageSrc: '/img/cargonaut.png',
+        //     name: 'myCargonaut',
+        //     description: 'Rent rides',
+        //     links: [
+        //         {
+        //             name: 'View site',
+        //             url: new URL('https://cargonaut.web.app/'),
+        //         },
+        //         {
+        //             name: 'View code',
+        //             url: new URL('https://github.com/clemenscodes/cargonaut/'),
+        //         },
+        //     ],
+        // },
+        {
+            imageSrc: '/img/swiftsell.png',
+            name: 'SWIFTSELL',
+            description: 'Sell swiftly (Note: Serverless app, visiting site usually triggers a cold start)',
+            links: [
+                {
+                    name: 'View site',
+                    url: new URL('https://shop.swiftsell.de/'),
+                },
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/swiftsell/'),
                 },
             ],
         },
@@ -408,20 +451,22 @@ export const projectsSection: IProjects = {
     display: true,
 };
 
-export const contactSection: Contact = {
+export const contact: IContact = {
     title: 'Contact Me',
-    subTitle: 'Discuss a project or just want to say hi? My Inbox is open for all.',
-    number: '+49-1746590828',
+    subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
     email: 'clemenscodes@gmail.com',
     href: '#contact',
     name: 'Contact',
     display: true,
 };
 
-export const sections: Section[] = [
-    skillsSection,
-    educationSection,
-    openSourceSection,
-    projectsSection,
-    contactSection,
-];
+export const sections: ISection[] = [skills, projects, contact];
+
+export const portfolio: IPortfolio = {
+    sections,
+    links,
+    greeting,
+    skills,
+    projects,
+    contact,
+};

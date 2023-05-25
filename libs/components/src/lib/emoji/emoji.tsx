@@ -5,10 +5,21 @@ export type EmojiProps = React.ComponentPropsWithoutRef<'span'> & {
     label: string;
 };
 
-export const Emoji: React.FC<EmojiProps> = ({ emoji, label, className, ...props }) => {
+export const Emoji: React.FC<EmojiProps> = ({
+    emoji,
+    label,
+    className,
+    ...props
+}) => {
     const hidden = label ? 'false' : 'true';
     return (
-        <span {...props} role='img' aria-label={label} aria-hidden={hidden} className={cn([className])}>
+        <span
+            {...props}
+            role='img'
+            aria-label={label}
+            aria-hidden={hidden}
+            className={cn([className])}
+        >
             {emoji}
         </span>
     );

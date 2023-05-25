@@ -4,7 +4,18 @@
     "overrides": [
         {
             "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-            "rules": {}
+            "rules": {
+                "max-len": [
+                    "error",
+                    {
+                        "code": 80,
+                        "ignoreUrls": true,
+                        "ignoreStrings": false,
+                        "ignoreTemplateLiterals": false,
+                        "ignoreRegExpLiterals": true
+                    }
+                ]
+            }
         },
         {
             "files": ["*.ts", "*.tsx"],

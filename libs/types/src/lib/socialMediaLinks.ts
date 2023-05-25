@@ -1,11 +1,11 @@
-import { Display } from './display';
+import { IDisplay } from './display';
 
-export interface SocialMediaLink {
+export interface ISocialMediaLink {
     name: string;
     href: URL | string;
     src: string;
 }
 
-export interface SocialMediaLinks extends Display {
-    links: SocialMediaLink[];
+export interface ISocialMediaLinks extends IDisplay {
+    links: ISocialMediaLink[];
 }

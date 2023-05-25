@@ -1,5 +1,6 @@
 import '../global.css';
 import { site } from '@config';
+import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -17,6 +18,7 @@ const App: React.FC<AppProps> = ({ Component, ...pageProps }) => {
             <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
                 <FontProvider>
                     <Component {...pageProps} />
+                    <Analytics />
                 </FontProvider>
             </ThemeProvider>
         </>

@@ -61,6 +61,7 @@ export const MenuList: React.FC<MenuListProps> = ({
                             <Link
                                 scroll={true}
                                 href={section.href}
+                                locale={false}
                                 onClick={handleScroll}
                             >
                                 {section.name}

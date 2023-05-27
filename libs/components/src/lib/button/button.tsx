@@ -37,7 +37,12 @@ export const Button: React.FC<ButtonProps> = ({
             {button}
         </Link>
     ) : (
-        <Link scroll={true} href={href} onClick={scrollToComponent}>
+        <Link
+            scroll={true}
+            locale={false}
+            href={href}
+            onClick={scrollToComponent}
+        >
             {button}
         </Link>
     );

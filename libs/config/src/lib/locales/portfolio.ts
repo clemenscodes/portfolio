@@ -5,6 +5,8 @@ export const greeting: IGreeting = {
     title: "Hi all, I'm Clemens",
     subTitle: 'A developer who loves building robust software with Rust and TypeScript.',
     resumeLink: new URL('https://drive.google.com/file/d/12J1mhDIUc5aN2EIIokasqajRS3h_br2h/view?usp=share_link'),
+    contactMe: 'Contact me',
+    seeResume: 'See resume',
     display: true,
 };
 

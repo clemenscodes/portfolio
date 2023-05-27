@@ -1,0 +1,421 @@
+{
+    "basics": {
+        "name": "Clemens Horn",
+        "email": "me@clemenshorn.com",
+        "phone": "",
+        "photo": {
+            "url": "https://cdn.rxresu.me/uploads/462477/497638/1685037660369.PNG",
+            "filters": {
+                "size": 512,
+                "shape": "circle",
+                "border": false,
+                "grayscale": false
+            },
+            "visible": true
+        },
+        "summary": "",
+        "website": "clemenshorn.com",
+        "headline": "Skalierbare und responsive Anwendungen sind mein Brot und Butter",
+        "location": {
+            "city": "",
+            "region": "",
+            "address": "",
+            "country": "",
+            "postalCode": ""
+        },
+        "profiles": [
+            {
+                "id": "dc96c208-2a78-4e25-84f3-0cd469fb44d0",
+                "url": "https://twitter.com/clemenscodes",
+                "network": "Twitter",
+                "username": "clemenscodes"
+            },
+            {
+                "id": "c24e6fa3-5111-44d1-b079-d039af87b8c1",
+                "url": "https://www.linkedin.com/in/clemens-horn/",
+                "network": "LinkedIn",
+                "username": "Clemens Horn"
+            },
+            {
+                "id": "03622bee-3f97-449c-b06d-d3038f1d2a1e",
+                "url": "https://github.com/clemenscodes",
+                "network": "GitHub",
+                "username": "clemenscodes"
+            }
+        ],
+        "birthdate": "1997-08-18"
+    },
+    "sections": {
+        "work": {
+            "id": "work",
+            "name": "Arbeitserfahrung",
+            "type": "work",
+            "items": [
+                {
+                    "id": "f18febcb-b3d1-4c7a-adca-6596308bee76",
+                    "url": "thm.de",
+                    "date": {
+                        "end": "2022-02-01",
+                        "start": "2019-08-01"
+                    },
+                    "name": "Technische Hochschule Mittelhessen",
+                    "summary": "- Unterstützung beim Programmieren in einer webbasierten Umgebung\n- Bewertung der Programmieraufgaben und Projekte der Studierenden",
+                    "position": "Tutor"
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "awards": {
+            "id": "awards",
+            "name": "Auszeichnungen",
+            "type": "basic",
+            "items": [],
+            "columns": 2,
+            "visible": true
+        },
+        "skills": {
+            "id": "skills",
+            "name": "Fähigkeiten",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "15df905b-d395-493d-a2b8-5e419ef92e53",
+                    "name": "Programmierung",
+                    "level": "",
+                    "keywords": [
+                        "TypeScript",
+                        "Rust",
+                        "C"
+                    ],
+                    "levelNum": 0
+                },
+                {
+                    "id": "0efb04fa-d8f6-4035-aa15-b9c86094c4b4",
+                    "name": "UI/UX",
+                    "level": "",
+                    "keywords": [
+                        "Next.js",
+                        "Tailwind"
+                    ],
+                    "levelNum": 0
+                },
+                {
+                    "id": "accb34e6-fc07-442d-aded-a98b1e45683f",
+                    "name": "API",
+                    "level": "",
+                    "keywords": [
+                        "Nest.js",
+                        "Hasura"
+                    ],
+                    "levelNum": 0
+                },
+                {
+                    "id": "2fb86dbf-50c7-4afd-bd1e-fa3db4895f5e",
+                    "name": "Datenbanken",
+                    "level": "",
+                    "keywords": [
+                        "PostgreSQL"
+                    ],
+                    "levelNum": 0
+                },
+                {
+                    "id": "28fb556a-236b-4daf-a905-757076bc1361",
+                    "name": "Testen",
+                    "level": "",
+                    "keywords": [
+                        "Jest",
+                        "Cypress"
+                    ],
+                    "levelNum": 0
+                },
+                {
+                    "id": "13d44060-9c03-49df-92d6-f76544bccd0a",
+                    "name": "DevOps",
+                    "level": "",
+                    "keywords": [
+                        "Git",
+                        "Docker",
+                        "Kubernetes",
+                        "Terraform"
+                    ],
+                    "levelNum": 0
+                },
+                {
+                    "id": "a4112d6b-276c-4b44-bc4f-7a40392b5a7a",
+                    "name": "Automation",
+                    "level": "",
+                    "keywords": [
+                        "POSIX",
+                        "Python"
+                    ],
+                    "levelNum": 0
+                },
+                {
+                    "id": "1042f0db-365f-4e90-9406-a3f02da364e6",
+                    "name": "Linux",
+                    "level": "",
+                    "keywords": [
+                        "Debian",
+                        "Arch"
+                    ],
+                    "levelNum": 0
+                }
+            ],
+            "columns": 2,
+            "visible": true
+        },
+        "projects": {
+            "id": "projects",
+            "name": "Projekte",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "25d5bc22-0187-4cbf-8fd3-a0a4c2246506",
+                    "url": "clemenshorn.com",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "name": "Portfolio",
+                    "summary": "Mein Portfolio bietet Besuchern eine moderne und dynamische Web-Erfahrung, um meine Expertise und Erfolge zu erkunden. Es vereint die Vorteile eines robusten Frontend-Frameworks, eines vielseitigen UI-Toolkits, einer leistungsstarken Monorepo-Struktur und einer typsicheren Sprache.",
+                    "keywords": [
+                        "Next.js",
+                        "Tailwind",
+                        "Storybook",
+                        "Nx",
+                        "TypeScript"
+                    ],
+                    "description": "Responsives und modernes Portfolio."
+                },
+                {
+                    "id": "34bcbdea-141a-4b1a-80a8-8ee096ccd81e",
+                    "url": "simple-crypto.web.app",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "name": "Simple Crypto",
+                    "summary": "Wertvoll für Personen, die ein besseres Verständnis von Kryptowährungen und ihren Herausforderungen suchen.",
+                    "keywords": [
+                        "JavaScript",
+                        "Sass"
+                    ],
+                    "description": "Eine informative Webseite, die die Kluft zwischen komplexen Kryptowährungskonzepten und ihren Umweltauswirkungen überbrückt."
+                },
+                {
+                    "id": "1b23f47b-7a39-43e0-a354-e1061da012dd",
+                    "url": "github.com/clemenscodes/njvm",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "name": "Ninja Virtual Machine",
+                    "summary": "",
+                    "keywords": [
+                        "C",
+                        "Assembly",
+                        "CMake",
+                        "Ninja"
+                    ],
+                    "description": "Die virtuelle Maschine für die Programmiersprache Ninja ist eine leistungsstarke und effiziente Umgebung, um Ninja-Code zu interpretieren und auszuführen."
+                },
+                {
+                    "id": "a464c0ea-33b7-4e02-8299-90bf82d7d023",
+                    "url": "github.com/clemenscodes/cardano",
+                    "date": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "name": "Cardano CLI",
+                    "summary": "",
+                    "keywords": [
+                        "Rust",
+                        "Cardano"
+                    ],
+                    "description": "Die Befehlszeilenschnittstelle ermöglicht eine effiziente Verwaltung der Cardano-Dienstprogramme und vereinfacht den Prozess der Installation eines Cardano-Knotens."
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "education": {
+            "id": "education",
+            "name": "Bildung",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "a19da3e4-ef48-473d-b183-72657cf780a4",
+                    "url": "thm.de",
+                    "area": "IT",
+                    "date": {
+                        "end": "",
+                        "start": "2019-04-01"
+                    },
+                    "score": "1.8",
+                    "degree": "Social Media Systems",
+                    "courses": [
+                        "Webbasierte Programmierung",
+                        "Algorithmen und Datenstrukturen",
+                        "Datenbanksysteme",
+                        "Architekturen von Webservices",
+                        "Konzepte systemnaher Programmierung",
+                        "Konzepte moderner Softwareentwicklung",
+                        "Compilerbau",
+                        "Webbasierte Systeme",
+                        "Betriebssysteme und Rechnernetze",
+                        "Sichere Softwareentwicklung"
+                    ],
+                    "summary": "Ein umfassendes und vielseitiges Studium mit Schwerpunkt auf IT, das sich auf das agile Designen, Planen und Erstellen von Anwendungen von Anfang bis Ende konzentriert. Dieses einzigartige Studium kombiniert das Wissen über Social-Media-Strategien mit dem technischen Know-how der Informatik. Damit habe ich eine solide Grundlage für den Einsatz von Technologien für effektive Weblösungen.",
+                    "institution": "Technische Hochschule Mittelhessen"
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "interests": {
+            "id": "interests",
+            "name": "Interessen",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "d0817195-4001-4097-b794-716726c3852c",
+                    "name": "Kryptowährungen",
+                    "keywords": [
+                        "Cardano",
+                        "Monero"
+                    ]
+                },
+                {
+                    "id": "133f8ebd-2f43-47f7-ad00-a6f852e08d6b",
+                    "name": "Persönlichkeitsentwicklung",
+                    "keywords": [
+                        "Fitness"
+                    ]
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "languages": {
+            "id": "languages",
+            "name": "Sprachen",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "c9839ccd-2151-45b2-b703-426c8f09a685",
+                    "name": "Deutsch",
+                    "level": "Muttersprachler",
+                    "levelNum": 0
+                },
+                {
+                    "id": "29891924-1dc7-4090-9841-3b93c818d8fe",
+                    "name": "Englisch",
+                    "level": "Fließend",
+                    "levelNum": 0
+                },
+                {
+                    "id": "f5f34cff-43bf-4270-9a5b-abaf83137774",
+                    "name": "Spanisch",
+                    "level": "Gesprächsfähig",
+                    "levelNum": 0
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "volunteer": {
+            "id": "volunteer",
+            "name": "Freiwilligenarbeit",
+            "type": "basic",
+            "items": [
+                {
+                    "id": "80f00df3-42a6-49e6-b5d1-8aa62e3c373b",
+                    "url": "ask-hessen.de",
+                    "date": {
+                        "end": "2019-03-01",
+                        "start": "2018-09-01"
+                    },
+                    "summary": "",
+                    "position": "Freiwilliger",
+                    "organization": "Albert-Schweitzer-Kinderdorf"
+                }
+            ],
+            "columns": 1,
+            "visible": true
+        },
+        "references": {
+            "id": "references",
+            "name": "Referenzen",
+            "type": "basic",
+            "items": [],
+            "columns": 2,
+            "visible": false
+        },
+        "publications": {
+            "id": "publications",
+            "name": "Veröffentlichungen",
+            "type": "basic",
+            "items": [],
+            "columns": 2,
+            "visible": false
+        },
+        "certifications": {
+            "id": "certifications",
+            "name": "Zertifikate",
+            "type": "basic",
+            "items": [],
+            "columns": 1,
+            "visible": false
+        }
+    },
+    "metadata": {
+        "css": {
+            "value": "/* Enter custom CSS here */\n\n.invert {\n    --tw-invert: !important;\n    --text-color: #fff;\n}",
+            "visible": true
+        },
+        "date": {
+            "format": "DD.MM.YYYY"
+        },
+        "page": {
+            "format": "A4"
+        },
+        "theme": {
+            "text": "#241b1b",
+            "primary": "#222222",
+            "background": "#ffffff"
+        },
+        "layout": [
+            [
+                [
+                    "education",
+                    "work",
+                    "volunteer",
+                    "projects",
+                    "references"
+                ],
+                [
+                    "skills",
+                    "languages",
+                    "interests",
+                    "awards",
+                    "certifications",
+                    "publications"
+                ]
+            ]
+        ],
+        "locale": "de",
+        "template": "gengar",
+        "typography": {
+            "size": {
+                "body": 12,
+                "heading": 24
+            },
+            "family": {
+                "body": "Open Sans",
+                "heading": "Open Sans"
+            }
+        }
+    },
+    "public": true
+}

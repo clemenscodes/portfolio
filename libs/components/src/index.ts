@@ -2,6 +2,7 @@ export * from './lib/projects/projects';
 export * from './lib/skills/skills';
 export * from './lib/social-media/social-media';
 export * from './lib/header/header';
+export * from './lib/header/logo/logo';
 export * from './lib/button/button';
 export * from './lib/animation/animation';
 export * from './lib/contact/contact';

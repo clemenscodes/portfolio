@@ -5,7 +5,7 @@ export type LogoProps = React.ComponentPropsWithoutRef<'button'> & {
     name: string;
 };
 
-export const Logo: React.FC<LogoProps> = ({ name, ...props }) => {
+export const Logo: React.FC<LogoProps> = ({ name, className, ...props }) => {
     return (
         <button
             className={cn(
@@ -13,7 +13,8 @@ export const Logo: React.FC<LogoProps> = ({ name, ...props }) => {
                 'h-4/5 p-2',
                 'rounded text-2xl',
                 'hover:bg-gray-200',
-                'dark:hover:bg-dimmed-800'
+                'dark:hover:bg-dimmed-800',
+                className
             )}
             onClick={scrollToTop}
             {...props}

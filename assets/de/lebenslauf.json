@@ -83,82 +83,56 @@
                     "id": "15df905b-d395-493d-a2b8-5e419ef92e53",
                     "name": "Programmierung",
                     "level": "",
-                    "keywords": [
-                        "TypeScript",
-                        "Rust",
-                        "C"
-                    ],
+                    "keywords": ["TypeScript", "Rust", "C"],
                     "levelNum": 0
                 },
                 {
                     "id": "0efb04fa-d8f6-4035-aa15-b9c86094c4b4",
                     "name": "UI/UX",
                     "level": "",
-                    "keywords": [
-                        "Next.js",
-                        "Tailwind"
-                    ],
+                    "keywords": ["Next.js", "Tailwind"],
                     "levelNum": 0
                 },
                 {
                     "id": "accb34e6-fc07-442d-aded-a98b1e45683f",
                     "name": "API",
                     "level": "",
-                    "keywords": [
-                        "Nest.js",
-                        "Hasura"
-                    ],
+                    "keywords": ["Nest.js", "Hasura"],
                     "levelNum": 0
                 },
                 {
                     "id": "2fb86dbf-50c7-4afd-bd1e-fa3db4895f5e",
                     "name": "Datenbanken",
                     "level": "",
-                    "keywords": [
-                        "PostgreSQL"
-                    ],
+                    "keywords": ["PostgreSQL"],
                     "levelNum": 0
                 },
                 {
                     "id": "28fb556a-236b-4daf-a905-757076bc1361",
                     "name": "Testen",
                     "level": "",
-                    "keywords": [
-                        "Jest",
-                        "Cypress"
-                    ],
+                    "keywords": ["Jest", "Cypress"],
                     "levelNum": 0
                 },
                 {
                     "id": "13d44060-9c03-49df-92d6-f76544bccd0a",
                     "name": "DevOps",
                     "level": "",
-                    "keywords": [
-                        "Git",
-                        "Docker",
-                        "Kubernetes",
-                        "Terraform"
-                    ],
+                    "keywords": ["Git", "Docker", "Kubernetes", "Terraform"],
                     "levelNum": 0
                 },
                 {
                     "id": "a4112d6b-276c-4b44-bc4f-7a40392b5a7a",
                     "name": "Automation",
                     "level": "",
-                    "keywords": [
-                        "POSIX",
-                        "Python"
-                    ],
+                    "keywords": ["POSIX", "Python"],
                     "levelNum": 0
                 },
                 {
                     "id": "1042f0db-365f-4e90-9406-a3f02da364e6",
                     "name": "Linux",
                     "level": "",
-                    "keywords": [
-                        "Debian",
-                        "Arch"
-                    ],
+                    "keywords": ["Debian", "Arch"],
                     "levelNum": 0
                 }
             ],
@@ -179,13 +153,7 @@
                     },
                     "name": "Portfolio",
                     "summary": "Mein Portfolio bietet Besuchern eine moderne und dynamische Web-Erfahrung, um meine Expertise und Erfolge zu erkunden. Es vereint die Vorteile eines robusten Frontend-Frameworks, eines vielseitigen UI-Toolkits, einer leistungsstarken Monorepo-Struktur und einer typsicheren Sprache.",
-                    "keywords": [
-                        "Next.js",
-                        "Tailwind",
-                        "Storybook",
-                        "Nx",
-                        "TypeScript"
-                    ],
+                    "keywords": ["Next.js", "Tailwind", "Storybook", "Nx", "TypeScript"],
                     "description": "Responsives und modernes Portfolio."
                 },
                 {
@@ -197,10 +165,7 @@
                     },
                     "name": "Simple Crypto",
                     "summary": "Wertvoll für Personen, die ein besseres Verständnis von Kryptowährungen und ihren Herausforderungen suchen.",
-                    "keywords": [
-                        "JavaScript",
-                        "Sass"
-                    ],
+                    "keywords": ["JavaScript", "Sass"],
                     "description": "Eine informative Webseite, die die Kluft zwischen komplexen Kryptowährungskonzepten und ihren Umweltauswirkungen überbrückt."
                 },
                 {
@@ -212,12 +177,7 @@
                     },
                     "name": "Ninja Virtual Machine",
                     "summary": "",
-                    "keywords": [
-                        "C",
-                        "Assembly",
-                        "CMake",
-                        "Ninja"
-                    ],
+                    "keywords": ["C", "Assembly", "CMake", "Ninja"],
                     "description": "Die virtuelle Maschine für die Programmiersprache Ninja ist eine leistungsstarke und effiziente Umgebung, um Ninja-Code zu interpretieren und auszuführen."
                 },
                 {
@@ -229,10 +189,7 @@
                     },
                     "name": "Cardano CLI",
                     "summary": "",
-                    "keywords": [
-                        "Rust",
-                        "Cardano"
-                    ],
+                    "keywords": ["Rust", "Cardano"],
                     "description": "Die Befehlszeilenschnittstelle ermöglicht eine effiziente Verwaltung der Cardano-Dienstprogramme und vereinfacht den Prozess der Installation eines Cardano-Knotens."
                 }
             ],
@@ -281,17 +238,12 @@
                 {
                     "id": "d0817195-4001-4097-b794-716726c3852c",
                     "name": "Kryptowährungen",
-                    "keywords": [
-                        "Cardano",
-                        "Monero"
-                    ]
+                    "keywords": ["Cardano", "Monero"]
                 },
                 {
                     "id": "133f8ebd-2f43-47f7-ad00-a6f852e08d6b",
                     "name": "Persönlichkeitsentwicklung",
-                    "keywords": [
-                        "Fitness"
-                    ]
+                    "keywords": ["Fitness"]
                 }
             ],
             "columns": 1,
@@ -387,21 +339,8 @@
         },
         "layout": [
             [
-                [
-                    "education",
-                    "work",
-                    "volunteer",
-                    "projects",
-                    "references"
-                ],
-                [
-                    "skills",
-                    "languages",
-                    "interests",
-                    "awards",
-                    "certifications",
-                    "publications"
-                ]
+                ["education", "work", "volunteer", "projects", "references"],
+                ["skills", "languages", "interests", "awards", "certifications", "publications"]
             ]
         ],
         "locale": "de",

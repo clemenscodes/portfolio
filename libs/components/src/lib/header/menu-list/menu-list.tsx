@@ -1,3 +1,4 @@
+import LanguageSelection from '../language-selection/language-selection';
 import ToggleTheme from '../toggle-theme/toggle-theme';
 import { cn } from '@styles';
 import { ISection } from '@types';
@@ -47,7 +48,7 @@ export const MenuList: React.FC<MenuListProps> = ({
                             onClick={handleChecked}
                             className={cn(
                                 'flex flex-col items-center',
-                                'p-3',
+                                'px-6 py-3',
                                 'rounded text-sm',
                                 'transition-transform',
                                 'hover:bg-gray-200',
@@ -78,6 +79,16 @@ export const MenuList: React.FC<MenuListProps> = ({
                 )}
             >
                 <ToggleTheme />
+            </li>
+            <li
+                className={cn(
+                    'flex flex-col items-center',
+                    'rounded',
+                    'md:inline-block md:items-center',
+                    'xl:text-2xl'
+                )}
+            >
+                <LanguageSelection />
             </li>
         </ul>
     );

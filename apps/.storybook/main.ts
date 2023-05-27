@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs';
+import path from 'path';
 
 const config: StorybookConfig = {
     core: { disableTelemetry: true },
@@ -11,11 +12,16 @@ const config: StorybookConfig = {
     framework: {
         name: '@storybook/nextjs',
         options: {
-            nextConfigPath: '../web/next.config.js',
+            nextConfigPath: path.join(__dirname, '../web/next.config.js'),
         },
     },
     docs: { autodocs: true },
     features: { storyStoreV7: true, buildStoriesJson: true },
+    webpackFinal: async (config, { configType }) => {
+        // apply any global webpack configs that might have been specified in .storybook/main.js
+        // add your own webpack tweaks if needed
+        return config;
+    },
 };
 
 export default config;

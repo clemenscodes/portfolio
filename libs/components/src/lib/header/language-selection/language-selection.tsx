@@ -9,14 +9,16 @@ export const LanguageSelection: React.FC<LanguageSelectionProps> = ({
     ...props
 }) => {
     const router = useRouter();
-    const { locales } = router;
+    const { locale, locales } = router;
+
     const changeLocale = (locale: Locale) => {
         router.push(router.pathname, router.asPath, { locale });
     };
+
     const localeToFlag = (locale: Locale) => {
         switch (locale) {
             case 'en': {
-                return '🏴󠁧󠁢󠁥󠁮󠁧󠁿';
+                return '🇺🇸󠁧󠁢󠁥󠁮󠁧󠁿';
             }
             case 'de': {
                 return '🇩🇪';
@@ -25,7 +27,7 @@ export const LanguageSelection: React.FC<LanguageSelectionProps> = ({
                 return '🇪🇸';
             }
             default: {
-                return '🏴󠁧󠁢󠁥󠁮󠁧󠁿';
+                return '🇺🇸󠁧󠁢󠁥󠁮󠁧󠁿';
             }
         }
     };
@@ -33,8 +35,9 @@ export const LanguageSelection: React.FC<LanguageSelectionProps> = ({
     return (
         <select
             onChange={(e) => changeLocale(e.target.value as Locale)}
+            value={locale}
             className={cn([
-                'cursor-pointer appearance-none rounded-full p-2',
+                'cursor-pointer appearance-none rounded-full p-3',
                 'text-xl outline-none',
                 'bg-white',
                 'hover:bg-gray-200',
@@ -45,7 +48,7 @@ export const LanguageSelection: React.FC<LanguageSelectionProps> = ({
             {...props}
         >
             {(locales as Locale[]).map((locale, index) => (
-                <option className={cn('')} value={locale} key={index}>
+                <option value={locale} key={index}>
                     {localeToFlag(locale)}
                 </option>
             ))}

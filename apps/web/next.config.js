@@ -13,6 +13,10 @@ const nextConfig = {
     nx: {
         svgr: true,
     },
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en', 'de', 'es'],
+    },
     webpack(config) {
         config.module.rules.push({
             test: /index\.(js|mjs|jsx|ts|tsx)$/,

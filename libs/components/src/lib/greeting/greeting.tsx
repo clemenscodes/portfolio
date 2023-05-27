@@ -60,23 +60,33 @@ export const Greeting: React.FC<GreetingProps> = ({
                     <div
                         className={cn(
                             'flex justify-evenly',
-                            'my-10',
+                            'my-10 space-x-6',
                             'md:w-1/2 md:justify-between md:space-x-36'
                         )}
                     >
                         <Button
-                            className={cn('p-3')}
+                            className={cn(
+                                'p-2',
+                                'whitespace-normal text-lg',
+                                'md:whitespace-nowrap',
+                                'md:p-3 md:text-xl'
+                            )}
                             newTab={false}
                             href='#contact'
                         >
-                            Contact me
+                            {greeting.contactMe}
                         </Button>
                         <Button
-                            className={cn('p-3')}
+                            className={cn(
+                                'p-2',
+                                'whitespace-normal text-lg',
+                                'md:whitespace-nowrap',
+                                'md:p-3 md:text-xl'
+                            )}
                             newTab={true}
                             href={greeting.resumeLink}
                         >
-                            See my resume
+                            {greeting.seeResume}
                         </Button>
                     </div>
                 </div>

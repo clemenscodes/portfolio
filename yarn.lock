@@ -6849,6 +6849,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"browserify-zlib@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "browserify-zlib@npm:0.2.0"
+  dependencies:
+    pako: ~1.0.5
+  checksum: 5cd9d6a665190fedb4a97dfbad8dabc8698d8a507298a03f42c734e96d58ca35d3c7d4085e283440bbca1cd1938cff85031728079bedb3345310c58ab1ec92d6
+  languageName: node
+  linkType: hard
+
 "browserslist@npm:^4.0.0, browserslist@npm:^4.14.5, browserslist@npm:^4.21.3, browserslist@npm:^4.21.4, browserslist@npm:^4.21.5":
   version: 4.21.5
   resolution: "browserslist@npm:4.21.5"
@@ -11029,7 +11038,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inherits@npm:2, inherits@npm:2.0.4, inherits@npm:^2.0.1, inherits@npm:^2.0.3, inherits@npm:^2.0.4, inherits@npm:~2.0.3":
+"inherits@npm:2, inherits@npm:2.0.4, inherits@npm:^2.0.1, inherits@npm:^2.0.3, inherits@npm:^2.0.4, inherits@npm:~2.0.3, inherits@npm:~2.0.4":
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
@@ -13348,6 +13357,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-router-mock@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "next-router-mock@npm:0.9.3"
+  peerDependencies:
+    next: ">=10.0.0"
+    react: ">=17.0.0"
+  checksum: 5e8a6ffd5517e896711af2bc009414ad3f68cb89ccc3d483bd03e818876d9bc95a2fc80d14db67e90f1ea26a39853ddd5b4902cb40398b51bef749b98b9ec38f
+  languageName: node
+  linkType: hard
+
 "next-themes@npm:^0.2.1":
   version: 0.2.1
   resolution: "next-themes@npm:0.2.1"
@@ -14065,6 +14084,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pako@npm:~1.0.5":
+  version: 1.0.11
+  resolution: "pako@npm:1.0.11"
+  checksum: 1be2bfa1f807608c7538afa15d6f25baa523c30ec870a3228a89579e474a4d992f4293859524e46d5d87fd30fa17c5edf34dbef0671251d9749820b488660b16
+  languageName: node
+  linkType: hard
+
 "param-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "param-case@npm:3.0.4"
@@ -14325,6 +14351,7 @@ __metadata:
     "@vercel/analytics": ^1.0.1
     autoprefixer: ^10.4.14
     babel-jest: ^29.4.1
+    browserify-zlib: ^0.2.0
     canvas: ^2.11.0
     class-variance-authority: ^0.4.0
     clsx: ^1.2.1
@@ -14348,6 +14375,7 @@ __metadata:
     jest-transform-stub: ^2.0.0
     lottie-react: ^2.4.0
     next: ^13.4.4-canary.1
+    next-router-mock: ^0.9.3
     next-themes: ^0.2.1
     nx: 16.2.1
     nx-cloud: 16.0.5
@@ -14358,6 +14386,7 @@ __metadata:
     react-dom: 18.2.0
     sharp: ^0.32.1
     storybook-tailwind-dark-mode: ^1.0.22
+    stream-browserify: ^3.0.0
     tailwind-merge: ^1.10.0
     tailwindcss: latest
     tailwindcss-animate: ^1.0.5
@@ -15392,7 +15421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
+"readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0":
   version: 3.6.2
   resolution: "readable-stream@npm:3.6.2"
   dependencies:
@@ -16563,6 +16592,16 @@ __metadata:
     react-dom:
       optional: true
   checksum: 6fb426507037239ea5307fb1dac38cf90723ff4984e427600021d7d5b7c1a92d6109cbcfb549d883556e09aa2eba01d97db5ad913ff14002bf1881ef793e840b
+  languageName: node
+  linkType: hard
+
+"stream-browserify@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "stream-browserify@npm:3.0.0"
+  dependencies:
+    inherits: ~2.0.4
+    readable-stream: ^3.5.0
+  checksum: 4c47ef64d6f03815a9ca3874e2319805e8e8a85f3550776c47ce523b6f4c6cd57f40e46ec6a9ab8ad260fde61863c2718f250d3bedb3fe9052444eb9abfd9921
   languageName: node
   linkType: hard
 

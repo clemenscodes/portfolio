@@ -1,14 +1,16 @@
 import { IGreeting, ISection, ISkills, IProjects, ISocialMediaLinks, IContact, IPortfolio } from '@types';
 
-export const greeting: IGreeting = {
+const greeting: IGreeting = {
     name: 'Clemens Horn',
     title: "Hi all, I'm Clemens",
     subTitle: 'A developer who loves building robust software with Rust and TypeScript.',
     resumeLink: new URL('https://drive.google.com/file/d/12J1mhDIUc5aN2EIIokasqajRS3h_br2h/view?usp=share_link'),
+    contactMe: 'Contact Me',
+    seeResume: 'See resume',
     display: true,
 };
 
-export const contact: IContact = {
+const contact: IContact = {
     title: 'Contact Me',
     subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
     email: 'me@clemenshorn.com',
@@ -17,7 +19,7 @@ export const contact: IContact = {
     display: true,
 };
 
-export const links: ISocialMediaLinks = {
+const links: ISocialMediaLinks = {
     links: [
         {
             name: 'GitHub',
@@ -43,7 +45,7 @@ export const links: ISocialMediaLinks = {
     display: true,
 };
 
-export const skills: ISkills = {
+const skills: ISkills = {
     title: 'What I do',
     subTitle: 'Building software that scales using modern technologies',
     skills: [
@@ -358,7 +360,7 @@ export const skills: ISkills = {
     display: true,
 };
 
-export const projects: IProjects = {
+const projects: IProjects = {
     title: 'Projects',
     subTitle: 'Some projects I have built along the way',
     projects: [
@@ -465,9 +467,9 @@ export const projects: IProjects = {
     display: true,
 };
 
-export const sections: ISection[] = [skills, projects, contact];
+const sections: ISection[] = [skills, projects, contact];
 
-export const portfolio: IPortfolio = {
+export const esPortfolio: IPortfolio = {
     sections,
     links,
     greeting,
@@ -475,3 +477,5 @@ export const portfolio: IPortfolio = {
     projects,
     contact,
 };
+
+export default esPortfolio;

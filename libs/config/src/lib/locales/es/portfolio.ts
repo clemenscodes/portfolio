@@ -62,10 +62,6 @@ const skills: ISkills = {
             description: 'Building dynamic, interactive and progressive web applications with Next.js and Angular',
         },
         {
-            name: 'TypeScript expertise',
-            description: 'Creating efficient and maintainable code using TypeScript to enhance frontend development',
-        },
-        {
             name: 'Backend services',
             description: 'Building RESTful and GraphQL APIs using Node.js, Nest.js and Hasura',
         },
@@ -104,7 +100,7 @@ const skills: ISkills = {
         },
         {
             name: 'Optimal development environment',
-            description: 'Utilizing Arch Linux and window managers in a keyboard driven workflow',
+            description: 'Utilizing Arch Linux in a keyboard driven workflow',
         },
         {
             name: 'Productive code editing',

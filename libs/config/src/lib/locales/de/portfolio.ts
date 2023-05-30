@@ -11,8 +11,8 @@ const greeting: IGreeting = {
 };
 
 const contact: IContact = {
-    title: 'Contact Me',
-    subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
+    title: 'Kontakt',
+    subTitle: 'Sie möchten ein Projekt besprechen oder einfach nur Hallo sagen? Mein Posteingang ist für alle offen!',
     email: 'me@clemenshorn.com',
     href: '#contact',
     name: 'Contact',
@@ -46,78 +46,76 @@ const links: ISocialMediaLinks = {
 };
 
 const skills: ISkills = {
-    title: 'What I do',
-    subTitle: 'Building software that scales using modern technologies',
+    title: 'Was ich mache',
+    subTitle: 'Entwicklung skalierbarer Software mit modernen Technologien',
     skills: [
         {
-            name: 'Frontend interface development',
-            description: 'Developing scalable, responsive and visually appealing frontend interfaces',
+            name: 'Frontend-Schnittstellen',
+            description:
+                'Entwicklung von skalierbaren, anpassungsfähigen und visuell ansprechenden Frontend-Schnittstellen',
         },
         {
-            name: 'UI/UX implementation',
-            description: 'Implementing UI/UX designs utilizing Tailwind CSS and Storybook',
+            name: 'UI/UX-Design',
+            description: 'Implementierung von UI/UX-Designs unter Verwendung von Tailwind CSS und Storybook',
         },
         {
-            name: 'Web application development',
-            description: 'Building dynamic, interactive and progressive web applications with Next.js and Angular',
+            name: 'Webanwendungen',
+            description: 'Erstellung dynamischer, interaktiver und progressiver Webanwendungen mit Next.js und Angular',
         },
         {
-            name: 'TypeScript expertise',
-            description: 'Creating efficient and maintainable code using TypeScript to enhance frontend development',
+            name: 'Backend-Dienste',
+            description: 'RESTful und GraphQL APIs mit Node.js, Nest.js und Hasura',
         },
         {
-            name: 'Backend services',
-            description: 'Building RESTful and GraphQL APIs using Node.js, Nest.js and Hasura',
+            name: 'Entwurf und Verwaltung von Datenbanken',
+            description: 'Erstellen und Verwalten von Datenbanken mit Prisma, PostgreSQL, MySQL und MongoDB',
         },
         {
-            name: 'Database design and management',
-            description: 'Creating and managing databases using Prisma, PostgreSQL, MySQL and MongoDB',
-        },
-
-        {
-            name: 'Realtime functionality ',
-            description: 'Implementing real-time functionality using WebSockets',
+            name: 'Echtzeit-Funktionalität',
+            description: 'Implementierung von Echtzeit-Funktionalität mit WebSockets',
         },
         {
-            name: 'Secure application development',
-            description: 'Ensuring security through the implementation of OAuth protocols',
+            name: 'Sichere Anwendungen',
+            description: 'Gewährleistung der Sicherheit durch die Implementierung von OAuth-Protokollen',
         },
         {
-            name: 'Testing frameworks',
-            description: 'Utilizing Jest and Cypress for comprehensive testing',
+            name: 'Test-Frameworks',
+            description: 'Einsatz von Jest und Cypress für umfassende Tests',
         },
         {
-            name: 'DevOps workflows',
-            description: 'Setting up and managing DevOps workflows using GitHub Actions, Docker, and Kubernetes',
+            name: 'CI/CD',
+            description: 'Einrichtung und Verwaltung von DevOps-Workflows mit GitHub Actions, Docker, und Kubernetes',
         },
         {
-            name: 'Cloud platform deployment',
-            description: 'Configuring and deploying applications on cloud platforms like Google Cloud using Terraform',
+            name: 'Bereitstellung auf Cloud-Plattformen',
+            description:
+                'Konfigurieren und Bereitstellen von Anwendungen auf Cloud-Plattformen wie Google Cloud mit Terraform',
         },
         {
-            name: 'Efficient code organization',
-            description: 'Leveraging Nx for streamlined code organization in monorepo architectures',
+            name: 'Effiziente Code-Organization',
+            description: 'Nutzung von Nx für eine effiziente Code-Organisation in Monorepo-Architekturen',
         },
         {
-            name: 'Command line interfaces',
-            description: 'Developing command line interfaces with Rust',
+            name: 'Kommandozeilen-Schnittstellen',
+            description: 'Entwicklung von Kommandozeilenschnittstellen mit Rust',
         },
         {
-            name: 'Optimal development environment',
-            description: 'Utilizing Arch Linux and window managers in a keyboard driven workflow',
+            name: 'Optimale Entwicklungsumgebung',
+            description: 'Verwendung von Arch Linux in einem tastaturgesteuerten Arbeitsablauf',
         },
         {
-            name: 'Productive code editing',
-            description: 'Employing Neovim as my code editor of choice to maximize efficiency and productivity',
+            name: 'Produktive Code-Bearbeitung',
+            description:
+                'Ich verwende Neovim als meinen bevorzugten Text-Editor, um so effizient und produktiv wie möglich zu sein',
         },
         {
             name: 'Automation',
-            description: 'Creating automation scripts using POSIX shell and Python',
+            description: 'Erstellung von Automatisierungsskripten mit POSIX-Shell und Python',
         },
     ],
     skillCategories: [
         {
-            categoryName: 'Programming Languages',
+            categoryName: 'Programmiersprachen',
             softwareSkills: [
                 {
                     name: 'javascript',
@@ -289,7 +287,7 @@ const skills: ISkills = {
             ],
         },
         {
-            categoryName: 'Development Tools',
+            categoryName: 'Entwicklungswerkzeuge',
             softwareSkills: [
                 {
                     name: 'linux',
@@ -338,7 +336,7 @@ const skills: ISkills = {
             ],
         },
         {
-            categoryName: 'Cryptocurrencies',
+            categoryName: 'Kryptowährungen',
             softwareSkills: [
                 {
                     name: 'bitcoin',
@@ -361,20 +359,20 @@ const skills: ISkills = {
 };
 
 const projects: IProjects = {
-    title: 'Projects',
-    subTitle: 'Some projects I have built along the way',
+    title: 'Projekte',
+    subTitle: 'Ein paar Projekte, die ich im Laufe der Zeit entwickelt habe',
     projects: [
         {
             imageSrc: '../../../svg/cli.svg',
             name: 'Ninja VM',
-            description: 'Virtual Machine for the Ninja Programming Language',
+            description: 'Virtuelle Maschine für die Programmiersprache Ninja',
             links: [
                 {
-                    name: 'View code in C',
+                    name: 'C-Code ansehen',
                     url: new URL('https://github.com/clemenscodes/njvm/'),
                 },
                 {
-                    name: 'View code in Rust',
+                    name: 'Rust-Code ansehen',
                     url: new URL('https://github.com/clemenscodes/njvm_rust/'),
                 },
             ],
@@ -382,21 +380,21 @@ const projects: IProjects = {
         {
             imageSrc: '../../../svg/cardano.svg',
             name: 'Cardano CLI',
-            description: 'Command line interface to work with Cardano utilities',
+            description: 'Kommandozeilen-Schnittstelle für die Arbeit mit Cardano-Dienstprogrammen',
             links: [
                 {
-                    name: 'View code in Rust',
+                    name: 'Rust-Code ansehen',
                     url: new URL('https://github.com/crc-cardano-stakepool/cardano/'),
                 },
             ],
         },
         {
             imageSrc: '../../../svg/monero.svg',
-            name: 'Peer-to-peer Monero mining setup',
-            description: 'Easily bootstrap a monero node and start mining',
+            name: 'Peer-to-Peer Monero-Mining Einrichtung',
+            description: 'Einfaches Hochfahren eines Monero-Knotens und Schürfen von Monero',
             links: [
                 {
-                    name: 'View code',
+                    name: 'Code ansehen',
                     url: new URL('https://github.com/clemenscodes/monero/'),
                 },
             ],
@@ -404,7 +402,7 @@ const projects: IProjects = {
         {
             imageSrc: '/img/crypto.png',
             name: 'Simple Crypto',
-            description: 'Beginner friendly introduction to cryptocurrencies and their ecological impact',
+            description: 'Einsteigerfreundliche Einführung in Kryptowährungen und ihre ökologischen Auswirkungen',
             links: [
                 {
                     name: 'View site',
@@ -449,7 +447,8 @@ const projects: IProjects = {
         {
             imageSrc: '/img/swiftsell.png',
             name: 'SWIFTSELL',
-            description: 'Sell swiftly (Note: Serverless app, visiting site usually triggers a cold start)',
+            description:
+                'Einfach verkaufen (PS: Serverlos, es dauert etwas bis die Seite nach einem Kaltstart geladen hat.)',
             links: [
                 {
                     name: 'View site',

@@ -2,7 +2,7 @@ import { IGreeting, ISection, ISkills, IProjects, ISocialMediaLinks, IContact, I
 
 export const greeting: IGreeting = {
     name: 'Clemens Horn',
-    title: "Hi all, I'm Clemens",
+    title: "Hello, I'm Clemens",
     subTitle: 'A developer who loves building robust software with Rust and TypeScript.',
     resumeLink: new URL('https://drive.google.com/file/d/12J1mhDIUc5aN2EIIokasqajRS3h_br2h/view?usp=share_link'),
     contactMe: 'Contact me',
@@ -11,7 +11,7 @@ export const greeting: IGreeting = {
 };
 
 export const contact: IContact = {
-    title: 'Contact Me',
+    title: 'Contact',
     subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
     email: 'me@clemenshorn.com',
     href: '#contact',
@@ -50,20 +50,16 @@ export const skills: ISkills = {
     subTitle: 'Building software that scales using modern technologies',
     skills: [
         {
-            name: 'Frontend interface development',
+            name: 'Frontend interfaces',
             description: 'Developing scalable, responsive and visually appealing frontend interfaces',
         },
         {
-            name: 'UI/UX implementation',
+            name: 'UI/UX design',
             description: 'Implementing UI/UX designs utilizing Tailwind CSS and Storybook',
         },
         {
-            name: 'Web application development',
+            name: 'Web applications',
             description: 'Building dynamic, interactive and progressive web applications with Next.js and Angular',
-        },
-        {
-            name: 'TypeScript expertise',
-            description: 'Creating efficient and maintainable code using TypeScript to enhance frontend development',
         },
         {
             name: 'Backend services',
@@ -73,7 +69,6 @@ export const skills: ISkills = {
             name: 'Database design and management',
             description: 'Creating and managing databases using Prisma, PostgreSQL, MySQL and MongoDB',
         },
-
         {
             name: 'Realtime functionality ',
             description: 'Implementing real-time functionality using WebSockets',
@@ -104,7 +99,7 @@ export const skills: ISkills = {
         },
         {
             name: 'Optimal development environment',
-            description: 'Utilizing Arch Linux and window managers in a keyboard driven workflow',
+            description: 'Utilizing Arch Linux in a keyboard driven workflow',
         },
         {
             name: 'Productive code editing',

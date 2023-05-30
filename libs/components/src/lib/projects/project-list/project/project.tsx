@@ -9,7 +9,7 @@ export type ProjectProps = React.ComponentPropsWithoutRef<'li'> & {
 };
 
 export const Project: React.FC<ProjectProps> = ({ project, ...props }) => {
-    const [ref, visible] = useIntersection<HTMLLIElement>();
+    const [ref, visible] = useIntersection<HTMLLIElement>({ threshold: 0.9 });
     return (
         <li
             ref={ref}

@@ -1,4 +1,4 @@
-import { SkillCategorySkillList } from '../../skill-category-skill-list';
+import { SkillCategorySkillList } from './skill-category-skill-list';
 import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { ISkillCategory } from '@types';
@@ -11,7 +11,7 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({
     category,
     ...props
 }) => {
-    const [ref, visible] = useIntersection<HTMLLIElement>();
+    const [ref, visible] = useIntersection<HTMLLIElement>({ threshold: 0.6 });
     return (
         <li
             ref={ref}

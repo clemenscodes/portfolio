@@ -2,6 +2,7 @@ import email from '../../../assets/json/email.json';
 import Animation from '../animation/animation';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
+import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { IContact, ISocialMediaLinks } from '@types';
 
@@ -15,9 +16,18 @@ export const Contact: React.FC<ContactProps> = ({
     links,
     ...props
 }) => {
+    const [ref, visible] = useIntersection();
     return (
         <section
-            className={cn(['flex flex-col', 'md:flex-row'])}
+            ref={ref}
+            className={cn([
+                'flex flex-col',
+                'md:flex-row',
+                'transform-will-change transition-all',
+                'duration-1000',
+                visible && 'opacity-100',
+                visible || 'opacity-0',
+            ])}
             id='contact'
             {...props}
         >

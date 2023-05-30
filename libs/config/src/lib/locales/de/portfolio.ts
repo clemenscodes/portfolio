@@ -404,11 +404,11 @@ const projects: IProjects = {
             description: 'Einsteigerfreundliche Einführung in Kryptowährungen und ihre ökologischen Auswirkungen',
             links: [
                 {
-                    name: 'View site',
+                    name: 'Webseite ansehen',
                     url: new URL('https://simple-crypto.web.app/'),
                 },
                 {
-                    name: 'View code',
+                    name: 'Code ansehen',
                     url: new URL('https://github.com/clemenscodes/simple-crypto/'),
                 },
             ],
@@ -450,11 +450,11 @@ const projects: IProjects = {
                 'Einfach verkaufen (PS: Serverlos, es dauert etwas bis die Seite nach einem Kaltstart geladen hat.)',
             links: [
                 {
-                    name: 'View site',
+                    name: 'Webseite ansehen',
                     url: new URL('https://shop.swiftsell.de/'),
                 },
                 {
-                    name: 'View code',
+                    name: 'Code ansehen',
                     url: new URL('https://github.com/clemenscodes/swiftsell/'),
                 },
             ],

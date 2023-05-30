@@ -12,10 +12,10 @@ const greeting: IGreeting = {
 
 const contact: IContact = {
     title: 'Kontakt',
-    subTitle: 'Sie möchten ein Projekt besprechen oder einfach nur Hallo sagen? Mein Posteingang ist für alle offen!',
+    subTitle: 'Sie möchten ein Projekt besprechen oder einfach nur Hallo sagen? Mein Posteingang ist offen für alle !',
     email: 'me@clemenshorn.com',
     href: '#contact',
-    name: 'Contact',
+    name: 'Kontakt',
     display: true,
 };
 
@@ -68,7 +68,7 @@ const skills: ISkills = {
         },
         {
             name: 'Entwurf und Verwaltung von Datenbanken',
-            description: 'Erstellen und Verwalten von Datenbanken mit Prisma, PostgreSQL, MySQL und MongoDB',
+            description: 'Erstellung und Verwaltung von Datenbanken mit Prisma, PostgreSQL, MySQL und MongoDB',
         },
         {
             name: 'Echtzeit-Funktionalität',
@@ -89,7 +89,7 @@ const skills: ISkills = {
         {
             name: 'Bereitstellung auf Cloud-Plattformen',
             description:
-                'Konfigurieren und Bereitstellen von Anwendungen auf Cloud-Plattformen wie Google Cloud mit Terraform',
+                'Konfigurierung und Bereitstellung von Anwendungen auf Cloud-Plattformen wie Google Cloud mit Terraform',
         },
         {
             name: 'Effiziente Code-Organization',
@@ -105,8 +105,7 @@ const skills: ISkills = {
         },
         {
             name: 'Produktive Code-Bearbeitung',
-            description:
-                'Ich verwende Neovim als meinen bevorzugten Text-Editor, um so effizient und produktiv wie möglich zu sein',
+            description: 'Nutzung von Neovim als Text-Editor, um so effizient und produktiv wie möglich zu sein',
         },
         {
             name: 'Automation',
@@ -354,7 +353,7 @@ const skills: ISkills = {
         },
     ],
     href: '#skills',
-    name: 'Skills',
+    name: 'Fähigkeiten',
     display: true,
 };
 
@@ -462,7 +461,7 @@ const projects: IProjects = {
         },
     ],
     href: '#projects',
-    name: 'Projects',
+    name: 'Projekte',
     display: true,
 };
 

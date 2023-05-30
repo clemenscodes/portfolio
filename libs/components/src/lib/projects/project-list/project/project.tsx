@@ -15,7 +15,7 @@ export const Project: React.FC<ProjectProps> = ({ project, ...props }) => {
             ref={ref}
             {...props}
             className={cn(
-                'flex flex-col items-center',
+                'flex flex-col items-center justify-between',
                 'my-4 w-full px-8',
                 'rounded-lg',
                 'shadow-full',

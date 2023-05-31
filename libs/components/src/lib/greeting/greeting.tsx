@@ -3,10 +3,8 @@ import Animation from '../animation/animation';
 import Button from '../button/button';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
-import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { type ISocialMediaLinks, type IGreeting } from '@types';
-import { useEffect, useState } from 'react';
 
 export type GreetingProps = React.ComponentPropsWithoutRef<'section'> & {
     greeting: IGreeting;
@@ -18,16 +16,8 @@ export const Greeting: React.FC<GreetingProps> = ({
     greeting,
     ...props
 }) => {
-    const [ref, visible] = useIntersection<HTMLDivElement>({ threshold: 0.1 });
-    const [animate, setAnimate] = useState(false);
-    useEffect(() => {
-        if (visible) {
-            setTimeout(() => setAnimate(true), 1000);
-        }
-    }, [visible]);
     return (
         <section
-            ref={ref}
             {...props}
             className={cn([
                 'animate-in fade-in slide-in-from-bottom-10 duration-1000',
@@ -101,20 +91,7 @@ export const Greeting: React.FC<GreetingProps> = ({
                     </div>
                 </div>
                 <div className={cn('mb-8 flex-1')}>
-                    <Animation
-                        className={cn(
-                            'transform will-change-transform',
-                            'transition-all duration-1000',
-                            animate && 'opacity-100',
-                            animate && 'animate-in fade-in ease-out',
-                            animate && 'slide-in-from-right',
-                            animate || 'hidden',
-                            animate || 'opacity-0',
-                            animate || 'animate-out fade-out',
-                            animate || 'slide-out-to-right'
-                        )}
-                        animationData={manWaving}
-                    />
+                    <Animation animationData={manWaving} />
                 </div>
             </div>
         </section>

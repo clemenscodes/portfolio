@@ -44,6 +44,7 @@ export const Project: React.FC<ProjectProps> = ({ project, ...props }) => {
                     fill
                     sizes='33vw'
                     quality={100}
+                    priority={false}
                     className={cn('h-full w-full rounded object-contain')}
                 />
             </div>

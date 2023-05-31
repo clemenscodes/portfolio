@@ -32,7 +32,7 @@ export const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({
                 {...linkProps}
                 className='relative h-12 w-12'
             >
-                <Image fill {...imageProps} />
+                <Image fill loading='lazy' priority={false} {...imageProps} />
             </Link>
         </button>
     );

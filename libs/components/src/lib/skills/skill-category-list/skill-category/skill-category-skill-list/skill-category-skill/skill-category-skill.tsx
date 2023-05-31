@@ -26,6 +26,8 @@ export const SkillCategorySkill: React.FC<SkillCategorySkillProps> = ({
                 src={softwareSkill.src}
                 alt={`Logo of ${softwareSkill.name}`}
                 fill
+                loading='lazy'
+                priority={false}
                 className={cn('object-contain')}
             />
         </li>

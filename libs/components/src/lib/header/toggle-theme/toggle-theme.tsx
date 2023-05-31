@@ -17,6 +17,7 @@ export const ToggleTheme = forwardRef<ToggleThemeProps>(
                 {...props}
                 ref={ref}
                 onClick={toggleTheme}
+                aria-label='theme-toggle-button'
                 className={cn(
                     'p-3',
                     'rounded-full',

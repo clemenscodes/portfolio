@@ -444,22 +444,22 @@ const projects: IProjects = {
         //         },
         //     ],
         // },
-        {
-            imageSrc: '/img/swiftsell.png',
-            name: 'SWIFTSELL',
-            description:
-                'Einfach verkaufen (PS: Serverlos, es dauert etwas bis die Seite nach einem Kaltstart geladen hat.)',
-            links: [
-                {
-                    name: 'Webseite ansehen',
-                    url: new URL('https://shop.swiftsell.de/'),
-                },
-                {
-                    name: 'Code ansehen',
-                    url: new URL('https://github.com/clemenscodes/swiftsell/'),
-                },
-            ],
-        },
+        // {
+        //     imageSrc: '/img/swiftsell.png',
+        //     name: 'SWIFTSELL',
+        //     description:
+        //         'Einfach verkaufen (PS: Serverlos, es dauert etwas bis die Seite nach einem Kaltstart geladen hat.)',
+        //     links: [
+        //         {
+        //             name: 'Webseite ansehen',
+        //             url: new URL('https://shop.swiftsell.de/'),
+        //         },
+        //         {
+        //             name: 'Code ansehen',
+        //             url: new URL('https://github.com/clemenscodes/swiftsell/'),
+        //         },
+        //     ],
+        // },
     ],
     href: '#projects',
     name: 'Projekte',

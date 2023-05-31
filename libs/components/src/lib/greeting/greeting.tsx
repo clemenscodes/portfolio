@@ -1,10 +1,9 @@
-import manWaving from '../../../assets/json/landingPerson.json';
-import Animation from '../animation/animation';
 import Button from '../button/button';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
 import { cn } from '@styles';
 import { type ISocialMediaLinks, type IGreeting } from '@types';
+import Image from 'next/image';
 
 export type GreetingProps = React.ComponentPropsWithoutRef<'section'> & {
     greeting: IGreeting;
@@ -17,14 +16,8 @@ export const Greeting: React.FC<GreetingProps> = ({
     ...props
 }) => {
     return (
-        <section
-            {...props}
-            className={cn([
-                'animate-in fade-in slide-in-from-bottom-10 duration-1000',
-                'md:my-16',
-            ])}
-        >
-            <div className={cn('block md:flex')}>
+        <section {...props} className={cn(['xl:my-16'])}>
+            <div className={cn('block xl:flex')}>
                 <div className={cn('flex-1')}>
                     <h1
                         className={cn(
@@ -90,8 +83,15 @@ export const Greeting: React.FC<GreetingProps> = ({
                         </Button>
                     </div>
                 </div>
-                <div className={cn('mb-8 flex-1')}>
-                    <Animation animationData={manWaving} />
+                <div
+                    className={cn('relative mb-8 h-72 w-full flex-1 md:h-96 ')}
+                >
+                    <Image
+                        src={'/svg/programmer.svg'}
+                        alt={'programmer'}
+                        priority
+                        fill
+                    />
                 </div>
             </div>
         </section>

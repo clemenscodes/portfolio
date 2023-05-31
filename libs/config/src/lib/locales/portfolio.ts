@@ -442,21 +442,21 @@ export const projects: IProjects = {
         //         },
         //     ],
         // },
-        {
-            imageSrc: '/img/swiftsell.png',
-            name: 'SWIFTSELL',
-            description: 'Sell swiftly (Note: Serverless app, visiting site usually triggers a cold start)',
-            links: [
-                {
-                    name: 'View site',
-                    url: new URL('https://shop.swiftsell.de/'),
-                },
-                {
-                    name: 'View code',
-                    url: new URL('https://github.com/clemenscodes/swiftsell/'),
-                },
-            ],
-        },
+        // {
+        //     imageSrc: '/img/swiftsell.png',
+        //     name: 'SWIFTSELL',
+        //     description: 'Sell swiftly (Note: Serverless app, visiting site usually triggers a cold start)',
+        //     links: [
+        //         {
+        //             name: 'View site',
+        //             url: new URL('https://shop.swiftsell.de/'),
+        //         },
+        //         {
+        //             name: 'View code',
+        //             url: new URL('https://github.com/clemenscodes/swiftsell/'),
+        //         },
+        //     ],
+        // },
     ],
     href: '#projects',
     name: 'Projects',

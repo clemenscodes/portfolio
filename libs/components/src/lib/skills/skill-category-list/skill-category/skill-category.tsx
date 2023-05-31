@@ -1,5 +1,5 @@
 import { SkillCategorySkillList } from './skill-category-skill-list';
-import { useIntersection } from '@hooks';
+// import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { ISkillCategory } from '@types';
 
@@ -11,22 +11,21 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({
     category,
     ...props
 }) => {
-    const [ref, visible] = useIntersection<HTMLLIElement>({ threshold: 0.6 });
     return (
         <li
-            ref={ref}
+            // ref={ref}
             className={cn(
                 'my-6',
                 'rounded-lg shadow-full',
                 'transform will-change-transform',
                 'transition-all duration-1000',
-                'hover:shadow-full-xl',
-                visible && 'opacity-100',
-                visible && 'animate-in fade-in ease-in-out',
-                visible && 'slide-in-from-right',
-                visible || 'opacity-0',
-                visible || 'animate-out fade-out',
-                visible || 'slide-out-to-right'
+                'hover:shadow-full-xl'
+                // visible && 'opacity-100',
+                // visible && 'animate-in fade-in ease-in-out',
+                // visible && 'slide-in-from-right',
+                // visible || 'opacity-0',
+                // visible || 'animate-out fade-out',
+                // visible || 'slide-out-to-right'
             )}
             {...props}
         >

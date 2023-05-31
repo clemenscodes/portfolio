@@ -14,6 +14,7 @@ export const contact: IContact = {
     title: 'Contact',
     subTitle: 'Discuss a project or just want to say hi? My inbox is open for all!',
     email: 'me@clemenshorn.com',
+    twitter: 'clemenscodes',
     href: '#contact',
     name: 'Contact',
     display: true,

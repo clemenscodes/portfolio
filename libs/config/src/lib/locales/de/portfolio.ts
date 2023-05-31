@@ -14,6 +14,7 @@ const contact: IContact = {
     title: 'Kontakt',
     subTitle: 'Sie möchten ein Projekt besprechen oder einfach nur Hallo sagen? Mein Posteingang ist offen für alle !',
     email: 'me@clemenshorn.com',
+    twitter: 'clemenscodes',
     href: '#contact',
     name: 'Kontakt',
     display: true,

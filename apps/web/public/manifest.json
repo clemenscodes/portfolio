@@ -1,0 +1,21 @@
+{
+  "short_name": "Clemens' Portfolio",
+  "name": "Clemens' Portfolio",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/android-chrome-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#6c63ff",
+  "background_color": "#22272e"
+}

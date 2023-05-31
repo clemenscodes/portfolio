@@ -1,7 +1,8 @@
 import { cn } from '@styles';
 import Lottie, { type LottieComponentProps } from 'lottie-react';
 
-export type AnimationProps = LottieComponentProps;
+export type AnimationProps = LottieComponentProps &
+    React.ComponentPropsWithoutRef<'div'>;
 
 export const Animation: React.FC<AnimationProps> = ({
     animationData,

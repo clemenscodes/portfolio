@@ -1,5 +1,5 @@
-import { type Locale } from '@config';
 import { cn } from '@styles';
+import { type Locale } from '@types';
 import { useRouter } from 'next/router';
 
 export type LanguageSelectionProps = React.ComponentPropsWithoutRef<'select'>;

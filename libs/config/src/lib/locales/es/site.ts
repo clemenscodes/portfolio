@@ -1,6 +1,7 @@
 import { ISiteConfig } from '@types';
 
-export const site: ISiteConfig = {
+export const esSite: ISiteConfig = {
+    url: new URL('https://clemenshorn.com/es'),
     title: "Clemens' Portfolio",
     description: '',
     keywords: '',

@@ -26,6 +26,10 @@
                 "production": {}
             }
         },
+        "sitemap": {
+            "dependsOn": ["build"],
+            "command": "yarn next-sitemap --config apps/web/next-sitemap.config.js"
+        },
         "serve": {
             "executor": "@nx/next:server",
             "defaultConfiguration": "development",

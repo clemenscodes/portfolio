@@ -1,5 +1,5 @@
-import { Locale, i18nPortfolio, portfolio } from '@config';
-import { IPortfolio } from '@types';
+import { i18nPortfolio, portfolio } from '@config';
+import { type IPortfolio, type Locale } from '@types';
 import { useRouter } from 'next/router';
 
 export const usePortfolio = (): IPortfolio => {

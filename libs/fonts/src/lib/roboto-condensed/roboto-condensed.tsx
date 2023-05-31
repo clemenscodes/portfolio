@@ -1,10 +1,10 @@
-import localFont from '@next/font/local';
+import { Roboto_Condensed } from '@next/font/google';
 
-const robotoCondensed = localFont({
-    src: '../../../../components/assets/fonts/RobotoCondensed-Light.ttf',
+const robotoCondensed = Roboto_Condensed({
     weight: '300',
     variable: '--font-sans',
-    preload: false,
+    subsets: ['latin'],
+    preload: true,
     display: 'swap',
 });
 

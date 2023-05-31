@@ -1,4 +1,5 @@
 export * from './lib/siteConfig';
+export * from './lib/locale';
 export * from './lib/extractElement';
 export * from './lib/greeting';
 export * from './lib/display';

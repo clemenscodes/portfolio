@@ -1,3 +1,6 @@
+export * from './lib/text-area/text-area';
+export * from './lib/error-message/error-message';
+export * from './lib/input/input';
 export * from './lib/contact-form/contact-form';
 export * from './lib/projects/projects';
 export * from './lib/skills/skills';

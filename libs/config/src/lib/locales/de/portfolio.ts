@@ -18,6 +18,28 @@ const contact: IContact = {
     href: '#contact',
     name: 'Kontakt',
     display: true,
+    form: {
+        nameInput: {
+            name: 'Name',
+            description: 'Wie ich dich ansprechen soll',
+            error: 'Bitte gib einen Namen ein.',
+        },
+        emailInput: {
+            name: 'E-Mail',
+            description: 'Wo ich dich erreichen kann',
+            error: 'Bitte gib eine korrekte E-Mail ein.',
+        },
+        subjectInput: {
+            name: 'Betreff',
+            description: 'Was du mit mir besprechen willst',
+            error: 'Bitte gib einen Betreff ein.',
+        },
+        messageInput: {
+            name: 'Nachricht',
+            description: 'Deine Nachricht an mich',
+            error: 'Bitte gib eine Nachricht ein.',
+        },
+    },
 };
 
 const links: ISocialMediaLinks = {

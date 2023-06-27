@@ -64,7 +64,7 @@ export const Contact: React.FC<ContactProps> = ({
                 >
                     {contact.email}
                 </p>
-                <ContactForm />
+                <ContactForm form={contact.form} />
                 <SocialMedia
                     className={cn('my-6', 'md:w-full md:justify-center')}
                     links={links}

@@ -1,12 +1,18 @@
 import Button from '../button/button';
+import { ErrorMessage } from '../error-message/error-message';
+import { Input } from '../input/input';
+import { TextArea } from '../text-area/text-area';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { cn } from '@styles';
+import { IContactForm } from '@types';
 import { ContactSchema, contactSchema } from '@utils';
 import { useForm } from 'react-hook-form';
 
-export type ContactFormProps = React.ComponentPropsWithoutRef<'form'>;
+export type ContactFormProps = React.ComponentPropsWithoutRef<'form'> & {
+    form: IContactForm;
+};
 
-export const ContactForm: React.FC<ContactFormProps> = ({ ...props }) => {
+export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
     const {
         register,
         handleSubmit,
@@ -14,11 +20,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({ ...props }) => {
     } = useForm<ContactSchema>({
         resolver: zodResolver(contactSchema),
         defaultValues: {
+            name: '',
             email: '',
             subject: '',
             message: '',
-            name: '',
-            number: '',
         },
     });
 
@@ -34,21 +39,65 @@ export const ContactForm: React.FC<ContactFormProps> = ({ ...props }) => {
             {...props}
             onSubmit={handleSubmit(onSubmit)}
         >
-            <label htmlFor='name'>Name</label>
-            <input id='name' type='text' {...register('name')} />
-            <p>{errors.name?.message}</p>
-            <label htmlFor='email'>E-Mail</label>
-            <input type='text' {...register('email')} />
-            <p>{errors.email?.message}</p>
-            <label htmlFor='subject'>Subject</label>
-            <input type='text' {...register('subject')} />
-            <p>{errors.subject?.message}</p>
-            <label htmlFor='message'>Message</label>
-            <input type='text' {...register('message')} />
-            <p>{errors.message?.message}</p>
-            <label htmlFor='number'>number</label>
-            <input type='text' {...register('number')} />
-            <p>{errors.number?.message}</p>
+            <div className={cn('flex w-full justify-between space-x-8')}>
+                <div className={cn('w-full space-y-2')}>
+                    <div className={cn('flex')}>
+                        <label htmlFor='name'>{form.nameInput.name}</label>
+                    </div>
+                    <Input
+                        id='name'
+                        type='text'
+                        placeholder={form.nameInput.description}
+                        {...register('name')}
+                    />
+                    <ErrorMessage>
+                        {errors.name && form.nameInput.error}
+                    </ErrorMessage>
+                </div>
+
+                <div className={cn('w-full space-y-2')}>
+                    <div className={cn('flex')}>
+                        <label htmlFor='email'>{form.emailInput.name}</label>
+                    </div>
+                    <Input
+                        type='text'
+                        placeholder={form.emailInput.description}
+                        {...register('email')}
+                    />
+                    <ErrorMessage>
+                        {errors.email && form.emailInput.error}
+                    </ErrorMessage>
+                </div>
+            </div>
+
+            <div className={cn('w-full space-y-2')}>
+                <div className={cn('flex')}>
+                    <label htmlFor='subject'>{form.subjectInput.name}</label>
+                </div>
+                <Input
+                    type='text'
+                    placeholder={form.subjectInput.description}
+                    {...register('subject')}
+                />
+                <ErrorMessage>
+                    {errors.subject && form.subjectInput.error}
+                </ErrorMessage>
+            </div>
+
+            <div className={cn('w-full space-y-2')}>
+                <div className={cn('flex')}>
+                    <label htmlFor='message'>{form.messageInput.name}</label>
+                </div>
+                <TextArea
+                    className={cn('h-48')}
+                    placeholder={form.messageInput.description}
+                    {...register('message')}
+                />
+                <ErrorMessage>
+                    {errors.message && form.messageInput.error}
+                </ErrorMessage>
+            </div>
+
             <Button type='submit'>Send</Button>
         </form>
     );

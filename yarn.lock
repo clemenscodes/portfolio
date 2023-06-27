@@ -6249,6 +6249,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nodemailer@npm:^6.4.8":
+  version: 6.4.8
+  resolution: "@types/nodemailer@npm:6.4.8"
+  dependencies:
+    "@types/node": "*"
+  checksum: 3cc9b6a0e54f25a1b36124df413964ff5a69e8dc4558c5dfc06818917313a50f4dbfe31fc9190e4270d07a0f8678474da24a2eae42f907933ea81d983b4772d4
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
@@ -15840,6 +15849,7 @@ __metadata:
     "@types/jest": ^29.4.0
     "@types/next-pwa": ^5.6.4
     "@types/node": 18.14.2
+    "@types/nodemailer": ^6.4.8
     "@types/react": 18.2.13
     "@types/react-dom": 18.2.6
     "@typescript-eslint/eslint-plugin": 5.59.6

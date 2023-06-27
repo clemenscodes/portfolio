@@ -27,8 +27,24 @@ export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
         },
     });
 
-    const onSubmit = (values: ContactSchema) => {
+    const onSubmit = async (values: ContactSchema) => {
         console.log({ values });
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+            if (response.ok) {
+                console.log('E-Mail erfolgreich gesendet');
+            } else {
+                throw new Error('Fehler beim Senden der E-Mail');
+            }
+        } catch (error) {
+            console.error('Fehler beim Senden der E-Mail:', error);
+        }
     };
 
     return (
@@ -39,7 +55,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
             {...props}
             onSubmit={handleSubmit(onSubmit)}
         >
-            <div className={cn('flex w-full justify-between space-x-8')}>
+            <div
+                className={cn(
+                    'flex w-full flex-col justify-between',
+                    'lg:flex-row lg:space-x-8'
+                )}
+            >
                 <div className={cn('w-full space-y-2')}>
                     <div className={cn('flex')}>
                         <label htmlFor='name'>{form.nameInput.name}</label>

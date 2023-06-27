@@ -1,3 +1,4 @@
+export * from './lib/contact-form/contact-form';
 export * from './lib/projects/projects';
 export * from './lib/skills/skills';
 export * from './lib/social-media/social-media';

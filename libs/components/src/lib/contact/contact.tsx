@@ -1,5 +1,6 @@
 import email from '../../../assets/json/email.json';
 import Animation from '../animation/animation';
+import ContactForm from '../contact-form/contact-form';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
 import { useIntersection } from '@hooks';
@@ -63,6 +64,7 @@ export const Contact: React.FC<ContactProps> = ({
                 >
                     {contact.email}
                 </p>
+                <ContactForm />
                 <SocialMedia
                     className={cn('my-6', 'md:w-full md:justify-center')}
                     links={links}

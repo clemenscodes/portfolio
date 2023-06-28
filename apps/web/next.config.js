@@ -20,6 +20,9 @@ const nextConfig = {
         defaultLocale: 'en',
         locales: ['en', 'de'],
     },
+    experimental: {
+        outputFileTracingIgnores: ['**canvas**'],
+    },
     webpack(config) {
         config.module.rules.push({
             test: /index\.(js|mjs|jsx|ts|tsx)$/,

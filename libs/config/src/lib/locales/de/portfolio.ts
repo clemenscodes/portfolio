@@ -18,6 +18,32 @@ const contact: IContact = {
     href: '#contact',
     name: 'Kontakt',
     display: true,
+    form: {
+        nameInput: {
+            name: 'Name',
+            description: 'Wie Sie von mir angesprochen werden wollen',
+            error: 'Bitte gib einen Namen ein.',
+        },
+        emailInput: {
+            name: 'E-Mail',
+            description: 'Wo ich mit Ihnen Kontakt aufnehmen soll',
+            error: 'Bitte gib eine korrekte E-Mail ein. T-Online wird aktuell nicht unterstützt.',
+        },
+        subjectInput: {
+            name: 'Betreff',
+            description: 'Was Sie mit mir besprechen wollen',
+            error: 'Bitte gib einen Betreff ein.',
+        },
+        messageInput: {
+            name: 'Nachricht',
+            description: 'Ihre Nachricht an mich',
+            error: 'Bitte gib eine Nachricht ein.',
+        },
+        submission: {
+            success: 'Email erfolgreich gesendet',
+            error: 'Email konnte nicht erfolgreich gesendet werden',
+        },
+    },
 };
 
 const links: ISocialMediaLinks = {

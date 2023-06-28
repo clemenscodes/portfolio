@@ -1,5 +1,6 @@
 import email from '../../../assets/json/email.json';
 import Animation from '../animation/animation';
+import ContactForm from '../contact-form/contact-form';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
 import { useIntersection } from '@hooks';
@@ -22,7 +23,7 @@ export const Contact: React.FC<ContactProps> = ({
             ref={ref}
             className={cn([
                 'flex flex-col',
-                'md:flex-row',
+                'lg:flex-row',
                 'transform-will-change transition-all',
                 'duration-1000',
                 visible && 'opacity-100',
@@ -34,7 +35,7 @@ export const Contact: React.FC<ContactProps> = ({
             <div
                 className={cn(
                     'flex flex-col',
-                    'm-8 md:w-1/2',
+                    'm-8 lg:w-1/2',
                     'justify-between text-center'
                 )}
             >
@@ -63,13 +64,14 @@ export const Contact: React.FC<ContactProps> = ({
                 >
                     {contact.email}
                 </p>
+                <ContactForm form={contact.form} />
                 <SocialMedia
                     className={cn('my-6', 'md:w-full md:justify-center')}
                     links={links}
                 />
             </div>
             <Animation
-                className={cn('flex-1', 'my-auto', 'md:w-1/2')}
+                className={cn('flex-1', 'my-auto', 'lg:w-1/2')}
                 animationData={email}
             />
         </section>

@@ -51,6 +51,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
             setTimeout(() => {
                 if (response.ok) {
                     setEmailSuccess(true);
+                    setTimeout(() => setEmailSubmitted(false), 2500);
                 } else {
                     setEmailSuccess(false);
                 }

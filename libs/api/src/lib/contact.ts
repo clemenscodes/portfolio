@@ -1,12 +1,16 @@
 import { ipRateLimit } from './ip-rate-limit';
+import { Email } from '@components';
 import { contact, i18nApi } from '@config';
+import { render } from '@react-email/render';
 import type { Locale } from '@types';
 import { type ContactSchema, contactSchema } from '@utils';
-import { IncomingHttpHeaders } from 'http';
+import type { IncomingHttpHeaders } from 'http';
+import { sanitize } from 'isomorphic-dompurify';
 import { NextApiHandler } from 'next';
 import { createTransport } from 'nodemailer';
 import type { Options as MailOptions } from 'nodemailer/lib/mailer';
 import type { Options as SMTPOptions, SentMessageInfo } from 'nodemailer/lib/smtp-transport';
+import React from 'react';
 
 export function assertIsContactData(data: unknown): asserts data is ContactSchema {
     if (!contactSchema.safeParse(data).success) {
@@ -121,13 +125,21 @@ export const contactHandler: NextApiHandler = async (req, res) => {
     }
 
     const { name, email, subject, message } = body;
+    const cleanMessage = sanitize(message);
+    const cleanSubject = sanitize(subject);
+    const props = { subject: cleanSubject, message: cleanMessage };
+    const emailElement = React.createElement(Email, props);
+    const html = render(emailElement, { pretty: true });
+    const text = render(emailElement, { plainText: true });
 
     const emailOptions: MailOptions = {
         from: `${name} <${contact.email}>`,
         to: contact.email,
         replyTo: email,
-        subject,
-        text: message,
+        cc: email,
+        subject: cleanSubject,
+        text,
+        html,
     };
 
     try {

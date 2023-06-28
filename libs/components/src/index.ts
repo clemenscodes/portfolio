@@ -1,3 +1,4 @@
+export * from './lib/email/email';
 export * from './lib/loader/loader';
 export * from './lib/text-area/text-area';
 export * from './lib/error-message/error-message';

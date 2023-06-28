@@ -27,7 +27,7 @@ export const contact: IContact = {
         emailInput: {
             name: 'E-Mail',
             description: 'Where you want me to contact you back',
-            error: 'Please enter a valid e-mail address.',
+            error: 'Please enter a valid e-mail address. T-Online is currently unsupported.',
         },
         subjectInput: {
             name: 'Subject',

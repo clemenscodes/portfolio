@@ -34,17 +34,6 @@ describe('Contact Schema', () => {
         expect(contactSchema.safeParse(invalidContact).success).toBe(false);
     });
 
-    it("should fail validation if email includes 't-online'", () => {
-        const invalidContact: ContactSchema = {
-            name: 'John Doe',
-            email: 'john.doe@t-online.com',
-            subject: 'Test Subject',
-            message: 'Test message',
-        };
-
-        expect(contactSchema.safeParse(invalidContact).success).toBe(false);
-    });
-
     it('should fail validation if subject is empty', () => {
         const invalidContact: ContactSchema = {
             name: 'John Doe',

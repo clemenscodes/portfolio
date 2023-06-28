@@ -1,3 +1,4 @@
+import { ipRateLimit } from '@api';
 import { contact, greeting, i18nApi } from '@config';
 import type { Locale } from '@types';
 import { type ContactSchema, contactSchema } from '@utils';
@@ -32,6 +33,12 @@ export const getLocale = (headers: IncomingHttpHeaders): Locale => {
 };
 
 export const handler: NextApiHandler = async (req, res) => {
+    const response = await ipRateLimit(req, res);
+    // If the status is not 200 then it has been rate limited.
+    if (response.statusCode !== 200) {
+        return;
+    }
+
     if (req.method !== 'POST') {
         res.status(405).json({ error: 'Method not allowed' });
         return;
@@ -100,21 +107,21 @@ export const handler: NextApiHandler = async (req, res) => {
     };
 
     try {
-        await transporter.verify();
+        // await transporter.verify();
 
-        let message: SentMessageInfo = await transporter.sendMail(emailOptions);
+        // let message: SentMessageInfo = await transporter.sendMail(emailOptions);
 
-        if (!message.accepted) {
-            res.status(500).json({ error: messages.contact.error });
-            return;
-        }
+        // if (!message.accepted) {
+        //     res.status(500).json({ error: messages.contact.error });
+        //     return;
+        // }
 
-        message = await transporter.sendMail(replyMailOptions);
+        // message = await transporter.sendMail(replyMailOptions);
 
-        if (!message.accepted) {
-            res.status(500).json({ error: messages.contact.error });
-            return;
-        }
+        // if (!message.accepted) {
+        //     res.status(500).json({ error: messages.contact.error });
+        //     return;
+        // }
 
         res.status(200).json({ message: messages.contact.success });
     } catch (e) {

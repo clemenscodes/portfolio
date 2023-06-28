@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { UrlObject } from 'url';
 
 export type ButtonProps = React.ComponentPropsWithoutRef<'button'> & {
-    newTab: boolean;
-    href: UrlObject | string;
+    newTab?: boolean;
+    href?: UrlObject | string;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -32,11 +32,11 @@ export const Button: React.FC<ButtonProps> = ({
             {children}
         </button>
     );
-    return newTab ? (
+    return newTab && href ? (
         <Link target='_blank' href={href}>
             {button}
         </Link>
-    ) : (
+    ) : href ? (
         <Link
             scroll={true}
             locale={false}
@@ -45,6 +45,8 @@ export const Button: React.FC<ButtonProps> = ({
         >
             {button}
         </Link>
+    ) : (
+        button
     );
 };
 

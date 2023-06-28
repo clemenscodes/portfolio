@@ -2,6 +2,7 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
+const path = require('path');
 const withPWA = require('next-pwa')({
     dest: 'public',
 });
@@ -19,6 +20,18 @@ const nextConfig = {
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'de'],
+    },
+
+    experimental: {
+        outputFileTracingRoot: path.join(__dirname, '../../'),
+        outputFileTracingExcludes: {
+            '*': [
+                'node_modules/canvas/build',
+                'node_modules/@swc/core-linux-x64-gnu',
+                'node_modules/@swc/core-linux-x64-musl',
+                'node_modules/@esbuild/linux-x64',
+            ],
+        },
     },
     webpack(config) {
         config.module.rules.push({

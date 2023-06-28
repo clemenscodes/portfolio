@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "apps/web/pages/**/*": {
+            "excludeFiles": "dist/apps/web/public/**"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import { initRateLimit, CountFn } from './rate-limit';
 import type { NextApiRequest } from 'next';
 
-export default function getIP(request: NextApiRequest) {
+export function getIP(request: NextApiRequest) {
     if (!('x-forwarded-for' in request.headers)) {
         return '127.0.0.1';
     }
@@ -22,9 +22,9 @@ export const ipRateLimit = initRateLimit((request) => ({
     timeframe: 10,
 }));
 
-const ipStore = new Map<string, number>();
+export const ipStore = new Map<string, number>();
 
-const increment: CountFn = async ({ key, limit }) => {
+export const increment: CountFn = async ({ key, limit }) => {
     const oldRemaining = ipStore.get(key);
     if (oldRemaining === undefined) {
         ipStore.set(key, limit);

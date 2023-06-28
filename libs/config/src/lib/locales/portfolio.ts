@@ -39,6 +39,10 @@ export const contact: IContact = {
             description: 'Your message to me',
             error: 'Please enter a message.',
         },
+        submission: {
+            success: 'Successfully sent email',
+            error: 'Failed sending email',
+        },
     },
 };
 

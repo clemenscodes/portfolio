@@ -1,11 +1,14 @@
 import Button from '../button/button';
+import Emoji from '../emoji/emoji';
 import { ErrorMessage } from '../error-message/error-message';
 import { Input } from '../input/input';
+import Loader from '../loader/loader';
 import { TextArea } from '../text-area/text-area';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { cn } from '@styles';
 import { IContactForm } from '@types';
 import { ContactSchema, contactSchema } from '@utils';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export type ContactFormProps = React.ComponentPropsWithoutRef<'form'> & {
@@ -13,9 +16,14 @@ export type ContactFormProps = React.ComponentPropsWithoutRef<'form'> & {
 };
 
 export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [emailSuccess, setEmailSuccess] = useState(false);
+    const [emailSubmitted, setEmailSubmitted] = useState(false);
+
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm<ContactSchema>({
         resolver: zodResolver(contactSchema),
@@ -28,8 +36,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
     });
 
     const onSubmit = async (values: ContactSchema) => {
-        console.log({ values });
         try {
+            setEmailSuccess(false);
+            setIsSubmitting(true);
+            setEmailSubmitted(true);
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
@@ -37,13 +47,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
                 },
                 body: JSON.stringify(values),
             });
-            if (response.ok) {
-                console.log('E-Mail erfolgreich gesendet');
-            } else {
-                throw new Error('Fehler beim Senden der E-Mail');
-            }
+            reset();
+            setTimeout(() => {
+                if (response.ok) {
+                    setEmailSuccess(true);
+                } else {
+                    setEmailSuccess(false);
+                }
+                setIsSubmitting(false);
+            }, 2500);
         } catch (error) {
-            console.error('Fehler beim Senden der E-Mail:', error);
+            setEmailSuccess(false);
         }
     };
 
@@ -68,58 +82,84 @@ export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
                     <Input
                         id='name'
                         type='text'
+                        disabled={isSubmitting}
                         placeholder={form.nameInput.description}
                         {...register('name')}
                     />
                     <ErrorMessage>
                         {errors.name && form.nameInput.error}
                     </ErrorMessage>
-                </div>
-
-                <div className={cn('w-full space-y-2')}>
                     <div className={cn('flex')}>
                         <label htmlFor='email'>{form.emailInput.name}</label>
                     </div>
                     <Input
                         type='text'
                         placeholder={form.emailInput.description}
+                        disabled={isSubmitting}
                         {...register('email')}
                     />
                     <ErrorMessage>
                         {errors.email && form.emailInput.error}
                     </ErrorMessage>
+                    <div className={cn('flex')}>
+                        <label htmlFor='subject'>
+                            {form.subjectInput.name}
+                        </label>
+                    </div>
+                    <Input
+                        type='text'
+                        placeholder={form.subjectInput.description}
+                        disabled={isSubmitting}
+                        {...register('subject')}
+                    />
+                    <ErrorMessage>
+                        {errors.subject && form.subjectInput.error}
+                    </ErrorMessage>
+                    <div className={cn('flex')}>
+                        <label htmlFor='message'>
+                            {form.messageInput.name}
+                        </label>
+                    </div>
+                    <TextArea
+                        className={cn('h-48')}
+                        placeholder={form.messageInput.description}
+                        disabled={isSubmitting}
+                        {...register('message')}
+                    />
+                    <ErrorMessage>
+                        {errors.message && form.messageInput.error}
+                    </ErrorMessage>
                 </div>
             </div>
 
-            <div className={cn('w-full space-y-2')}>
-                <div className={cn('flex')}>
-                    <label htmlFor='subject'>{form.subjectInput.name}</label>
-                </div>
-                <Input
-                    type='text'
-                    placeholder={form.subjectInput.description}
-                    {...register('subject')}
-                />
-                <ErrorMessage>
-                    {errors.subject && form.subjectInput.error}
-                </ErrorMessage>
-            </div>
+            <Button
+                type='submit'
+                className={cn(
+                    'flex h-12 w-full flex-col items-center justify-center'
+                )}
+                onClick={() => setEmailSuccess(false)}
+            >
+                {isSubmitting ? (
+                    <Loader />
+                ) : (
+                    <Emoji emoji='📩' label={'envelope'} />
+                )}
+            </Button>
 
-            <div className={cn('w-full space-y-2')}>
-                <div className={cn('flex')}>
-                    <label htmlFor='message'>{form.messageInput.name}</label>
-                </div>
-                <TextArea
-                    className={cn('h-48')}
-                    placeholder={form.messageInput.description}
-                    {...register('message')}
-                />
-                <ErrorMessage>
-                    {errors.message && form.messageInput.error}
-                </ErrorMessage>
-            </div>
-
-            <Button type='submit'>Send</Button>
+            {emailSubmitted &&
+                !isSubmitting &&
+                (emailSuccess ? (
+                    <p
+                        className={cn(
+                            'text-lg font-medium text-lime-700',
+                            'dark:text-lime-500'
+                        )}
+                    >
+                        {form.submission.success}
+                    </p>
+                ) : (
+                    <ErrorMessage>{form.submission.error}</ErrorMessage>
+                ))}
         </form>
     );
 };

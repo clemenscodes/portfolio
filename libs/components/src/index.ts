@@ -1,3 +1,4 @@
+export * from './lib/loader/loader';
 export * from './lib/text-area/text-area';
 export * from './lib/error-message/error-message';
 export * from './lib/input/input';

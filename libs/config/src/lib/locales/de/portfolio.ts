@@ -39,6 +39,10 @@ const contact: IContact = {
             description: 'Ihre Nachricht an mich',
             error: 'Bitte gib eine Nachricht ein.',
         },
+        submission: {
+            success: 'Email erfolgreich gesendet',
+            error: 'Email konnte nicht erfolgreich gesendet werden',
+        },
     },
 };
 

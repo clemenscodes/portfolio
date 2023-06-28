@@ -32,21 +32,21 @@ export type OnRateLimit = (context: RateLimitContext) => NextApiResponse | Promi
 
 export type CountFn = (context: RateLimitContext & { key: string }) => Promise<number>;
 
-const rateLimited: OnRateLimit = ({ id, response }) => {
+export const rateLimited: OnRateLimit = ({ id, response }) => {
     response.status(429).json({
         error: { message: `API rate limit exceeded for ${id}` },
     });
     return response;
 };
 
-function getHeaders(nameOrHeaders?: RateLimitHeaders) {
+export function getHeaders(nameOrHeaders?: RateLimitHeaders) {
     nameOrHeaders = nameOrHeaders ?? 'RateLimit';
     return !nameOrHeaders || typeof nameOrHeaders === 'string'
         ? ([`X-${nameOrHeaders}-Limit`, `X-${nameOrHeaders}-Remaining`, `X-${nameOrHeaders}-Reset`] as const)
         : nameOrHeaders;
 }
 
-async function rateLimit(context: RateLimitContext): Promise<NextApiResponse> {
+export async function rateLimit(context: RateLimitContext): Promise<NextApiResponse> {
     const { headers, id, limit, timeframe, count, onRateLimit, response } = context;
 
     // By removing the milliseconds our of the date and dividing by `timeframe`

@@ -11,7 +11,7 @@ export const ErrorMessage: React.FC<ErrorMessageProps> = forwardRef<
         <p
             ref={ref}
             className={cn(
-                'text-destructive my-8 text-sm font-medium text-red-500',
+                'text-destructive text-sm font-medium text-red-500',
                 className
             )}
             {...props}

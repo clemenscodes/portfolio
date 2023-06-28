@@ -1,85 +1,125 @@
-import { contact, greeting } from '@config';
-import { ContactSchema, contactSchema } from '@utils';
+import { contact, greeting, i18nApi } from '@config';
+import type { Locale } from '@types';
+import { type ContactSchema, contactSchema } from '@utils';
+import { IncomingHttpHeaders } from 'http';
 import { NextApiHandler } from 'next';
 import { createTransport } from 'nodemailer';
 import type { Options as MailOptions } from 'nodemailer/lib/mailer';
-import type { Options as SMTPOptions } from 'nodemailer/lib/smtp-transport';
+import type { Options as SMTPOptions, SentMessageInfo } from 'nodemailer/lib/smtp-transport';
 
 export function assertIsContactData(data: unknown): asserts data is ContactSchema {
     if (!contactSchema.safeParse(data).success) {
-        throw new Error('Invalid contact data');
+        throw new Error('Invalid data');
     }
 }
 
-export async function mail(mail: MailOptions, smtp: SMTPOptions) {
-    const transporter = createTransport({
-        ...smtp,
+export const getLocale = (headers: IncomingHttpHeaders): Locale => {
+    if (!('accept-language' in headers)) {
+        return 'en';
+    }
+
+    const acceptLanguage = headers['accept-language'];
+
+    if (acceptLanguage.includes('de')) {
+        return 'de';
+    }
+
+    if (acceptLanguage.includes('es')) {
+        return 'es';
+    }
+
+    return 'en';
+};
+
+export const handler: NextApiHandler = async (req, res) => {
+    if (req.method !== 'POST') {
+        res.status(405).json({ error: 'Method not allowed' });
+        return;
+    }
+
+    const { body, headers } = req;
+
+    try {
+        assertIsContactData(body);
+    } catch (e) {
+        if (!(e instanceof Error)) {
+            res.status(500).json({ error: 'Internal Server Error' });
+            return;
+        }
+        res.status(405).json({ error: e.message });
+        return;
+    }
+
+    const locale: Locale = getLocale(headers);
+    const messages = i18nApi.get(locale);
+    const { name, email, subject, message } = body;
+
+    const smtpTransportOptions: SMTPOptions = {
+        host: process.env.SMTP_HOST,
+        port: (process.env.SMTP_PORT || 587) as number,
+        secure: (process.env.SMTP_SECURE || false) as boolean,
+        auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+        dkim: {
+            domainName: 'clemenshorn.com',
+            keySelector: 'mail',
+            cacheDir: '/tmp',
+            cacheTreshold: 100 * 1024,
+            privateKey: process.env.DKIM_KEY,
+        },
         requireTLS: true,
         tls: {
-            rejectUnauthorized: false,
+            rejectUnauthorized: true,
             ciphers: 'SSLv3',
+        },
+        dsn: {
+            envid: 'some random message specific id',
+            ret: 'Full',
+            notify: ['SUCCESS', 'FAILURE', 'DELAY'],
+            orcpt: contact.email,
         },
         debug: true,
         logger: true,
-    });
-    await transporter.verify();
-    await transporter.sendMail(mail);
-}
+    };
 
-export const handler: NextApiHandler = async (req, res) => {
-    if (req.method === 'POST') {
-        const { body } = req;
+    const transporter = createTransport(smtpTransportOptions);
 
-        try {
-            assertIsContactData(body);
-        } catch {
-            res.status(405).json({ error: 'Invalid data' });
+    const emailOptions: MailOptions = {
+        from: `${name} <${contact.email}>`,
+        to: contact.email,
+        replyTo: email,
+        subject,
+        text: message,
+    };
+
+    const replyMailOptions: MailOptions = {
+        from: `${greeting.name} <${contact.email}>`,
+        to: email,
+        replyTo: contact.email,
+        subject: 'Thank you for contacting me',
+        text: `Dear ${name},\n\nI have received your message and will reply as soon as possible.\n\nBest regards,\n${greeting.name}`,
+    };
+
+    try {
+        await transporter.verify();
+
+        let message: SentMessageInfo = await transporter.sendMail(emailOptions);
+
+        if (!message.accepted) {
+            res.status(500).json({ error: messages.contact.error });
+            return;
         }
 
-        const { name, email, subject, message } = body;
+        message = await transporter.sendMail(replyMailOptions);
 
-        try {
-            const emailOptions: MailOptions = {
-                from: `${name} <${contact.email}>`,
-                to: contact.email,
-                replyTo: email,
-                subject,
-                text: message,
-            };
-
-            const smtpTransportOptions: SMTPOptions = {
-                host: process.env.SMTP_HOST,
-                port: (process.env.SMTP_PORT || 587) as number,
-                secure: (process.env.SMTP_SECURE || false) as boolean,
-                auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-                dkim: {
-                    domainName: 'clemenshorn.com',
-                    keySelector: 'mail',
-                    cacheDir: '/tmp',
-                    cacheTreshold: 100 * 1024,
-                    privateKey: process.env.DKIM_KEY,
-                },
-            };
-
-            await mail(emailOptions, smtpTransportOptions);
-
-            const replyMailOptions: MailOptions = {
-                from: `${greeting.name} <${contact.email}>`,
-                to: email,
-                replyTo: contact.email,
-                subject: 'Thank you for contacting me',
-                text: `Dear ${name},\n\nI have received your message and will reply as soon as possible.\n\nBest regards,\n${greeting.name}`,
-            };
-
-            await mail(replyMailOptions, smtpTransportOptions);
-
-            res.status(200).json({ message: 'E-Mail erfolgreich gesendet' });
-        } catch (error) {
-            console.error('Fehler beim Senden der E-Mail:', error);
-            res.status(500).json({ error: 'Fehler beim Senden der E-Mail' });
+        if (!message.accepted) {
+            res.status(500).json({ error: messages.contact.error });
+            return;
         }
-    } else {
-        res.status(405).json({ error: 'Method not allowed' });
+
+        res.status(200).json({ message: messages.contact.success });
+    } catch (e) {
+        console.error(`${messages.contact.error}: ${JSON.stringify(e)}`);
+        res.status(500).json({ error: messages.contact.error });
     }
 };
 

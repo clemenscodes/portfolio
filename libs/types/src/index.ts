@@ -5,6 +5,7 @@ export * from './lib/greeting';
 export * from './lib/display';
 export * from './lib/skills';
 export * from './lib/section';
+export * from './lib/api';
 export * from './lib/projects';
 export * from './lib/description';
 export * from './lib/socialMediaLinks';

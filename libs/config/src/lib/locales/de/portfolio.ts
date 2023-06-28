@@ -21,22 +21,22 @@ const contact: IContact = {
     form: {
         nameInput: {
             name: 'Name',
-            description: 'Wie ich dich ansprechen soll',
+            description: 'Wie Sie von mir angesprochen werden wollen',
             error: 'Bitte gib einen Namen ein.',
         },
         emailInput: {
             name: 'E-Mail',
-            description: 'Wo ich dich erreichen kann',
-            error: 'Bitte gib eine korrekte E-Mail ein.',
+            description: 'Wo ich mit Ihnen Kontakt aufnehmen soll',
+            error: 'Bitte gib eine korrekte E-Mail ein. T-Online wird aktuell nicht unterstützt.',
         },
         subjectInput: {
             name: 'Betreff',
-            description: 'Was du mit mir besprechen willst',
+            description: 'Was Sie mit mir besprechen wollen',
             error: 'Bitte gib einen Betreff ein.',
         },
         messageInput: {
             name: 'Nachricht',
-            description: 'Deine Nachricht an mich',
+            description: 'Ihre Nachricht an mich',
             error: 'Bitte gib eine Nachricht ein.',
         },
     },

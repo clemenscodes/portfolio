@@ -1,6 +1,6 @@
-import Greeting from './greeting';
 import { greeting, links } from '@config';
 import { render } from '@testing-library/react';
+import Greeting from './greeting';
 
 describe('Greeting', () => {
     it('should render successfully', () => {

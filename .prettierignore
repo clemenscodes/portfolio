@@ -14,3 +14,4 @@ gha-creds-*.json
 **/tmp
 **/assets/json/**/*.json
 **/apps/web/public
+**/.vercel

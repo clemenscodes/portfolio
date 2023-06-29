@@ -1,8 +1,8 @@
-import LanguageSelection from '../language-selection/language-selection';
-import ToggleTheme from '../toggle-theme/toggle-theme';
 import { cn } from '@styles';
 import { ISection } from '@types';
 import Link from 'next/link';
+import LanguageSelection from '../language-selection/language-selection';
+import ToggleTheme from '../toggle-theme/toggle-theme';
 
 export type MenuListProps = React.ComponentPropsWithoutRef<'ul'> & {
     isChecked: boolean;

@@ -1,7 +1,7 @@
-import ProjectList from './project-list/project-list';
 import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { IProjects } from '@types';
+import ProjectList from './project-list/project-list';
 
 export type ProjectsProps = React.ComponentPropsWithoutRef<'section'> & {
     projects: IProjects;

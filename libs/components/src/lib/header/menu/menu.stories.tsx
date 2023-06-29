@@ -1,5 +1,5 @@
-import { Menu } from './menu';
 import type { Meta } from '@storybook/react';
+import { Menu } from './menu';
 
 const Story: Meta<typeof Menu> = {
     component: Menu,

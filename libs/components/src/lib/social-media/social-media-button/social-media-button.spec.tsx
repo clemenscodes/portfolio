@@ -1,5 +1,5 @@
-import SocialMediaButton from './social-media-button';
 import { render } from '@testing-library/react';
+import SocialMediaButton from './social-media-button';
 
 describe('SocialMediaButton', () => {
     it('should render successfully', () => {

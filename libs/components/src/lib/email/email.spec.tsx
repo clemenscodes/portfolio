@@ -1,5 +1,5 @@
-import { Email } from './email';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { Email } from './email';
 
 describe('Email', () => {
     it('should render successfully', () => {

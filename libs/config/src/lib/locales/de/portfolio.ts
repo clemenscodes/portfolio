@@ -1,4 +1,4 @@
-import { IGreeting, ISection, ISkills, IProjects, ISocialMediaLinks, IContact, IPortfolio } from '@types';
+import { IContact, IGreeting, IPortfolio, IProjects, ISection, ISkills, ISocialMediaLinks } from '@types';
 
 const greeting: IGreeting = {
     name: 'Clemens Horn',

@@ -1,5 +1,5 @@
-import type { Meta } from '@storybook/react';
 import { Animation } from './animation';
+import type { Meta } from '@storybook/react';
 
 const Story: Meta<typeof Animation> = {
     component: Animation,

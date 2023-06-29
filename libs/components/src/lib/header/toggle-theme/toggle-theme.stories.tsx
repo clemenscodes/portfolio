@@ -1,5 +1,5 @@
-import type { Meta } from '@storybook/react';
 import { ToggleTheme } from './toggle-theme';
+import type { Meta } from '@storybook/react';
 
 const Story: Meta<typeof ToggleTheme> = {
     component: ToggleTheme,

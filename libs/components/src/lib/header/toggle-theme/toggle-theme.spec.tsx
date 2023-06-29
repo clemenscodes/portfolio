@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
 import ToggleTheme from './toggle-theme';
+import { render } from '@testing-library/react';
 
 describe('ToggleTheme', () => {
     it('should render successfully', () => {

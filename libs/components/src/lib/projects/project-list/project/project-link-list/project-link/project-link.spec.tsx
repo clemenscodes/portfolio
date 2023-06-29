@@ -1,6 +1,6 @@
+import ProjectLink from './project-link';
 import { projects } from '@config';
 import { render } from '@testing-library/react';
-import ProjectLink from './project-link';
 
 describe('ProjectLink', () => {
     it('should render successfully', () => {

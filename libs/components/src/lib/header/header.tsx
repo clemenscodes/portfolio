@@ -1,11 +1,11 @@
+import Logo from './logo/logo';
+import MenuList from './menu-list/menu-list';
+import Menu from './menu/menu';
 import { useClickOutside, useScroll } from '@hooks';
 import { cn } from '@styles';
 import { IGreeting, ISection } from '@types';
 import { scrollToComponent } from '@utils';
 import { useRef, useState } from 'react';
-import Logo from './logo/logo';
-import MenuList from './menu-list/menu-list';
-import Menu from './menu/menu';
 
 export type HeaderProps = React.ComponentPropsWithoutRef<'header'> & {
     sections: ISection[];

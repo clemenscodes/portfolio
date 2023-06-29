@@ -1,5 +1,5 @@
-import { greeting } from '@config';
 import { getGreeting } from '../support/app.po';
+import { greeting } from '@config';
 
 describe('Home', () => {
     beforeEach(() => cy.visit('/'));

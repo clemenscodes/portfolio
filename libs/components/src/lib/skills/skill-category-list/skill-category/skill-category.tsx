@@ -1,7 +1,8 @@
 // import { useIntersection } from '@hooks';
+
+import { SkillCategorySkillList } from './skill-category-skill-list';
 import { cn } from '@styles';
 import { ISkillCategory } from '@types';
-import { SkillCategorySkillList } from './skill-category-skill-list';
 
 export type SkillCategoryProps = React.ComponentPropsWithoutRef<'li'> & {
     category: ISkillCategory;

@@ -1,5 +1,5 @@
-import type { Meta } from '@storybook/react';
 import { Emoji } from './emoji';
+import type { Meta } from '@storybook/react';
 
 const Story: Meta<typeof Emoji> = {
     component: Emoji,

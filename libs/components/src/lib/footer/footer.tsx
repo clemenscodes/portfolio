@@ -1,6 +1,6 @@
+import Contact from '../contact/contact';
 import { cn } from '@styles';
 import { IContact, ISocialMediaLinks } from '@types';
-import Contact from '../contact/contact';
 
 export type FooterProps = React.ComponentPropsWithoutRef<'footer'> & {
     contact: IContact;

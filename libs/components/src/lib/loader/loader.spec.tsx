@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
 import Loader from './loader';
+import { render } from '@testing-library/react';
 
 describe('Loader', () => {
     it('should render successfully', () => {

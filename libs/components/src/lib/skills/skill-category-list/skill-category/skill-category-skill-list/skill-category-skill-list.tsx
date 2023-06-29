@@ -1,6 +1,6 @@
+import { SkillCategorySkill } from './skill-category-skill';
 import { cn } from '@styles';
 import { ISoftwareSkill } from '@types';
-import { SkillCategorySkill } from './skill-category-skill';
 
 export type SkillCategorySkillListProps =
     React.ComponentPropsWithoutRef<'ul'> & {

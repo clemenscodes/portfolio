@@ -1,6 +1,6 @@
+import Project from './project/project';
 import { cn } from '@styles';
 import { IProject } from '@types';
-import Project from './project/project';
 
 export type ProjectListProps = React.ComponentPropsWithoutRef<'ul'> & {
     projects: IProject[];

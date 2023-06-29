@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
 import { TextArea } from './text-area';
+import { render } from '@testing-library/react';
 
 describe('TextArea', () => {
     it('should render successfully', () => {

@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
 import Skill from './skill';
+import { render } from '@testing-library/react';
 
 describe('Skill', () => {
     it('should render successfully', () => {

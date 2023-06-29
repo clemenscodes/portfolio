@@ -1,15 +1,15 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import { cn } from '@styles';
-import { IContactForm } from '@types';
-import { ContactSchema, contactSchema } from '@utils';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
 import Button from '../button/button';
 import Emoji from '../emoji/emoji';
 import { ErrorMessage } from '../error-message/error-message';
 import { Input } from '../input/input';
 import Loader from '../loader/loader';
 import { TextArea } from '../text-area/text-area';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { cn } from '@styles';
+import { IContactForm } from '@types';
+import { ContactSchema, contactSchema } from '@utils';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export type ContactFormProps = React.ComponentPropsWithoutRef<'form'> & {
     form: IContactForm;

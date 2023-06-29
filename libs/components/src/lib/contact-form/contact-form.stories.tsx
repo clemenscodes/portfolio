@@ -1,5 +1,5 @@
-import type { Meta } from '@storybook/react';
 import { ContactForm } from './contact-form';
+import type { Meta } from '@storybook/react';
 
 const Story: Meta<typeof ContactForm> = {
     component: ContactForm,

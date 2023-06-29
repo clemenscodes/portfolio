@@ -51,12 +51,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({ form, ...props }) => {
             setTimeout(() => {
                 if (response.ok) {
                     setEmailSuccess(true);
-                    setTimeout(() => setEmailSubmitted(false), 2500);
+                    setTimeout(() => setEmailSubmitted(false), 1000);
                 } else {
                     setEmailSuccess(false);
                 }
                 setIsSubmitting(false);
-            }, 2500);
+            }, 1000);
         } catch (error) {
             setEmailSuccess(false);
         }

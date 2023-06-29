@@ -129,17 +129,14 @@ export const contactHandler: NextApiHandler = async (req, res) => {
     const cleanSubject = sanitize(subject);
     const props = { subject: cleanSubject, message: cleanMessage };
     const emailElement = React.createElement(Email, props);
-    const html = render(emailElement, { pretty: true });
     const text = render(emailElement, { plainText: true });
 
     const emailOptions: MailOptions = {
         from: `${name} <${contact.email}>`,
         to: contact.email,
         replyTo: email,
-        cc: email,
         subject: cleanSubject,
         text,
-        html,
     };
 
     try {

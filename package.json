@@ -96,7 +96,7 @@
         "jest-environment-node": "^29.4.1",
         "jest-transform-stub": "^2.0.0",
         "jsdom": "^22.1.0",
-        "next-router-mock": "^0.9.3",
+        "next-router-mock": "^0.9.7",
         "nx": "16.4.0",
         "nx-cloud": "16.0.5",
         "postcss": "^8.4.21",

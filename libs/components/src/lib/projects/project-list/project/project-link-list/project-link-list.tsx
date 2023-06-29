@@ -1,6 +1,6 @@
-import ProjectLink from './project-link/project-link';
 import { cn } from '@styles';
 import { IProjectLink } from '@types';
+import ProjectLink from './project-link/project-link';
 
 export type ProjectLinkListProps = React.ComponentPropsWithoutRef<'ul'> & {
     links: IProjectLink[];

@@ -1,6 +1,6 @@
-import SkillCategorySkill from './skill-category-skill';
 import { skills } from '@config';
 import { render } from '@testing-library/react';
+import SkillCategorySkill from './skill-category-skill';
 
 describe('SkillCategorySkill', () => {
     it('should render successfully', () => {

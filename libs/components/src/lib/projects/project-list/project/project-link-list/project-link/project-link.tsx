@@ -1,6 +1,6 @@
-import Button from '../../../../../button/button';
 import { cn } from '@styles';
 import { IProjectLink } from '@types';
+import Button from '../../../../../button/button';
 
 export type ProjectLinkProps = React.ComponentPropsWithoutRef<'li'> & {
     link: IProjectLink;

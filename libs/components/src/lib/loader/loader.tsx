@@ -1,6 +1,6 @@
+import { cn } from '@styles';
 import loader from '../../../assets/json/circle-loader.json';
 import { Animation, AnimationProps } from '../animation/animation';
-import { cn } from '@styles';
 
 export type LoaderProps = Omit<AnimationProps, 'animationData'>;
 

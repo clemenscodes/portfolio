@@ -1,4 +1,4 @@
-import { Greeting, Skills, Projects, Header, Footer } from '@components';
+import { Footer, Greeting, Header, Projects, Skills } from '@components';
 import { cn } from '@styles';
 import { IPortfolio } from '@types';
 import { NextPage } from 'next';

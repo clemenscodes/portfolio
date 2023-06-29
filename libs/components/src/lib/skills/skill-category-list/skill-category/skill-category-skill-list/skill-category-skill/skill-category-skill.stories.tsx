@@ -1,5 +1,5 @@
-import { SkillCategorySkill } from './skill-category-skill';
 import type { Meta } from '@storybook/react';
+import { SkillCategorySkill } from './skill-category-skill';
 
 const Story: Meta<typeof SkillCategorySkill> = {
     component: SkillCategorySkill,

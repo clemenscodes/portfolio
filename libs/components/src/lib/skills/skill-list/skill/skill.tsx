@@ -1,7 +1,7 @@
-import Emoji from '../../../emoji/emoji';
 // import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { ISkill } from '@types';
+import Emoji from '../../../emoji/emoji';
 
 export type SkillProps = React.ComponentPropsWithoutRef<'li'> & {
     skill: ISkill;

@@ -1,6 +1,6 @@
-import { ContactForm } from './contact-form';
 import { contact } from '@config';
 import { render } from '@testing-library/react';
+import { ContactForm } from './contact-form';
 
 describe('ContactForm', () => {
     it('should render successfully', () => {

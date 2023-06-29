@@ -1,6 +1,6 @@
-import { Skill } from './skill';
 import { cn } from '@styles';
 import { ISkill } from '@types';
+import { Skill } from './skill';
 
 export type SkillListProps = React.ComponentPropsWithoutRef<'ul'> & {
     skills: ISkill[];

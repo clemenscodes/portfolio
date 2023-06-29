@@ -1,5 +1,5 @@
-import { initRateLimit, CountFn } from './rate-limit';
 import type { NextApiRequest } from 'next';
+import { CountFn, initRateLimit } from './rate-limit';
 
 export function getIP(request: NextApiRequest) {
     if (!('x-forwarded-for' in request.headers)) {

@@ -1,5 +1,5 @@
-import { Contact } from './contact';
 import type { Meta } from '@storybook/react';
+import { Contact } from './contact';
 
 const Story: Meta<typeof Contact> = {
     component: Contact,

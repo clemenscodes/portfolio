@@ -1,5 +1,5 @@
-import Menu from './menu';
 import { render } from '@testing-library/react';
+import Menu from './menu';
 
 describe('Menu', () => {
     it('should render successfully', () => {

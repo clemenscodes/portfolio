@@ -1,4 +1,4 @@
-import { IGreeting, ISection, ISkills, IProjects, ISocialMediaLinks, IContact, IPortfolio } from '@types';
+import { IContact, IGreeting, IPortfolio, IProjects, ISection, ISkills, ISocialMediaLinks } from '@types';
 
 const greeting: IGreeting = {
     name: 'Clemens Horn',
@@ -388,6 +388,17 @@ const projects: IProjects = {
     title: 'Projekte',
     subTitle: 'Ein paar Projekte, die ich im Laufe der Zeit entwickelt habe',
     projects: [
+        {
+            imageSrc: '../../../svg/programmer.svg',
+            name: 'Portfolio',
+            description: 'Diese Webseite hier',
+            links: [
+                {
+                    name: 'Code ansehen',
+                    url: new URL('https://github.com/clemenscodes/portfolio/'),
+                },
+            ],
+        },
         {
             imageSrc: '../../../svg/cli.svg',
             name: 'Ninja VM',

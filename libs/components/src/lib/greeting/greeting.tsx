@@ -2,7 +2,7 @@ import Button from '../button/button';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
 import { cn } from '@styles';
-import { type ISocialMediaLinks, type IGreeting } from '@types';
+import { type IGreeting, type ISocialMediaLinks } from '@types';
 import Image from 'next/image';
 
 export type GreetingProps = React.ComponentPropsWithoutRef<'section'> & {

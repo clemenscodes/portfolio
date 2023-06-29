@@ -1,5 +1,6 @@
-import Emoji from '../../../emoji/emoji';
 // import { useIntersection } from '@hooks';
+
+import Emoji from '../../../emoji/emoji';
 import { cn } from '@styles';
 import { ISkill } from '@types';
 

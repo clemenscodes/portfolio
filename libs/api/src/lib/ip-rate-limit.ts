@@ -1,4 +1,4 @@
-import { initRateLimit, CountFn } from './rate-limit';
+import { CountFn, initRateLimit } from './rate-limit';
 import type { NextApiRequest } from 'next';
 
 export function getIP(request: NextApiRequest) {

@@ -1,5 +1,6 @@
-import { SkillCategorySkillList } from './skill-category-skill-list';
 // import { useIntersection } from '@hooks';
+
+import { SkillCategorySkillList } from './skill-category-skill-list';
 import { cn } from '@styles';
 import { ISkillCategory } from '@types';
 

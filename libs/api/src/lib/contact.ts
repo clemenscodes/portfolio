@@ -3,13 +3,13 @@ import { Email } from '@components';
 import { contact, i18nApi } from '@config';
 import { render } from '@react-email/render';
 import type { Locale } from '@types';
-import { type ContactSchema, contactSchema } from '@utils';
+import { contactSchema, type ContactSchema } from '@utils';
 import type { IncomingHttpHeaders } from 'http';
 import { sanitize } from 'isomorphic-dompurify';
 import { NextApiHandler } from 'next';
 import { createTransport } from 'nodemailer';
 import type { Options as MailOptions } from 'nodemailer/lib/mailer';
-import type { Options as SMTPOptions, SentMessageInfo } from 'nodemailer/lib/smtp-transport';
+import type { SentMessageInfo, Options as SMTPOptions } from 'nodemailer/lib/smtp-transport';
 import React from 'react';
 
 export function assertIsContactData(data: unknown): asserts data is ContactSchema {

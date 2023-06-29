@@ -1,7 +1,8 @@
+// import { useIntersection } from '@hooks';
+
 import codingPerson from '../../../assets/json/codingPerson.json';
 import Animation from '../animation/animation';
 import { SkillCategoryList, SkillList } from './';
-// import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { ISkills } from '@types';
 

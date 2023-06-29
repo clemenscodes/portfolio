@@ -387,6 +387,21 @@ export const projects: IProjects = {
     subTitle: 'Some projects I have built along the way',
     projects: [
         {
+            imageSrc: '../../../svg/programmer.svg',
+            name: 'Portfolio',
+            description: 'This website here',
+            links: [
+                {
+                    name: 'View Site',
+                    url: new URL('https://clemenshorn.com/'),
+                },
+                {
+                    name: 'View code',
+                    url: new URL('https://github.com/clemenscodes/portfolio/'),
+                },
+            ],
+        },
+        {
             imageSrc: '../../../svg/cli.svg',
             name: 'Ninja VM',
             description: 'Virtual Machine for the Ninja Programming Language',

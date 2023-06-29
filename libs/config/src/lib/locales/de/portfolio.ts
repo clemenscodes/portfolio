@@ -389,6 +389,17 @@ const projects: IProjects = {
     subTitle: 'Ein paar Projekte, die ich im Laufe der Zeit entwickelt habe',
     projects: [
         {
+            imageSrc: '../../../svg/programmer.svg',
+            name: 'Portfolio',
+            description: 'Diese Webseite hier',
+            links: [
+                {
+                    name: 'Code ansehen',
+                    url: new URL('https://github.com/clemenscodes/portfolio/'),
+                },
+            ],
+        },
+        {
             imageSrc: '../../../svg/cli.svg',
             name: 'Ninja VM',
             description: 'Virtuelle Maschine für die Programmiersprache Ninja',

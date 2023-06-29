@@ -6938,10 +6938,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.14.2":
-  version: 18.14.2
-  resolution: "@types/node@npm:18.14.2"
-  checksum: 53c07e721f6ae33de71306f6a0b75dae6066a4f55bd5484c93bd59ff25f0c5f004ceafeef509a4d0cb9e24a247efc34d50489bcc1b05a53ecc68e2fc088e65cb
+"@types/node@npm:20.3.2":
+  version: 20.3.2
+  resolution: "@types/node@npm:20.3.2"
+  checksum: 5929ce2b9b12b1e2a2304a0921a953c72a81f5753ad39ac43b99ce6312fbb2b4fb5bc6b60d64a2550704e3223cd5de1299467d36085ac69888899db978f2653a
   languageName: node
   linkType: hard
 
@@ -17117,7 +17117,7 @@ __metadata:
     "@testing-library/react": 14.0.0
     "@types/jest": ^29.4.0
     "@types/next-pwa": ^5.6.4
-    "@types/node": 18.14.2
+    "@types/node": 20.3.2
     "@types/nodemailer": ^6.4.8
     "@types/react": 18.2.13
     "@types/react-dom": 18.2.6

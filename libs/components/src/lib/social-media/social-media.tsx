@@ -1,8 +1,8 @@
+import SocialMediaButton from './social-media-button/social-media-button';
 import { cn } from '@styles';
 import { ISocialMediaLinks } from '@types';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import SocialMediaButton from './social-media-button/social-media-button';
 
 export type SocialMediaProps = React.ComponentPropsWithoutRef<'ul'> & {
     links: ISocialMediaLinks;

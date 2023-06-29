@@ -1,9 +1,10 @@
 // import { useIntersection } from '@hooks';
-import { cn } from '@styles';
-import { ISkills } from '@types';
+
 import codingPerson from '../../../assets/json/codingPerson.json';
 import Animation from '../animation/animation';
 import { SkillCategoryList, SkillList } from './';
+import { cn } from '@styles';
+import { ISkills } from '@types';
 
 export type SkillsProps = React.ComponentPropsWithoutRef<'section'> & {
     skills: ISkills;

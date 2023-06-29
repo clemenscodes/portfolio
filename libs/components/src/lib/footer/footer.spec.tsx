@@ -1,6 +1,6 @@
+import Footer from './footer';
 import { contact, links } from '@config';
 import { render } from '@testing-library/react';
-import Footer from './footer';
 
 describe('Footer', () => {
     it('should render successfully', () => {

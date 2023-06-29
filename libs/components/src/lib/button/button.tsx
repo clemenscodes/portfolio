@@ -1,7 +1,7 @@
-import { UrlObject } from 'url';
 import { cn } from '@styles';
 import { scrollToComponent } from '@utils';
 import Link from 'next/link';
+import { UrlObject } from 'url';
 
 export type ButtonProps = React.ComponentPropsWithoutRef<'button'> & {
     newTab?: boolean;

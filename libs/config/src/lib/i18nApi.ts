@@ -1,7 +1,7 @@
-import type { IApi, Locale } from '@types';
 import { api } from './locales/api';
 import { deApi } from './locales/de/api';
 import { esApi } from './locales/es/api';
+import type { IApi, Locale } from '@types';
 
 export const i18nApi = new Map<Locale, IApi>();
 i18nApi.set('en', api);

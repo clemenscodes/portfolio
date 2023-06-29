@@ -1,11 +1,11 @@
-import { useIntersection } from '@hooks';
-import { cn } from '@styles';
-import { IContact, ISocialMediaLinks } from '@types';
 import email from '../../../assets/json/email.json';
 import Animation from '../animation/animation';
 import ContactForm from '../contact-form/contact-form';
 import Emoji from '../emoji/emoji';
 import SocialMedia from '../social-media/social-media';
+import { useIntersection } from '@hooks';
+import { cn } from '@styles';
+import { IContact, ISocialMediaLinks } from '@types';
 
 export type ContactProps = React.ComponentPropsWithoutRef<'section'> & {
     contact: IContact;

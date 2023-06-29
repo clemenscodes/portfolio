@@ -1,5 +1,5 @@
-import type { Meta } from '@storybook/react';
 import { ProjectLinkList } from './project-link-list';
+import type { Meta } from '@storybook/react';
 
 const Story: Meta<typeof ProjectLinkList> = {
     component: ProjectLinkList,

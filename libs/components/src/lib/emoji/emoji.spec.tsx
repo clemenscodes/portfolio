@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import Emoji from './emoji';
+import { render, screen } from '@testing-library/react';
 
 describe('Emoji', () => {
     it('renders the emoji and label', () => {

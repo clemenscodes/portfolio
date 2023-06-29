@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
 import { ErrorMessage } from './error-message';
+import { render } from '@testing-library/react';
 
 describe('ErrorMessage', () => {
     it('should render successfully', () => {

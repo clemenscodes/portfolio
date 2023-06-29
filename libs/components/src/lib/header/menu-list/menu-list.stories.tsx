@@ -1,5 +1,5 @@
-import type { Meta } from '@storybook/react';
 import { MenuList } from './menu-list';
+import type { Meta } from '@storybook/react';
 
 const Story: Meta<typeof MenuList> = {
     component: MenuList,

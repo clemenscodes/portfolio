@@ -1,8 +1,8 @@
+import ProjectLinkList from './project-link-list/project-link-list';
 import { useIntersection } from '@hooks';
 import { cn } from '@styles';
 import { IProject } from '@types';
 import Image from 'next/image';
-import ProjectLinkList from './project-link-list/project-link-list';
 
 export type ProjectProps = React.ComponentPropsWithoutRef<'li'> & {
     project: IProject;

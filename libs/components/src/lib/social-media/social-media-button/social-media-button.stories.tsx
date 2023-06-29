@@ -1,5 +1,5 @@
-import type { Meta } from '@storybook/react';
 import { SocialMediaButton } from './social-media-button';
+import type { Meta } from '@storybook/react';
 
 const Story: Meta<typeof SocialMediaButton> = {
     component: SocialMediaButton,

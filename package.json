@@ -59,7 +59,7 @@
         "@storybook/addon-essentials": "7.0.12",
         "@storybook/core-common": "^7.0.9",
         "@storybook/core-server": "7.0.12",
-        "@storybook/nextjs": "7.0.12",
+        "@storybook/nextjs": "7.0.27",
         "@swc/core": "^1.2.173",
         "@swc/jest": "^0.2.24",
         "@testing-library/jest-dom": "^5.16.5",

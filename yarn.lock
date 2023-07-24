@@ -6452,22 +6452,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tabler/icons-react@npm:^2.12.0":
-  version: 2.13.0
-  resolution: "@tabler/icons-react@npm:2.13.0"
+"@tabler/icons-react@npm:^2.28.0":
+  version: 2.28.0
+  resolution: "@tabler/icons-react@npm:2.28.0"
   dependencies:
-    "@tabler/icons": 2.13.0
+    "@tabler/icons": 2.28.0
     prop-types: ^15.7.2
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0
-  checksum: 9280eeec45d40a4370fd11aaf996dc11d651cde3bbcb8388c8d3f1b70aefb5dcc7e00eec6860b9bda388e2178253a8e9fb547d6125857665563b49e6b5809701
+  checksum: d923dff75d0b0d77fdbb0c82f8244669ef3827cfff23165f5f790a3df82d10acc2e1926c0c3ee56542aaa5c41e98de3e2ba7c3ef4af62ae490420e9ecbdb834f
   languageName: node
   linkType: hard
 
-"@tabler/icons@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@tabler/icons@npm:2.13.0"
-  checksum: a55b35f3000d8d300234d517bc171108b8dded715614b9cd516472b7e3d344c2560906908ee952b360a00ae2da70eb180ac3c7c12fc831df0b59633e037940a7
+"@tabler/icons@npm:2.28.0":
+  version: 2.28.0
+  resolution: "@tabler/icons@npm:2.28.0"
+  checksum: 5b69d3b507f3226ce3bf92644908fe153e144032e8171cd850108e2721447705219c68659a309163855b40d0d533b07aadf94ac9e6c8756c199483f22c373e35
   languageName: node
   linkType: hard
 
@@ -17134,7 +17134,7 @@ __metadata:
     "@storybook/nextjs": 7.0.12
     "@swc/core": ^1.2.173
     "@swc/jest": ^0.2.24
-    "@tabler/icons-react": ^2.12.0
+    "@tabler/icons-react": ^2.28.0
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": 14.0.0
     "@types/jest": ^29.4.0

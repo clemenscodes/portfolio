@@ -17187,7 +17187,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-email: ^1.9.4
-    react-hook-form: ^7.45.0
+    react-hook-form: ^7.45.4
     sharp: ^0.32.1
     storybook-tailwind-dark-mode: ^1.0.22
     stream-browserify: ^3.0.0
@@ -18215,12 +18215,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.45.0":
-  version: 7.45.0
-  resolution: "react-hook-form@npm:7.45.0"
+"react-hook-form@npm:^7.45.4":
+  version: 7.45.4
+  resolution: "react-hook-form@npm:7.45.4"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18
-  checksum: 3e35253f0efb0f77f5036c74f85cbdd425adb2fad20a14fc692d573fe552b3d9b7e7ac22193cd767f265fa292c33383d8721cfbdcc5ae41910a35a1ba3655f66
+  checksum: 1d84c78dadf561bc9e360272c5c856c724426162e13a74929c0517c3eb8004a7f057561fff3bfd4c1121b36d6cf1437399df1dbfd01d0817b9f922503f407d8f
   languageName: node
   linkType: hard
 

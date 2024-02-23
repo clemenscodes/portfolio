@@ -36,3 +36,4 @@ apps/web/public/*
 **/.firebase/
 **/coverage
 .vercel
+.direnv

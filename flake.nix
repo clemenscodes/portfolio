@@ -11,8 +11,9 @@
     devShell = {
       ${system} = pkgs.mkShell {
         buildInputs = [
-          pkgs.nodejs-slim_18
-          pkgs.yarn-berry
+          pkgs.bun
+          pkgs.nodejs
+          pkgs.python3
         ];
       };
     };

@@ -1,0 +1,442 @@
+{
+  "basics": {
+    "url": {
+      "href": "https://clemenshorn.com",
+      "label": ""
+    },
+    "name": "Clemens Horn",
+    "email": "me@clemenshorn.com",
+    "phone": "+491746590828",
+    "picture": {
+      "url": "https://avatars.githubusercontent.com/u/51924045?v=4",
+      "size": 230,
+      "effects": {
+        "border": false,
+        "hidden": false,
+        "grayscale": false
+      },
+      "aspectRatio": 1,
+      "borderRadius": 9999
+    },
+    "headline": "",
+    "location": "Gießen",
+    "customFields": [
+      {
+        "id": "k71i9ng3jwmzf45hfvpkxxua",
+        "icon": "cake",
+        "name": "",
+        "value": "18.08.1997"
+      }
+    ]
+  },
+  "metadata": {
+    "css": {
+      "value": ".section {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
+      "visible": false
+    },
+    "page": {
+      "format": "a4",
+      "margin": 16,
+      "options": {
+        "breakLine": true,
+        "pageNumbers": true
+      }
+    },
+    "notes": "",
+    "theme": {
+      "text": "#241B1B",
+      "primary": "#222222",
+      "background": "#DEDEDE"
+    },
+    "layout": [
+      [
+        [
+          "education",
+          "summary",
+          "experience",
+          "volunteer",
+          "projects",
+          "references"
+        ],
+        [
+          "profiles",
+          "skills",
+          "interests",
+          "certifications",
+          "awards",
+          "publications",
+          "languages"
+        ]
+      ]
+    ],
+    "template": "gengar",
+    "typography": {
+      "font": {
+        "size": 14,
+        "family": "Open Sans",
+        "subset": "latin",
+        "variants": [
+          "regular"
+        ]
+      },
+      "hideIcons": false,
+      "lineHeight": 1.5,
+      "underlineLinks": false
+    }
+  },
+  "sections": {
+    "awards": {
+      "id": "awards",
+      "name": "Awards",
+      "items": [],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "custom": {},
+    "skills": {
+      "id": "skills",
+      "name": "Fähigkeiten",
+      "items": [
+        {
+          "id": "iumllp13jhac5c8fsl43k2mz",
+          "visible": true,
+          "name": "Programmierung",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "TypeScript",
+            "Rust",
+            "C",
+            "Lua",
+            "Java",
+            "C#"
+          ]
+        },
+        {
+          "id": "rk5ybgza7a13okniy5plxpla",
+          "visible": true,
+          "name": "UI/UX",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "HTML",
+            "CSS",
+            "React.js",
+            "Next.js",
+            "Angular"
+          ]
+        },
+        {
+          "id": "m5dz7214g6lms6si0ccdh7ih",
+          "visible": true,
+          "name": "DevOps",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Git",
+            "Docker",
+            "Kubernetes",
+            "Terraform",
+            "Nx"
+          ]
+        },
+        {
+          "id": "nla7txq5m4fjzz971zbgvzz2",
+          "visible": true,
+          "name": "Datenbanken",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "PostgreSQL",
+            "MySQL",
+            "MongoDB"
+          ]
+        },
+        {
+          "id": "x2n758mzkdv2pxe4ounpn9u9",
+          "visible": true,
+          "name": "Systemadministration",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Nix",
+            "Bash",
+            "Python"
+          ]
+        },
+        {
+          "id": "qp3wxbvg0n6c5r20tu87ra74",
+          "visible": true,
+          "name": "Buildsysteme",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Make",
+            "CMake"
+          ]
+        },
+        {
+          "id": "hgohbf1awg2uukv7c5o7h9qj",
+          "visible": true,
+          "name": "IDE",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Neovim",
+            "VSCode",
+            "JetBrains",
+            "Visual Studio"
+          ]
+        }
+      ],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "summary": {
+      "id": "summary",
+      "name": "Summary",
+      "columns": 1,
+      "content": "",
+      "visible": true,
+      "separateLinks": true
+    },
+    "profiles": {
+      "id": "profiles",
+      "name": "Profile",
+      "items": [
+        {
+          "id": "y9llqx7v5llqgh5rx4rznm9c",
+          "visible": true,
+          "network": "GitHub",
+          "username": "clemenscodes",
+          "icon": "github",
+          "url": {
+            "label": "",
+            "href": "https://github.com/clemenscodes"
+          }
+        }
+      ],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "projects": {
+      "id": "projects",
+      "name": "Projekte",
+      "items": [
+        {
+          "id": "yfz6dx899kvsantdz6nwivmw",
+          "visible": true,
+          "name": "Portfolio",
+          "description": "",
+          "date": "",
+          "summary": "<p>Moderne Webanwendung zur Vernanschaulichung meiner Fähigkeiten.</p>",
+          "keywords": [
+            "Next.js",
+            "Tailwind",
+            "TypeScript",
+            "Nx"
+          ],
+          "url": {
+            "label": "",
+            "href": "https://clemenshorn.com"
+          }
+        },
+        {
+          "id": "eodkwjeod0u4wd1pa3zpigql",
+          "visible": true,
+          "name": "nx-cmake",
+          "description": "",
+          "date": "",
+          "summary": "<p>Plugin für C und C++ Projekte in einem Nx Workspace. Integriert Codegeneration, Cachingmechanismen und Dependencymanagement.</p>",
+          "keywords": [],
+          "url": {
+            "label": "",
+            "href": "https://www.npmjs.com/package/nx-cmake"
+          }
+        },
+        {
+          "id": "e5ocucppaqla2sycuistk964",
+          "visible": true,
+          "name": "Schach MVC",
+          "description": "",
+          "date": "",
+          "summary": "<p>GUI, die alle Schachregeln implementiert. Nutzt die Bitboardtechnik. Unterstützt Forsysth-Edwards-Notation.</p>",
+          "keywords": [
+            "Java",
+            "Processing",
+            "ControlP5",
+            "JUnit"
+          ],
+          "url": {
+            "label": "",
+            "href": "https://https://github.com/clemenscodes/chess"
+          }
+        },
+        {
+          "id": "ti5u8wggkdnw5aq4y8t1a2xv",
+          "visible": true,
+          "name": "Systemadministration",
+          "description": "",
+          "date": "",
+          "summary": "<p>Konfiguration für alle meiner Systeme mit Nix. Kann als Flake verwendet werden.</p>",
+          "keywords": [
+            "Nix",
+            "NixOS"
+          ],
+          "url": {
+            "label": "",
+            "href": "https://github.com/cymenix/os"
+          }
+        }
+      ],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "education": {
+      "id": "education",
+      "name": "Bildung",
+      "items": [
+        {
+          "id": "oayks7f4av4pwfncc3xsbaeq",
+          "visible": true,
+          "institution": "Technische Hochschule Mittelhessen",
+          "studyType": "IT",
+          "area": "Social Media Systems",
+          "score": "1.8",
+          "date": "01.04.2019 - Heute",
+          "summary": "<p>Ein umfassendes und vielseitiges Studium mit Schwerpunkt auf IT, das sich auf das agile Designen, Planen und Erstellen von Anwendungen von Anfang bis Ende konzentriert. Das  Studium kombiniert Wissen über Social-Media-Strategien mit dem technischen Know-how der Informatik.</p>",
+          "url": {
+            "label": "",
+            "href": "https://thm.de"
+          }
+        }
+      ],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "interests": {
+      "id": "interests",
+      "name": "Interests",
+      "items": [],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "languages": {
+      "id": "languages",
+      "name": "Sprachen",
+      "items": [
+        {
+          "id": "rkvpoh9eksjt2ehtzcdvag3b",
+          "visible": true,
+          "name": "Deutsh",
+          "description": "Muttersprachler",
+          "level": 0
+        },
+        {
+          "id": "c5lqct2demzm89j0zjnufeao",
+          "visible": true,
+          "name": "Englisch",
+          "description": "Fließend",
+          "level": 0
+        },
+        {
+          "id": "u7u2esu2ynhg4p5t5tc95pai",
+          "visible": true,
+          "name": "Spanisch",
+          "description": "Gesprächsfähig",
+          "level": 0
+        }
+      ],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "volunteer": {
+      "id": "volunteer",
+      "name": "Freiwilligenarbeit",
+      "items": [
+        {
+          "id": "hd9qk26neddvulex62p4esw1",
+          "visible": true,
+          "organization": "Albert-Schweitzer-Kinderdorf",
+          "position": "Freiwilliger",
+          "location": "Wetzlar",
+          "date": "01.09.2018 - 01.03.2019",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": "https://ask-hessen.de"
+          }
+        }
+      ],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "experience": {
+      "id": "experience",
+      "name": "Arbeitserfahrung",
+      "items": [
+        {
+          "id": "ngclvi94sm7isdz8asdq7pxb",
+          "visible": true,
+          "company": "Technische Hochschule Mittelhessen",
+          "position": "Tutor",
+          "location": "Gießen",
+          "date": "01.08.2019 - 01.02.2022",
+          "summary": "<ul><li><p style=\"text-align: justify\">Unterstützung beim Programmieren in einer webbasierten Umgebung.</p></li><li><p style=\"text-align: justify\">Bewertung der Programmieraufgaben und Projekte der Studierenden.</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": "https://thm.de"
+          }
+        },
+        {
+          "id": "whd0l3qlbptwn22ei3vvl9hl",
+          "visible": true,
+          "company": "mbi GmbH",
+          "position": "Softwareentwickler",
+          "location": "Wetzlar",
+          "date": "01.03.2024 - 31.05.2024",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": "https://mbi.de"
+          }
+        }
+      ],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "references": {
+      "id": "references",
+      "name": "References",
+      "items": [],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "publications": {
+      "id": "publications",
+      "name": "Publications",
+      "items": [],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    },
+    "certifications": {
+      "id": "certifications",
+      "name": "Certifications",
+      "items": [],
+      "columns": 1,
+      "visible": true,
+      "separateLinks": true
+    }
+  }
+}

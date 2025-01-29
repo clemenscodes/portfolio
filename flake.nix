@@ -1,23 +1,20 @@
 {
   inputs = {
-    utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+    };
   };
-  outputs = {
-    self,
-    nixpkgs,
-    utils,
-  }:
-    utils.lib.eachDefaultSystem (
-      system: let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in {
-        devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            nodejs
-            corepack
-          ];
-        };
-      }
-    );
+  outputs = {nixpkgs, ...}: let
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {inherit system;};
+  in {
+    devShell = {
+      ${system} = pkgs.mkShell {
+        buildInputs = [
+          pkgs.nodejs-slim_18
+          pkgs.yarn-berry
+        ];
+      };
+    };
+  };
 }
